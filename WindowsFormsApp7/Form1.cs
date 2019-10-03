@@ -42,5 +42,6 @@ namespace WindowsFormsApp7
             password = textBox1.Text;
             textBox2.PasswordChar = '*';
         }
+
     }
 }
