@@ -72,7 +72,7 @@ namespace WindowsFormsApp7
         {
             Form1 x = new Form1();
             string[] lines = { "First Name: " + textboxF, "Last Name: " + textboxL, "Email: " + textboxE, "Password: " + textboxP};
-            Directory.CreateDirectory(x.path() + textboxE);
+            Directory.CreateDirectory(x.path() + @"\" + textboxE);
             File.WriteAllLines(x.path() + textboxE + @"\" + textboxE + ".txt", lines);
         }
 
