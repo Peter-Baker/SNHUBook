@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp7
 {
+    
     public partial class Form1 : Form
     {
+        int global;
         private string username;
         private string password;
 
