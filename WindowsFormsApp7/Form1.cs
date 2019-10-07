@@ -28,8 +28,10 @@ namespace WindowsFormsApp7
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             SignUp a = new SignUp();
-            a.Show();
+            a.ShowDialog();
+            this.Close();
 
         }
 
