@@ -69,7 +69,9 @@ namespace WindowsFormsApp7
             {
                 password_textbox.BackColor = Color.Red;
             }
-                if (email_textbox.BackColor != Color.Red && firstname_textbox.BackColor != Color.Red && lastname_textbox.BackColor != Color.Red && password_textbox.BackColor != Color.Red)
+
+                if (email_textbox.BackColor != Color.Red && firstname_textbox.BackColor != Color.Red && 
+                    lastname_textbox.BackColor != Color.Red && password_textbox.BackColor != Color.Red)
                 {
                     a.save();
                     MessageBox.Show("You Successfully Signed Up! You May Now LogIn");
