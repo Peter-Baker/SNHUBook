@@ -76,7 +76,7 @@ namespace WindowsFormsApp7
                     a.save();
                     MessageBox.Show("You Successfully Signed Up! You May Now LogIn");
                     this.Hide();
-                    Form1 o = new Form1();
+                    WelcomePage o = new WelcomePage();
                     o.ShowDialog();
                     this.Close();
                 }

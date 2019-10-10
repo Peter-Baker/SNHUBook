@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace WindowsFormsApp7
 {
     
-    public partial class Form1 : Form
+    public partial class WelcomePage : Form
     {
         private string username;
         private string password;
@@ -21,7 +21,7 @@ namespace WindowsFormsApp7
             return @"C:/Users/Caela/source/repos/WindowsFormsApp7";
         }
 
-        public Form1()
+        public WelcomePage()
         {
             InitializeComponent();
         }
@@ -42,9 +42,14 @@ namespace WindowsFormsApp7
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+            
             password = textBox1.Text;
             textBox2.PasswordChar = '*';
         }
 
+        private void username_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
