@@ -75,7 +75,7 @@ namespace WindowsFormsApp7
             Directory.CreateDirectory(x.path() + @"\" + textboxE);
             File.WriteAllLines(x.path() + textboxE + @"\" + textboxE + ".txt", lines);
         }
-        //iunjiuninij
+        
         public bool password_check()
         {
             if (textboxP == "")

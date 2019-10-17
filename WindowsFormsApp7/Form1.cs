@@ -43,5 +43,10 @@ namespace WindowsFormsApp7
             textBox2.PasswordChar = '*';
         }
 
+        private void login_bn_Click(object sender, EventArgs e)
+        {
+            Form3 a = new Form3();
+            a.Show();
+        }
     }
 }
