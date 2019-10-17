@@ -10,7 +10,8 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp7
 {
-    public partial class Form1 : Form
+    
+    public partial class WelcomePage : Form
     {
         private string username;
         private string password;
@@ -20,15 +21,17 @@ namespace WindowsFormsApp7
             return @"C:/Users/Caela/source/repos/WindowsFormsApp7";
         }
 
-        public Form1()
+        public WelcomePage()
         {
             InitializeComponent();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             SignUp a = new SignUp();
-            a.Show();
+            a.ShowDialog();
+            this.Close();
 
         }
 
@@ -39,6 +42,7 @@ namespace WindowsFormsApp7
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+            
             password = textBox1.Text;
             textBox2.PasswordChar = '*';
         }
@@ -47,6 +51,9 @@ namespace WindowsFormsApp7
         {
             Form3 a = new Form3();
             a.Show();
+        private void username_lbl_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

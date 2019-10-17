@@ -29,6 +29,7 @@ namespace WindowsFormsApp7
 
         private void save_button_Click(object sender, EventArgs e)
         {
+            
             signup a = new signup(email_textbox.Text, firstname_textbox.Text, lastname_textbox.Text, password_textbox.Text);
             a.firstname_check();
             a.lastname_check();
@@ -68,32 +69,25 @@ namespace WindowsFormsApp7
             {
                 password_textbox.BackColor = Color.Red;
             }
-                if (email_textbox.BackColor != Color.Red)
-                {
-                    if (firstname_textbox.BackColor != Color.Red)
-                    {
-                        if (lastname_textbox.BackColor != Color.Red)
-                        {
-                            if (password_textbox.BackColor != Color.Red)
-                            {
-                                a.save();
-                                MessageBox.Show("You Successfully Signed Up! You May Now LogIn");
 
-                                this.Close();
-                            }
-                            else
-                                MessageBox.Show("Make Sure Everythings Valid and Submit again");
-                        }
-                        else
-                            MessageBox.Show("Make Sure Everythings Valid and Submit again");
-                    }
-                    else
-                        MessageBox.Show("Make Sure Everythings Valid and Submit again");
+                if (email_textbox.BackColor != Color.Red && firstname_textbox.BackColor != Color.Red && 
+                    lastname_textbox.BackColor != Color.Red && password_textbox.BackColor != Color.Red)
+                {
+                    a.save();
+                    MessageBox.Show("You Successfully Signed Up! You May Now LogIn");
+                    this.Hide();
+                    WelcomePage o = new WelcomePage();
+                    o.ShowDialog();
+                    this.Close();
                 }
                 else
+                {
                     MessageBox.Show("Make Sure Everythings Valid and Submit again");
-            }
+                }
+      
+        }
             //else
               //  MessageBox.Show("Make Sure Everythings Valid and Submit again");
-        }
+             
+    }
     }

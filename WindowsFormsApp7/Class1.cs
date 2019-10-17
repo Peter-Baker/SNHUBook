@@ -27,7 +27,7 @@ namespace WindowsFormsApp7
             this.textboxP = password;
         }
 
-        Form1 a = new Form1();
+        WelcomePage a = new WelcomePage();
 
         public bool firstname_check()
         {
@@ -70,7 +70,7 @@ namespace WindowsFormsApp7
 
         public void save()
         {
-            Form1 x = new Form1();
+            WelcomePage x = new WelcomePage();
             string[] lines = { "First Name: " + textboxF, "Last Name: " + textboxL, "Email: " + textboxE, "Password: " + textboxP};
             Directory.CreateDirectory(x.path() + @"\" + textboxE);
             File.WriteAllLines(x.path() + textboxE + @"\" + textboxE + ".txt", lines);
