@@ -41,24 +41,17 @@
             // 
             this.username_lbl.AutoSize = true;
             this.username_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.username_lbl.Location = new System.Drawing.Point(37, 79);
-            this.username_lbl.Name = "username_lbl";
-            this.username_lbl.Size = new System.Drawing.Size(102, 24);
             this.username_lbl.Location = new System.Drawing.Point(75, 153);
             this.username_lbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.username_lbl.Name = "username_lbl";
             this.username_lbl.Size = new System.Drawing.Size(120, 42);
             this.username_lbl.TabIndex = 1;
             this.username_lbl.Text = "Email:";
-            //this.username_lbl.Click += new System.EventHandler(this.username_lbl_Click);
             // 
             // password_lbl
             // 
             this.password_lbl.AutoSize = true;
             this.password_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.password_lbl.Location = new System.Drawing.Point(37, 144);
-            this.password_lbl.Name = "password_lbl";
-            this.password_lbl.Size = new System.Drawing.Size(97, 24);
             this.password_lbl.Location = new System.Drawing.Point(75, 279);
             this.password_lbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.password_lbl.Name = "password_lbl";
@@ -69,12 +62,8 @@
             // login_bn
             // 
             this.login_bn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.login_bn.Location = new System.Drawing.Point(216, 213);
-            this.login_bn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.login_bn.Name = "login_bn";
-            this.login_bn.Size = new System.Drawing.Size(79, 37);
             this.login_bn.Location = new System.Drawing.Point(432, 413);
-            this.login_bn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.login_bn.Margin = new System.Windows.Forms.Padding(5);
             this.login_bn.Name = "login_bn";
             this.login_bn.Size = new System.Drawing.Size(157, 72);
             this.login_bn.TabIndex = 4;
@@ -85,12 +74,8 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button2.Location = new System.Drawing.Point(91, 213);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 37);
             this.button2.Location = new System.Drawing.Point(181, 413);
-            this.button2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 72);
             this.button2.TabIndex = 5;
@@ -100,12 +85,8 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(181, 81);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 22);
             this.textBox1.Location = new System.Drawing.Point(295, 157);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(429, 38);
             this.textBox1.TabIndex = 6;
@@ -113,24 +94,8 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(181, 146);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 22);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // label1
-            // 
-            /*this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 106);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 17);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "(hint: your email is the username)";*/
-            // 
             this.textBox2.Location = new System.Drawing.Point(295, 284);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(5);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(429, 38);
             this.textBox2.TabIndex = 7;
@@ -140,22 +105,16 @@
             // 
             this.WelcomeToSNHUBook.AutoSize = true;
             this.WelcomeToSNHUBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WelcomeToSNHUBook.Location = new System.Drawing.Point(47, 26);
-            this.WelcomeToSNHUBook.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.WelcomeToSNHUBook.Name = "WelcomeToSNHUBook";
-            this.WelcomeToSNHUBook.Size = new System.Drawing.Size(303, 31);
             this.WelcomeToSNHUBook.Location = new System.Drawing.Point(93, 50);
             this.WelcomeToSNHUBook.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.WelcomeToSNHUBook.Name = "WelcomeToSNHUBook";
             this.WelcomeToSNHUBook.Size = new System.Drawing.Size(589, 61);
             this.WelcomeToSNHUBook.TabIndex = 9;
             this.WelcomeToSNHUBook.Text = "Welcome to SNHUBook";
+            this.WelcomeToSNHUBook.Click += new System.EventHandler(this.WelcomeToSNHUBook_Click);
             // 
-            // Form1
+            // WelcomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 314);
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 608);
@@ -166,9 +125,8 @@
             this.Controls.Add(this.login_bn);
             this.Controls.Add(this.password_lbl);
             this.Controls.Add(this.username_lbl);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Name = "WelcomePage";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
