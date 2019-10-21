@@ -49,7 +49,7 @@ namespace WindowsFormsApp7
 
         private void login_bn_Click(object sender, EventArgs e)
         {
-            Form3 a = new Form3();
+            HomePage a = new HomePage();
             a.Show();
         private void username_lbl_Click(object sender, EventArgs e)
         {
