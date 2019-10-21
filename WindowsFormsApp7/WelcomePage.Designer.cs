@@ -50,7 +50,6 @@
             this.username_lbl.Size = new System.Drawing.Size(120, 42);
             this.username_lbl.TabIndex = 1;
             this.username_lbl.Text = "Email:";
-            this.username_lbl.Click += new System.EventHandler(this.username_lbl_Click);
             // 
             // password_lbl
             // 
