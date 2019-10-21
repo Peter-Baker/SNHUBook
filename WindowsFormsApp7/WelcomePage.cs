@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp7
 {
-    
+
     public partial class WelcomePage : Form
     {
         private string username;
@@ -42,7 +42,7 @@ namespace WindowsFormsApp7
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            
+
             password = textBox1.Text;
             textBox2.PasswordChar = '*';
         }
@@ -51,9 +51,10 @@ namespace WindowsFormsApp7
         {
             HomePage a = new HomePage();
             a.Show();
-        private void username_lbl_Click(object sender, EventArgs e)
-        {
+            /*private void username_lbl_Click(object sender, EventArgs e)
+            {
 
+            }*/
         }
     }
 }

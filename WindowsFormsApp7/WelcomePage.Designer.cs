@@ -50,7 +50,7 @@
             this.username_lbl.Size = new System.Drawing.Size(120, 42);
             this.username_lbl.TabIndex = 1;
             this.username_lbl.Text = "Email:";
-            this.username_lbl.Click += new System.EventHandler(this.username_lbl_Click);
+            //this.username_lbl.Click += new System.EventHandler(this.username_lbl_Click);
             // 
             // password_lbl
             // 
@@ -122,12 +122,12 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            /*this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(37, 106);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(219, 17);
             this.label1.TabIndex = 8;
-            this.label1.Text = "(hint: your email is the username)";
+            this.label1.Text = "(hint: your email is the username)";*/
             // 
             this.textBox2.Location = new System.Drawing.Point(295, 284);
             this.textBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
