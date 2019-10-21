@@ -1,40 +1,54 @@
-﻿using System;
+﻿using MySql.Data;
 using MySql.Data.MySqlClient;
+using System;
 
-namespace WindowsFormsApp7
+namespace Data
 {
-    using System;
-    using MySql.Data.MySqlClient;
-
-    public class Example
+    public class DBConnection
     {
-
-        static void Main()
+        private DBConnection()
         {
-            string cs = @"server=localhost;userid=user12;
-            password=34klq*;database=mydb";
+        }
 
-            MySqlConnection conn = null;
+        private string databaseName = string.Empty;
+        public string SNHUBook
+        {
+            get { return databaseName; }
+            set { databaseName = value; }
+        }
 
-            try
+        public string Password { get; set; }
+        private MySqlConnection connection = null;
+        public MySqlConnection Connection
+        {
+            get { return connection; }
+        }
+
+        private static DBConnection _instance = null;
+        public static DBConnection Instance()
+        {
+            if (_instance == null)
+                _instance = new DBConnection();
+            return _instance;
+        }
+
+        public bool IsConnect()
+        {
+            if (Connection == null)
             {
-                conn = new MySqlConnection(cs);
-                conn.Open();
-                Console.WriteLine("MySQL version : {0}", conn.ServerVersion);
+                if (String.IsNullOrEmpty(databaseName))
+                    return false;
+                string connstring = string.Format("Server=localhost; database={0}; UID=user12; password=1234", SNHUBook);
+                connection = new MySqlConnection(connstring);
+                connection.Open();
+            }
 
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Error: {0}", ex.ToString());
+            return true;
+        }
 
-            }
-            finally
-            {
-                if (conn != null)
-                {
-                    conn.Close();
-                }
-            }
+        public void Close()
+        {
+            connection.Close();
         }
     }
 }
