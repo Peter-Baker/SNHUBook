@@ -83,11 +83,19 @@ namespace WindowsFormsApp7
                 else
                 {
                     MessageBox.Show("Make Sure Everythings Valid and Submit again");
-                }
-      
+            }
+
+            /*void GenerateScript()
+            {
+                string constr = "server=localhost;user=root;pwd=qwerty;database=test;";
+                string file = "C:\\MyDumpFile.sql";
+                MySqlBackup mb = new MySqlBackup(constr);
+                mb.ExportInfo.Filename = file;
+                mb.Export();
+            }*/
+
+
         }
-            //else
-              //  MessageBox.Show("Make Sure Everythings Valid and Submit again");
              
     }
     }
