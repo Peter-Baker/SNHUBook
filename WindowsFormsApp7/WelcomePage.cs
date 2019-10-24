@@ -45,12 +45,18 @@ namespace WindowsFormsApp7
 
             connectionString = String.Format("server={0};port={1};user id={2}; password={3}; database={4}; SslMode=Required", server, port, user, password, database, sslM);
 
+            /*
+            
+             * The paragraph below is how you would insert the information below into the database.
+             * Please add this into the Create Account page. So it would add this account into the file.
+           
             connection = new MySqlConnection(connectionString);
             MySqlCommand command = new MySqlCommand("INSERT INTO accounts (ID, FirstName, LastName, Email, Password) Values(1, 'Peter', 'Baker', 'pb0213@gmail.com', '1234')");
             command.Connection = connection;
             connection.Open();
             command.ExecuteNonQuery();
             command.Connection.Close();
+            */
         }
 
         private void conexion()
@@ -92,12 +98,6 @@ namespace WindowsFormsApp7
         private void login_bn_Click(object sender, EventArgs e)
         {
             conexion();
-           // HomePage a = new HomePage();
-            //a.Show();
-            /*private void username_lbl_Click(object sender, EventArgs e)
-            {
-
-            }*/
         }
 
         private void WelcomeToSNHUBook_Click(object sender, EventArgs e)
