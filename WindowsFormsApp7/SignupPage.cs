@@ -97,6 +97,10 @@ namespace WindowsFormsApp7
             //irrelevant change
 
         }
-             
+
+        private void email_textbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
