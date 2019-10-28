@@ -29,7 +29,7 @@ namespace WindowsFormsApp7
 
         public string path()
         {
-            return @"C:/Users/Caela/source/repos/WindowsFormsApp7";
+            return @"C:\Users\peter\Desktop\WindowsFormsApp7\";
         }
 
         public WelcomePage()
@@ -97,7 +97,9 @@ namespace WindowsFormsApp7
 
         private void login_bn_Click(object sender, EventArgs e)
         {
-            conexion();
+            HomePage a = new HomePage();
+            a.Show();
+
         }
 
         private void WelcomeToSNHUBook_Click(object sender, EventArgs e)
