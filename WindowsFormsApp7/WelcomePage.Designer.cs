@@ -47,7 +47,7 @@
             this.username_lbl.Location = new System.Drawing.Point(946, 351);
             this.username_lbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.username_lbl.Name = "username_lbl";
-            this.username_lbl.Size = new System.Drawing.Size(154, 68);
+            this.username_lbl.Size = new System.Drawing.Size(150, 66);
             this.username_lbl.TabIndex = 1;
             this.username_lbl.Text = "Email:";
             // 
@@ -58,7 +58,7 @@
             this.password_lbl.Location = new System.Drawing.Point(879, 478);
             this.password_lbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.password_lbl.Name = "password_lbl";
-            this.password_lbl.Size = new System.Drawing.Size(232, 68);
+            this.password_lbl.Size = new System.Drawing.Size(226, 66);
             this.password_lbl.TabIndex = 3;
             this.password_lbl.Text = "Password:";
             // 
@@ -122,7 +122,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(514, 509);
+            this.pictureBox1.Size = new System.Drawing.Size(2434, 1128);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
@@ -132,7 +132,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(2458, 1192);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.WelcomeToSNHUBook);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -140,6 +139,7 @@
             this.Controls.Add(this.login_bn);
             this.Controls.Add(this.password_lbl);
             this.Controls.Add(this.username_lbl);
+            this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "WelcomePage";
             this.Text = "Form1";
