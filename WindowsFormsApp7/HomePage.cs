@@ -26,5 +26,10 @@ namespace WindowsFormsApp7
         {
 
         }
+
+        private void user_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

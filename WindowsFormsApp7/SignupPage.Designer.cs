@@ -44,6 +44,7 @@
             // firstname_textbox
             // 
             this.firstname_textbox.Location = new System.Drawing.Point(1141, 266);
+            this.firstname_textbox.Location = new System.Drawing.Point(364, 132);
             this.firstname_textbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.firstname_textbox.Name = "firstname_textbox";
             this.firstname_textbox.Size = new System.Drawing.Size(298, 38);
@@ -53,14 +54,17 @@
             // lastname_textbox
             // 
             this.lastname_textbox.Location = new System.Drawing.Point(1141, 372);
+            this.lastname_textbox.Location = new System.Drawing.Point(364, 238);
             this.lastname_textbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.lastname_textbox.Name = "lastname_textbox";
             this.lastname_textbox.Size = new System.Drawing.Size(298, 38);
             this.lastname_textbox.TabIndex = 1;
+            this.lastname_textbox.TextChanged += new System.EventHandler(this.lastname_textbox_TextChanged);
             // 
             // email_textbox
             // 
             this.email_textbox.Location = new System.Drawing.Point(1141, 479);
+            this.email_textbox.Location = new System.Drawing.Point(364, 345);
             this.email_textbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.email_textbox.Name = "email_textbox";
             this.email_textbox.Size = new System.Drawing.Size(298, 38);
@@ -70,10 +74,12 @@
             // password_textbox
             // 
             this.password_textbox.Location = new System.Drawing.Point(1141, 591);
+            this.password_textbox.Location = new System.Drawing.Point(364, 453);
             this.password_textbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.password_textbox.Name = "password_textbox";
             this.password_textbox.Size = new System.Drawing.Size(298, 38);
             this.password_textbox.TabIndex = 3;
+            this.password_textbox.TextChanged += new System.EventHandler(this.password_textbox_TextChanged);
             // 
             // firstname_lbl
             // 
@@ -83,6 +89,11 @@
             this.firstname_lbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.firstname_lbl.Name = "firstname_lbl";
             this.firstname_lbl.Size = new System.Drawing.Size(255, 68);
+            this.firstname_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.firstname_lbl.Location = new System.Drawing.Point(104, 132);
+            this.firstname_lbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.firstname_lbl.Name = "firstname_lbl";
+            this.firstname_lbl.Size = new System.Drawing.Size(192, 39);
             this.firstname_lbl.TabIndex = 4;
             this.firstname_lbl.Text = "First Name:";
             // 
@@ -94,6 +105,11 @@
             this.lastname_lbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lastname_lbl.Name = "lastname_lbl";
             this.lastname_lbl.Size = new System.Drawing.Size(252, 68);
+            this.lastname_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lastname_lbl.Location = new System.Drawing.Point(104, 238);
+            this.lastname_lbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lastname_lbl.Name = "lastname_lbl";
+            this.lastname_lbl.Size = new System.Drawing.Size(190, 39);
             this.lastname_lbl.TabIndex = 5;
             this.lastname_lbl.Text = "Last Name:";
             // 
@@ -105,6 +121,11 @@
             this.email_lbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.email_lbl.Name = "email_lbl";
             this.email_lbl.Size = new System.Drawing.Size(154, 68);
+            this.email_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.email_lbl.Location = new System.Drawing.Point(184, 345);
+            this.email_lbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.email_lbl.Name = "email_lbl";
+            this.email_lbl.Size = new System.Drawing.Size(112, 39);
             this.email_lbl.TabIndex = 6;
             this.email_lbl.Text = "Email:";
             // 
@@ -116,6 +137,11 @@
             this.password_lbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.password_lbl.Name = "password_lbl";
             this.password_lbl.Size = new System.Drawing.Size(232, 68);
+            this.password_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.password_lbl.Location = new System.Drawing.Point(104, 457);
+            this.password_lbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.password_lbl.Name = "password_lbl";
+            this.password_lbl.Size = new System.Drawing.Size(176, 39);
             this.password_lbl.TabIndex = 7;
             this.password_lbl.Text = "Password:";
             // 
@@ -123,6 +149,7 @@
             // 
             this.save_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.save_button.Location = new System.Drawing.Point(1248, 685);
+            this.save_button.Location = new System.Drawing.Point(262, 564);
             this.save_button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(150, 68);
@@ -135,6 +162,7 @@
             // 
             this.login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.login.Location = new System.Drawing.Point(1014, 685);
+            this.login.Location = new System.Drawing.Point(516, 564);
             this.login.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(150, 68);
@@ -162,6 +190,7 @@
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(2458, 1192);
             this.Controls.Add(this.WelcomeToSNHUBook);
+            this.ClientSize = new System.Drawing.Size(802, 752);
             this.Controls.Add(this.login);
             this.Controls.Add(this.save_button);
             this.Controls.Add(this.password_lbl);
@@ -175,6 +204,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "SignUp";
             this.Text = "SignUp";
+            this.Load += new System.EventHandler(this.SignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

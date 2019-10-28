@@ -244,6 +244,7 @@
             this.user_button.TabIndex = 1;
             this.user_button.Text = "UserName";
             this.user_button.UseVisualStyleBackColor = false;
+            this.user_button.Click += new System.EventHandler(this.user_button_Click);
             // 
             // SNHUbook_lbl
             // 
@@ -311,7 +312,7 @@
             this.Recent_Posts.UseVisualStyleBackColor = false;
             this.Recent_Posts.Click += new System.EventHandler(this.Recent_Posts_Click);
             // 
-            // Form3
+            // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -322,7 +323,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Form3";
+            this.Name = "HomePage";
             this.Text = "Form3";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
