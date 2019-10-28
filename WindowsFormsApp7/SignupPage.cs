@@ -31,19 +31,6 @@ namespace WindowsFormsApp7
             InitializeComponent();
         }
 
-        /*
-
- * The paragraph below is how you would insert the information below into the database.
- * Please add this into the Create Account page. So it would add this account into the file.
-
-connection = new MySqlConnection(connectionString);
-MySqlCommand command = new MySqlCommand("INSERT INTO accounts (ID, FirstName, LastName, Email, Password) Values(1, 'Peter', 'Baker', 'pb0213@gmail.com', '1234')");
-command.Connection = connection;
-connection.Open();
-command.ExecuteNonQuery();
-command.Connection.Close();
-*/
-
         private void firstname_textbox_TextChanged(object sender, EventArgs e)
         {
             //Add setting firstname string to the text inside the box.
@@ -157,11 +144,5 @@ command.Connection.Close();
         {
 
         }
-
-        private void email_textbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-    }
     }
 }
