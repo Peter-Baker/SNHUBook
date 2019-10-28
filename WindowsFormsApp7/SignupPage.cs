@@ -24,6 +24,8 @@ namespace WindowsFormsApp7
 
         private void login_Click(object sender, EventArgs e)
         {
+            WelcomePage a = new WelcomePage();
+            a.Show();
             Close();
         }
 
@@ -97,6 +99,10 @@ namespace WindowsFormsApp7
             //irrelevant change
 
         }
-             
+
+        private void SignUp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     }
