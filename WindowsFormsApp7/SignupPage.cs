@@ -99,7 +99,7 @@ namespace WindowsFormsApp7
                     tempString = tempString + email + "', '";
                     tempString = tempString + userPassword + "')";
 
-                    MessageBox.Show(tempString);
+                    //MessageBox.Show(tempString);
                     
                     MySqlCommand command = new MySqlCommand(tempString);
                     command.Connection = connection;
