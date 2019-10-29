@@ -63,6 +63,16 @@ namespace WindowsFormsApp7.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _10759301728_IMG_9920 {
+            get {
+                object obj = ResourceManager.GetObject("10759301728_IMG_9920", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap animal_texture {
             get {
                 object obj = ResourceManager.GetObject("animal_texture", resourceCulture);
