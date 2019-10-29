@@ -93,14 +93,13 @@ namespace WindowsFormsApp7
                     string connectionString = String.Format("server={0};port={1};user id={2}; password={3}; database={4}; SslMode=Required", server, port, user, password, database, sslM);
                     connection = new MySqlConnection(connectionString);
                     //"INSERT INTO accounts (ID, FirstName, LastName, Email, Password) Values(1, 'Peter', 'Baker', 'pb0213@gmail.com', '1234')"
-                    string tempString = "INSERT INTO accounts(ID, FirstName, LastName, Email, Password) Values(";
-                    tempString = tempString + "2, '";
+                    string tempString = "INSERT INTO accounts (FirstName, LastName, Email, Password) Values('";
                     tempString = tempString + firstName + "', '";
                     tempString = tempString + lastName + "', '";
                     tempString = tempString + email + "', '";
                     tempString = tempString + userPassword + "')";
 
-                    //MessageBox.Show(tempString);
+                    MessageBox.Show(tempString);
                     
                     MySqlCommand command = new MySqlCommand(tempString);
                     command.Connection = connection;
