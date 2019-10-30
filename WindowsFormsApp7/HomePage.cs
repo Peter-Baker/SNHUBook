@@ -29,7 +29,22 @@ namespace WindowsFormsApp7
 
         private void user_button_Click(object sender, EventArgs e)
         {
+            AccountPage a = new AccountPage();
+            a.Show();
+            Close();
+        }
 
+        private void Photo_Video_Click(object sender, EventArgs e)
+        {
+            PhotoPage b = new PhotoPage();
+            b.Show();
+        }
+
+        private void home_button_Click(object sender, EventArgs e)
+        {
+            HomePage a = new HomePage();
+            a.Show();
+            Close();
         }
     }
 }

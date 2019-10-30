@@ -10,11 +10,30 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp7
 {
-    public partial class Form1 : Form
+    public partial class AccountPage : Form
     {
-        public Form1()
+        public AccountPage()
         {
             InitializeComponent();
+        }
+
+        private void AccountPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void user_button_Click(object sender, EventArgs e)
+        {
+            AccountPage a = new AccountPage();
+            a.Show();
+            Close();
+        }
+
+        private void home_button_Click(object sender, EventArgs e)
+        {
+            HomePage a = new HomePage();
+            a.Show();
+            Close();
         }
     }
 }
