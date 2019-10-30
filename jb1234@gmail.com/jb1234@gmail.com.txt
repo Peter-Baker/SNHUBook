@@ -1,4 +1,0 @@
-First Name: Jacob
-Last Name: Burton
-Email: jb1234@gmail.com
-Password: 1234

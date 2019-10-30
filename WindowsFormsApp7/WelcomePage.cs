@@ -78,20 +78,101 @@ namespace WindowsFormsApp7
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
-            password = textBox1.Text;
+            password = textBox2.Text;
             textBox2.PasswordChar = '*';
         }
 
         private void login_bn_Click(object sender, EventArgs e)
         {
-            HomePage a = new HomePage();
-            a.Show();
+            if (username != "" && password != "")
+            {
+                if (password == getPass(username))//
+                {
+                    userInfo.setCurrentUser(getUserIDFromEmail(username));
+                    userInfo.setCurrentEmail(username);
 
+                    this.Hide();
+                    HomePage a = new HomePage();
+                    a.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Email and password do not match");
+                }
+            }
         }
 
-        private void WelcomeToSNHUBook_Click(object sender, EventArgs e)
+        public static string GenerateHash(string value, string salt)
+        {
+            byte[] data = System.Text.Encoding.ASCII.GetBytes(salt + value);
+            data = System.Security.Cryptography.MD5.Create().ComputeHash(data);
+            return Convert.ToBase64String(data);
+        }
+
+        public static string getPass(string email)
         {
 
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd=Sword144;";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT password FROM accounts WHERE email LIKE '{email}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string storedPass = string.Empty;
+
+
+            while (dr.Read())
+            {
+                storedPass = dr.GetString(0);
+                Console.WriteLine(storedPass);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+
+            return storedPass;
+        }
+
+
+        public static int getUserIDFromEmail(string email)
+        {
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd=Sword144;";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT ID FROM accounts WHERE email LIKE '{email}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string userID = string.Empty;
+
+
+            while (dr.Read())
+            {
+                userID = dr.GetString(0);
+                Console.WriteLine(userID);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+
+            return Convert.ToInt32(userID);
         }
     }
 }

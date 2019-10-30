@@ -1,4 +1,0 @@
-First Name: Peter
-Last Name: Baker
-Email: peter.baker@snhu.edu
-Password: 1234
