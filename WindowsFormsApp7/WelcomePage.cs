@@ -86,7 +86,6 @@ namespace WindowsFormsApp7
         {
             HomePage a = new HomePage();
             a.Show();
-
         }
 
         private void WelcomeToSNHUBook_Click(object sender, EventArgs e)

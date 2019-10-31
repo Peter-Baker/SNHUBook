@@ -133,7 +133,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gold;
+            this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel1.Controls.Add(this.Bio_lbl);
             this.panel1.Controls.Add(this.Biography);
             this.panel1.Controls.Add(this.username_lbl);
@@ -145,7 +145,9 @@
             // username_lbl
             // 
             this.username_lbl.AutoSize = true;
+            this.username_lbl.BackColor = System.Drawing.Color.Transparent;
             this.username_lbl.Font = new System.Drawing.Font("Franklin Gothic Medium", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username_lbl.ForeColor = System.Drawing.Color.Gold;
             this.username_lbl.Location = new System.Drawing.Point(459, 15);
             this.username_lbl.Name = "username_lbl";
             this.username_lbl.Size = new System.Drawing.Size(141, 36);
@@ -156,6 +158,7 @@
             // 
             this.Biography.AutoSize = true;
             this.Biography.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Biography.ForeColor = System.Drawing.Color.Gold;
             this.Biography.Location = new System.Drawing.Point(461, 51);
             this.Biography.Name = "Biography";
             this.Biography.Size = new System.Drawing.Size(45, 25);
@@ -173,6 +176,7 @@
             // 
             this.Bio_lbl.AutoSize = true;
             this.Bio_lbl.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bio_lbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Bio_lbl.Location = new System.Drawing.Point(511, 53);
             this.Bio_lbl.Name = "Bio_lbl";
             this.Bio_lbl.Size = new System.Drawing.Size(89, 24);
