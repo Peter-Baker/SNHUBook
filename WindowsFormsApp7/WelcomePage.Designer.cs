@@ -115,7 +115,6 @@
             this.WelcomeToSNHUBook.Size = new System.Drawing.Size(912, 101);
             this.WelcomeToSNHUBook.TabIndex = 9;
             this.WelcomeToSNHUBook.Text = "Welcome to SNHUBook";
-            this.WelcomeToSNHUBook.Click += new System.EventHandler(this.WelcomeToSNHUBook_Click);
             // 
             // pictureBox1
             // 

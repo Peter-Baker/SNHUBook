@@ -87,6 +87,8 @@ namespace WindowsFormsApp7
                 password_textbox.BackColor = Color.Red;
             }
 
+            //FUTURE ADD WAY TO 
+
                 if (email_textbox.BackColor != Color.Red && firstname_textbox.BackColor != Color.Red && 
                     lastname_textbox.BackColor != Color.Red && password_textbox.BackColor != Color.Red)
                 {

@@ -10,10 +10,6 @@ namespace WindowsFormsApp7
 {
     class signup
     {
-        public string email;
-        public string firstname;
-        public string lastname;
-        public string password;
         public string textboxF;
         public string textboxL;
         public string textboxE;
