@@ -94,8 +94,8 @@ namespace WindowsFormsApp7
                     userInfo.setCurrentEmail(username);
 
                     this.Hide();
-                    HomePage a = new HomePage();
-                    a.Show();
+                    HomePage b = new HomePage();
+                    b.Show();
                 }
                 else
                 {
