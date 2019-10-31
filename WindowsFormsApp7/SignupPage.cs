@@ -109,12 +109,11 @@ namespace WindowsFormsApp7
                     command.ExecuteNonQuery();
                     command.Connection.Close();
 
-                a.save();
                     MessageBox.Show("You Successfully Signed Up! You May Now LogIn");
                     this.Hide();
                     WelcomePage o = new WelcomePage();
                     o.ShowDialog();
-                    this.Close();
+                   // this.Close();
                 }
                 else
                 {

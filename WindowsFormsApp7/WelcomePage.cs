@@ -26,12 +26,12 @@ namespace WindowsFormsApp7
         private string connectionString;
         private string port;
         private string sslM;
-
+        /*
         public string path()
         {
             return @"C:\Users\peter\Desktop\WindowsFormsApp7\";
         }
-
+        */
         public WelcomePage()
         {
             InitializeComponent();
@@ -84,8 +84,6 @@ namespace WindowsFormsApp7
 
         private void login_bn_Click(object sender, EventArgs e)
         {
-            HomePage a = new HomePage();
-            a.Show();
             if (username != "" && password != "")
             {
                 if (password == getPass(username))//
@@ -94,8 +92,8 @@ namespace WindowsFormsApp7
                     userInfo.setCurrentEmail(username);
 
                     this.Hide();
-                    HomePage a = new HomePage();
-                    a.Show();
+                    HomePage hPage = new HomePage();
+                    hPage.Show();
                 }
                 else
                 {
