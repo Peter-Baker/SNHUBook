@@ -26,12 +26,7 @@ namespace WindowsFormsApp7
         private string connectionString;
         private string port;
         private string sslM;
-        /*
-        public string path()
-        {
-            return @"C:\Users\peter\Desktop\WindowsFormsApp7\";
-        }
-        */
+
         public WelcomePage()
         {
             InitializeComponent();
@@ -100,13 +95,6 @@ namespace WindowsFormsApp7
                     MessageBox.Show("Email and password do not match");
                 }
             }
-        }
-
-        public static string GenerateHash(string value, string salt)
-        {
-            byte[] data = System.Text.Encoding.ASCII.GetBytes(salt + value);
-            data = System.Security.Cryptography.MD5.Create().ComputeHash(data);
-            return Convert.ToBase64String(data);
         }
 
         public static string getPass(string email)

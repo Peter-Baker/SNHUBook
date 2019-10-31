@@ -63,14 +63,6 @@ namespace WindowsFormsApp7
                 return false;
             }
         }
-        /*
-        public void save()
-        {
-            WelcomePage x = new WelcomePage();
-            string[] lines = { "First Name: " + textboxF, "Last Name: " + textboxL, "Email: " + textboxE, "Password: " + textboxP};
-            Directory.CreateDirectory(x.path() + @"\" + textboxE);
-            File.WriteAllLines(x.path() + textboxE + @"\" + textboxE + ".txt", lines);
-        }*/
         
         public bool password_check()
         {
@@ -83,24 +75,5 @@ namespace WindowsFormsApp7
                 return true;
             }
         }
-        /*
-        public signup(string path)
-        {
-
-            if (File.Exists(path))
-            {
-                string[] lines = File.ReadAllLines(path);
-
-                textboxF = lines[0].Split(' ')[2];
-                textboxL = lines[1].Split(' ')[2];
-                textboxE = lines[2].Split(' ')[1];
-                textboxP = lines[3].Split(' ')[1];
-            }
-            else
-            {
-
-            }
-
-        }*/
     }
 }
