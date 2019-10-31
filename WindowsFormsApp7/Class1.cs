@@ -63,14 +63,14 @@ namespace WindowsFormsApp7
                 return false;
             }
         }
-
+        /*
         public void save()
         {
             WelcomePage x = new WelcomePage();
             string[] lines = { "First Name: " + textboxF, "Last Name: " + textboxL, "Email: " + textboxE, "Password: " + textboxP};
             Directory.CreateDirectory(x.path() + @"\" + textboxE);
             File.WriteAllLines(x.path() + textboxE + @"\" + textboxE + ".txt", lines);
-        }
+        }*/
         
         public bool password_check()
         {
@@ -83,7 +83,7 @@ namespace WindowsFormsApp7
                 return true;
             }
         }
-
+        /*
         public signup(string path)
         {
 
@@ -101,6 +101,6 @@ namespace WindowsFormsApp7
 
             }
 
-        }
+        }*/
     }
 }

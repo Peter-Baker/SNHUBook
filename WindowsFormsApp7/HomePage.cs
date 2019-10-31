@@ -46,5 +46,10 @@ namespace WindowsFormsApp7
             a.Show();
             Close();
         }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
