@@ -124,10 +124,10 @@
             // save_button
             // 
             this.save_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.save_button.Location = new System.Drawing.Point(314, 356);
+            this.save_button.Location = new System.Drawing.Point(304, 356);
             this.save_button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.save_button.Name = "save_button";
-            this.save_button.Size = new System.Drawing.Size(56, 29);
+            this.save_button.Size = new System.Drawing.Size(66, 29);
             this.save_button.TabIndex = 8;
             this.save_button.Text = "Create";
             this.save_button.UseVisualStyleBackColor = true;
@@ -139,7 +139,7 @@
             this.login.Location = new System.Drawing.Point(390, 356);
             this.login.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(56, 29);
+            this.login.Size = new System.Drawing.Size(62, 29);
             this.login.TabIndex = 9;
             this.login.Text = "Cancel";
             this.login.UseVisualStyleBackColor = true;

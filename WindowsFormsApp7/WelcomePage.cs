@@ -81,7 +81,7 @@ namespace WindowsFormsApp7
         {
             if (username != "" && password != "")
             {
-                if (password == getPass(username))//
+                if (password == getPass(username))
                 {
                     userInfo.setCurrentUser(getUserIDFromEmail(username));
                     userInfo.setCurrentEmail(username);

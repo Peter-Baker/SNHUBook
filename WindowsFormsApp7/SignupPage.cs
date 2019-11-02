@@ -92,6 +92,13 @@ namespace WindowsFormsApp7
                 if (email_textbox.BackColor != Color.Red && firstname_textbox.BackColor != Color.Red && 
                     lastname_textbox.BackColor != Color.Red && password_textbox.BackColor != Color.Red)
                 {
+                string username = email_textbox.Text;
+                    if (password == getPass(username))
+                    {
+                        MessageBox.Show("Account Already exists");
+                    }
+                    else
+                    {
                     string connectionString = String.Format("server={0};port={1};user id={2}; password={3}; database={4}; SslMode=Required", server, port, user, password, database, sslM);
                     connection = new MySqlConnection(connectionString);
                     //"INSERT INTO accounts (ID, FirstName, LastName, Email, Password) Values(1, 'Peter', 'Baker', 'pb0213@gmail.com', '1234')"
@@ -102,7 +109,7 @@ namespace WindowsFormsApp7
                     tempString = tempString + userPassword + "')";
 
                     //MessageBox.Show(tempString);
-                    
+
                     MySqlCommand command = new MySqlCommand(tempString);
                     command.Connection = connection;
                     connection.Open();
@@ -113,8 +120,9 @@ namespace WindowsFormsApp7
                     this.Hide();
                     WelcomePage o = new WelcomePage();
                     o.ShowDialog();
-                   // this.Close();
+                    // this.Close();
                 }
+            }
                 else
                 {
                     MessageBox.Show("Make Sure Everythings Valid and Submit again");
@@ -143,6 +151,72 @@ namespace WindowsFormsApp7
         private void SignUp_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public static string getPass(string email)
+        {
+
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd=Sword144;";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT password FROM accounts WHERE email LIKE '{email}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string storedPass = string.Empty;
+
+
+            while (dr.Read())
+            {
+                storedPass = dr.GetString(0);
+                Console.WriteLine(storedPass);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+
+            return storedPass;
+        }
+
+
+        public static int getUserIDFromEmail(string email)
+        {
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd=Sword144;";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT ID FROM accounts WHERE email LIKE '{email}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string userID = string.Empty;
+
+
+            while (dr.Read())
+            {
+                userID = dr.GetString(0);
+                Console.WriteLine(userID);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+
+            return Convert.ToInt32(userID);
         }
     }
 }
