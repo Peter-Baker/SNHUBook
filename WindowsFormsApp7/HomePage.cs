@@ -61,6 +61,7 @@ namespace WindowsFormsApp7
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
+        private void Check_In_Click(object sender, EventArgs e)
         {
 
         }
