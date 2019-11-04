@@ -39,9 +39,10 @@ namespace WindowsFormsApp7
 
         private void login_Click(object sender, EventArgs e)
         {
+            this.Hide();
             WelcomePage a = new WelcomePage();
-            a.Show();
-            Close();
+            a.ShowDialog();
+            this.Close();
         }
 
         private void save_button_Click(object sender, EventArgs e)

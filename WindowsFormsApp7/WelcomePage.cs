@@ -84,7 +84,7 @@ namespace WindowsFormsApp7
 
         private void login_bn_Click(object sender, EventArgs e)
         {
-            if (username != "" && password != "")
+            /*if (username != "" && password != "")
             {
                 if (password == getPass(username))//
                 {
@@ -101,7 +101,10 @@ namespace WindowsFormsApp7
                 {
                     MessageBox.Show("Email and password do not match");
                 }
-            }
+            }*/
+
+            HomePage d = new HomePage();
+            d.Show();
         }
 
         public static string GenerateHash(string value, string salt)
