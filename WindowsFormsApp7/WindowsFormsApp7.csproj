@@ -65,6 +65,7 @@
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs" />
+    <Compile Include="MySQLFunctions.cs" />
     <Compile Include="userInfo.cs" />
     <Compile Include="WelcomePage.cs">
       <SubType>Form</SubType>

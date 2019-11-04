@@ -16,44 +16,11 @@ namespace WindowsFormsApp7
     public partial class WelcomePage : Form
     {
         private string username;
-        private string pw;
-
-        private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string user;
         private string password;
-        private string connectionString;
-        private string port;
-        private string sslM;
 
         public WelcomePage()
         {
             InitializeComponent();
-
-            server = "localhost";
-            database = "SNHUBook";
-            user = "root";
-            password = "Sword144";
-            port = "3306";
-            sslM = "none";
-
-            connectionString = String.Format("server={0};port={1};user id={2}; password={3}; database={4}; SslMode=Required", server, port, user, password, database, sslM);
-        }
-
-        private void conexion()
-        {
-            try
-            {
-                connection.Open();
-
-                connection.Close();
-                
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show(ex.Message + connectionString);
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -81,9 +48,9 @@ namespace WindowsFormsApp7
         {
             if (username != "" && password != "")
             {
-                if (password == getPass(username))
+                if (password == MySQLFunctions.getPass(username))
                 {
-                    userInfo.setCurrentUser(getUserIDFromEmail(username));
+                    userInfo.setCurrentUser(MySQLFunctions.getUserIDFromEmail(username));
                     userInfo.setCurrentEmail(username);
 
                     this.Hide();
@@ -95,72 +62,6 @@ namespace WindowsFormsApp7
                     MessageBox.Show("Email and password do not match");
                 }
             }
-        }
-
-        public static string getPass(string email)
-        {
-
-            string connectionString = null;
-            MySqlConnection cnn;
-            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd=Sword144;";
-            cnn = new MySqlConnection(connectionString);
-
-            string query = $"SELECT password FROM accounts WHERE email LIKE '{email}';";
-
-            MySqlCommand cmd = new MySqlCommand(query, cnn);
-
-            MySqlDataReader dr;
-
-            cnn.Open();
-            dr = cmd.ExecuteReader();
-
-            string storedPass = string.Empty;
-
-
-            while (dr.Read())
-            {
-                storedPass = dr.GetString(0);
-                Console.WriteLine(storedPass);
-            }
-
-            dr.Close();
-            cnn.Close();
-
-
-            return storedPass;
-        }
-
-
-        public static int getUserIDFromEmail(string email)
-        {
-            string connectionString = null;
-            MySqlConnection cnn;
-            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd=Sword144;";
-            cnn = new MySqlConnection(connectionString);
-
-            string query = $"SELECT ID FROM accounts WHERE email LIKE '{email}';";
-
-            MySqlCommand cmd = new MySqlCommand(query, cnn);
-
-            MySqlDataReader dr;
-
-            cnn.Open();
-            dr = cmd.ExecuteReader();
-
-            string userID = string.Empty;
-
-
-            while (dr.Read())
-            {
-                userID = dr.GetString(0);
-                Console.WriteLine(userID);
-            }
-
-            dr.Close();
-            cnn.Close();
-
-
-            return Convert.ToInt32(userID);
         }
     }
 }
