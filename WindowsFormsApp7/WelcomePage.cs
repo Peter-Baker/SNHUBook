@@ -77,7 +77,7 @@ namespace WindowsFormsApp7
             return Convert.ToBase64String(data);
         }
 
-        public static string getPass(string email)
+        public static string GetPass(string email)
         {
 
             string connectionString = null;
@@ -97,8 +97,7 @@ namespace WindowsFormsApp7
             string storedPass = string.Empty;
 
 
-            while (dr.Read())
-            }
+            while (dr.Read()) {}
             else
             {
                 MessageBox.Show("Username or Password is empty!");
