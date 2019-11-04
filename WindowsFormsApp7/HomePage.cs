@@ -52,6 +52,15 @@ namespace WindowsFormsApp7
 
         }
 
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "")
+            {
+                textBox2.Text = "Just saw a roach in the bathroom. I let him live cuz I thought: how would I like it if a giant bug stepped on me? (Mood: Hungry 🤤)";
+            }
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
         private void Check_In_Click(object sender, EventArgs e)
         {
 

@@ -32,8 +32,8 @@ namespace WindowsFormsApp7
         {
             this.Hide();
             WelcomePage a = new WelcomePage();
-            a.Show();
-            Close();
+            a.ShowDialog();
+            this.Close();
         }
 
         private void save_button_Click(object sender, EventArgs e)

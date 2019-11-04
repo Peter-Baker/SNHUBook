@@ -46,7 +46,7 @@ namespace WindowsFormsApp7
 
         private void login_bn_Click(object sender, EventArgs e)
         {
-            if (username != "" && password != "")
+            /*if (username != "" && password != "")
             {
                 if (password == MySQLFunctions.getPass(username))
                 {
@@ -54,6 +54,8 @@ namespace WindowsFormsApp7
                     userInfo.setCurrentEmail(username);
 
                     this.Hide();
+                    HomePage b = new HomePage();
+                    b.Show();
                     HomePage hPage = new HomePage();
                     hPage.Show();
                     MessageBox.Show("Should open page, without closing");
@@ -62,6 +64,40 @@ namespace WindowsFormsApp7
                 {
                     MessageBox.Show("Email and password do not match");
                 }
+            }*/
+
+            HomePage d = new HomePage();
+            d.Show();
+        }
+
+        public static string GenerateHash(string value, string salt)
+        {
+            byte[] data = System.Text.Encoding.ASCII.GetBytes(salt + value);
+            data = System.Security.Cryptography.MD5.Create().ComputeHash(data);
+            return Convert.ToBase64String(data);
+        }
+
+        public static string getPass(string email)
+        {
+
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd=Sword144;";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT password FROM accounts WHERE email LIKE '{email}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string storedPass = string.Empty;
+
+
+            while (dr.Read())
             }
             else
             {
