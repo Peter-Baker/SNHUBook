@@ -13,18 +13,10 @@ namespace WindowsFormsApp7
 {
     public partial class SignUp : Form
     {
-        private int num;
         private string firstName;
         private string lastName;
         private string email;
-        private string userPassword;
-        private string server = "localhost";
-        private string database = "SNHUBook";
-        private string user = "root";
-        private string password = "Sword144";
-        private string port = "3306";
-        private string sslM = "none";
-        private MySqlConnection connection;
+        private string password;
 
         public SignUp()
         {
@@ -33,7 +25,6 @@ namespace WindowsFormsApp7
 
         private void firstname_textbox_TextChanged(object sender, EventArgs e)
         {
-            //Add setting firstname string to the text inside the box.
             firstName = firstname_textbox.Text;
         }
 
@@ -87,40 +78,29 @@ namespace WindowsFormsApp7
                 password_textbox.BackColor = Color.Red;
             }
 
-            //FUTURE ADD WAY TO 
-
                 if (email_textbox.BackColor != Color.Red && firstname_textbox.BackColor != Color.Red && 
                     lastname_textbox.BackColor != Color.Red && password_textbox.BackColor != Color.Red)
                 {
                 string username = email_textbox.Text;
-                    if (password == getPass(username))
+                    if (password == MySQLFunctions.getPass(username))
                     {
                         MessageBox.Show("Account Already exists");
                     }
                     else
                     {
-                    string connectionString = String.Format("server={0};port={1};user id={2}; password={3}; database={4}; SslMode=Required", server, port, user, password, database, sslM);
-                    connection = new MySqlConnection(connectionString);
-                    //"INSERT INTO accounts (ID, FirstName, LastName, Email, Password) Values(1, 'Peter', 'Baker', 'pb0213@gmail.com', '1234')"
+
                     string tempString = "INSERT INTO accounts (FirstName, LastName, Email, Password) Values('";
                     tempString = tempString + firstName + "', '";
                     tempString = tempString + lastName + "', '";
                     tempString = tempString + email + "', '";
-                    tempString = tempString + userPassword + "')";
+                    tempString = tempString + password + "')";
 
-                    //MessageBox.Show(tempString);
-
-                    MySqlCommand command = new MySqlCommand(tempString);
-                    command.Connection = connection;
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                    command.Connection.Close();
+                    MySQLFunctions.SQLCommand(tempString);
 
                     MessageBox.Show("You Successfully Signed Up! You May Now LogIn");
                     this.Hide();
                     WelcomePage o = new WelcomePage();
                     o.ShowDialog();
-                    // this.Close();
                 }
             }
                 else
@@ -132,91 +112,22 @@ namespace WindowsFormsApp7
 
         private void lastname_textbox_TextChanged(object sender, EventArgs e)
         {
-            //Add the lastname string being set to it. Like first name
             lastName = lastname_textbox.Text;
         }
 
         private void email_textbox_TextChanged(object sender, EventArgs e)
         {
-            //set string
             email = email_textbox.Text;
         }
 
         private void password_textbox_TextChanged(object sender, EventArgs e)
         {
-            //set string
-            userPassword = password_textbox.Text;
+            password = password_textbox.Text;
         }
 
         private void SignUp_Load(object sender, EventArgs e)
         {
 
-        }
-
-        public static string getPass(string email)
-        {
-
-            string connectionString = null;
-            MySqlConnection cnn;
-            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd=Sword144;";
-            cnn = new MySqlConnection(connectionString);
-
-            string query = $"SELECT password FROM accounts WHERE email LIKE '{email}';";
-
-            MySqlCommand cmd = new MySqlCommand(query, cnn);
-
-            MySqlDataReader dr;
-
-            cnn.Open();
-            dr = cmd.ExecuteReader();
-
-            string storedPass = string.Empty;
-
-
-            while (dr.Read())
-            {
-                storedPass = dr.GetString(0);
-                Console.WriteLine(storedPass);
-            }
-
-            dr.Close();
-            cnn.Close();
-
-
-            return storedPass;
-        }
-
-
-        public static int getUserIDFromEmail(string email)
-        {
-            string connectionString = null;
-            MySqlConnection cnn;
-            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd=Sword144;";
-            cnn = new MySqlConnection(connectionString);
-
-            string query = $"SELECT ID FROM accounts WHERE email LIKE '{email}';";
-
-            MySqlCommand cmd = new MySqlCommand(query, cnn);
-
-            MySqlDataReader dr;
-
-            cnn.Open();
-            dr = cmd.ExecuteReader();
-
-            string userID = string.Empty;
-
-
-            while (dr.Read())
-            {
-                userID = dr.GetString(0);
-                Console.WriteLine(userID);
-            }
-
-            dr.Close();
-            cnn.Close();
-
-
-            return Convert.ToInt32(userID);
         }
     }
 }

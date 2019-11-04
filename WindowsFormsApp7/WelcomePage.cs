@@ -56,11 +56,16 @@ namespace WindowsFormsApp7
                     this.Hide();
                     HomePage hPage = new HomePage();
                     hPage.Show();
+                    MessageBox.Show("Should open page, without closing");
                 }
                 else
                 {
                     MessageBox.Show("Email and password do not match");
                 }
+            }
+            else
+            {
+                MessageBox.Show("Username or Password is empty!");
             }
         }
     }
