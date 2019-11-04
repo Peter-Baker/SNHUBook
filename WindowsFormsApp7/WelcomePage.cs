@@ -56,30 +56,5 @@ namespace WindowsFormsApp7
             data = System.Security.Cryptography.MD5.Create().ComputeHash(data);
             return Convert.ToBase64String(data);
         }
-
-        public static string getPass(string email)
-        {
-
-            string connectionString = null;
-            MySqlConnection cnn;
-            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd=Sword144;";
-            cnn = new MySqlConnection(connectionString);
-
-            string query = $"SELECT password FROM accounts WHERE email LIKE '{email}';";
-
-            MySqlCommand cmd = new MySqlCommand(query, cnn);
-
-            MySqlDataReader dr;
-
-            cnn.Open();
-            dr = cmd.ExecuteReader();
-
-            string storedPass = string.Empty;
-            while (dr.Read()) {}
-            else
-            {
-                MessageBox.Show("Username or Password is empty!");
-            }
-        }
     }
 }
