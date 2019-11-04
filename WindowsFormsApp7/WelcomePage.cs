@@ -57,7 +57,7 @@ namespace WindowsFormsApp7
             return Convert.ToBase64String(data);
         }
 
-        public static string GetPass(string email)
+        public static string getPass(string email)
         {
 
             string connectionString = null;
@@ -75,8 +75,6 @@ namespace WindowsFormsApp7
             dr = cmd.ExecuteReader();
 
             string storedPass = string.Empty;
-
-
             while (dr.Read()) {}
             else
             {
