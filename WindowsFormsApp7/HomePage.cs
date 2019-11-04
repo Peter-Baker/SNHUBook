@@ -29,8 +29,9 @@ namespace WindowsFormsApp7
 
         private void user_button_Click(object sender, EventArgs e)
         {
+            this.Hide();
             AccountPage a = new AccountPage();
-            a.Show();
+            a.ShowDialog();
             Close();
         }
 
@@ -42,8 +43,9 @@ namespace WindowsFormsApp7
 
         private void home_button_Click(object sender, EventArgs e)
         {
+            this.Hide();
             HomePage a = new HomePage();
-            a.Show();
+            a.ShowDialog();
             Close();
         }
 
