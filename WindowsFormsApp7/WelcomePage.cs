@@ -46,8 +46,11 @@ namespace WindowsFormsApp7
 
         private void login_bn_Click(object sender, EventArgs e)
         {
+            this.Hide();
             HomePage d = new HomePage();
-            d.Show();
+            d.ShowDialog();
+            this.Close();
+            
         }
 
         public static string GenerateHash(string value, string salt)
