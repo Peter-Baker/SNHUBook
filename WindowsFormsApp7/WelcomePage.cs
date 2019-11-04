@@ -46,26 +46,6 @@ namespace WindowsFormsApp7
 
         private void login_bn_Click(object sender, EventArgs e)
         {
-            /*if (username != "" && password != "")
-            {
-                if (password == MySQLFunctions.getPass(username))
-                {
-                    userInfo.setCurrentUser(MySQLFunctions.getUserIDFromEmail(username));
-                    userInfo.setCurrentEmail(username);
-
-                    this.Hide();
-                    HomePage b = new HomePage();
-                    b.Show();
-                    HomePage hPage = new HomePage();
-                    hPage.Show();
-                    MessageBox.Show("Should open page, without closing");
-                }
-                else
-                {
-                    MessageBox.Show("Email and password do not match");
-                }
-            }*/
-
             HomePage d = new HomePage();
             d.Show();
         }
