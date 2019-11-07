@@ -46,18 +46,20 @@ namespace WindowsFormsApp7
 
         private void login_bn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            HomePage d = new HomePage();
-            d.ShowDialog();
-            this.Close();
-            
-        }
-
-        public static string GenerateHash(string value, string salt)
-        {
-            byte[] data = System.Text.Encoding.ASCII.GetBytes(salt + value);
-            data = System.Security.Cryptography.MD5.Create().ComputeHash(data);
-            return Convert.ToBase64String(data);
+            if (password != "" && username != "")
+            {
+                if (password == MySQLFunctions.getPass(username))
+                {
+                    this.Hide();
+                    HomePage d = new HomePage();
+                    d.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Account does not exist / Password is not correct");
+                }
+            }
         }
     }
 }

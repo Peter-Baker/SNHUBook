@@ -102,5 +102,14 @@ namespace WindowsFormsApp7
         {
             post = textBox1.Text;
         }
+
+        private void settings_button_Click(object sender, EventArgs e)
+        {
+            //Form sendform = Form.ActiveForm;
+            this.Hide();
+            SettingsPage a = new SettingsPage();
+            a.ShowDialog();
+            this.Close();
+        }
     }
 }

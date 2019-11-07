@@ -90,11 +90,11 @@ namespace WindowsFormsApp7
                     else
                     {
 
-                    string tempString = "INSERT INTO accounts (FirstName, LastName, Email, Password) Values('";
+                    string tempString = "INSERT INTO accounts (FirstName, LastName, Email, Password, profImage_path, backgroundImage_path) Values('";
                     tempString = tempString + firstName + "', '";
                     tempString = tempString + lastName + "', '";
                     tempString = tempString + email + "', '";
-                    tempString = tempString + password + "')";
+                    tempString = tempString + password + "','NULL','NULL')";
 
                     MySQLFunctions.SQLCommand(tempString);
 
@@ -102,8 +102,8 @@ namespace WindowsFormsApp7
                     this.Hide();
                     WelcomePage o = new WelcomePage();
                     o.ShowDialog();
+                    }
                 }
-            }
                 else
                 {
                     MessageBox.Show("Make Sure Everythings Valid and Submit again");
@@ -124,6 +124,7 @@ namespace WindowsFormsApp7
         private void password_textbox_TextChanged(object sender, EventArgs e)
         {
             password = password_textbox.Text;
+            password_textbox.PasswordChar = '*';
         }
 
         private void SignUp_Load(object sender, EventArgs e)

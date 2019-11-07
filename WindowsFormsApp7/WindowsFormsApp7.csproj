@@ -66,6 +66,12 @@
     </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="MySQLFunctions.cs" />
+    <Compile Include="SettingsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsPage.Designer.cs">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="userInfo.cs" />
     <Compile Include="WelcomePage.cs">
       <SubType>Form</SubType>
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPage.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomePage.resx">
       <DependentUpon>WelcomePage.cs</DependentUpon>
