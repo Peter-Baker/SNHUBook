@@ -57,10 +57,10 @@
             this.panel2.Controls.Add(this.user_button);
             this.panel2.Controls.Add(this.SNHUbook_lbl);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(2, 3);
-            this.panel2.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.panel2.Location = new System.Drawing.Point(1, 1);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2730, 103);
+            this.panel2.Size = new System.Drawing.Size(1024, 43);
             this.panel2.TabIndex = 5;
             // 
             // settings_button
@@ -74,10 +74,10 @@
             this.settings_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.settings_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settings_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.settings_button.Location = new System.Drawing.Point(2610, 43);
-            this.settings_button.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.settings_button.Location = new System.Drawing.Point(979, 18);
+            this.settings_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.settings_button.Name = "settings_button";
-            this.settings_button.Size = new System.Drawing.Size(50, 48);
+            this.settings_button.Size = new System.Drawing.Size(19, 20);
             this.settings_button.TabIndex = 8;
             this.settings_button.UseVisualStyleBackColor = false;
             // 
@@ -90,10 +90,10 @@
             this.FriendRequest_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FriendRequest_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FriendRequest_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.FriendRequest_button.Location = new System.Drawing.Point(2106, 31);
-            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.FriendRequest_button.Location = new System.Drawing.Point(790, 13);
+            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FriendRequest_button.Name = "FriendRequest_button";
-            this.FriendRequest_button.Size = new System.Drawing.Size(350, 72);
+            this.FriendRequest_button.Size = new System.Drawing.Size(131, 30);
             this.FriendRequest_button.TabIndex = 7;
             this.FriendRequest_button.Text = "Friend Requests";
             this.FriendRequest_button.UseVisualStyleBackColor = false;
@@ -107,10 +107,10 @@
             this.home_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.home_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.home_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.home_button.Location = new System.Drawing.Point(1816, 31);
-            this.home_button.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.home_button.Location = new System.Drawing.Point(681, 13);
+            this.home_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.home_button.Name = "home_button";
-            this.home_button.Size = new System.Drawing.Size(278, 72);
+            this.home_button.Size = new System.Drawing.Size(104, 30);
             this.home_button.TabIndex = 6;
             this.home_button.Text = "Home";
             this.home_button.UseVisualStyleBackColor = false;
@@ -120,10 +120,10 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBox1.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.nyc;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(1440, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(540, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(74, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(28, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -137,10 +137,10 @@
             this.user_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.user_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.user_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.user_button.Location = new System.Drawing.Point(1526, 31);
-            this.user_button.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.user_button.Location = new System.Drawing.Point(572, 13);
+            this.user_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.user_button.Name = "user_button";
-            this.user_button.Size = new System.Drawing.Size(278, 72);
+            this.user_button.Size = new System.Drawing.Size(104, 30);
             this.user_button.TabIndex = 1;
             this.user_button.Text = "UserName";
             this.user_button.UseVisualStyleBackColor = false;
@@ -151,80 +151,87 @@
             this.SNHUbook_lbl.BackColor = System.Drawing.Color.Transparent;
             this.SNHUbook_lbl.Font = new System.Drawing.Font("Franklin Gothic Heavy", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SNHUbook_lbl.ForeColor = System.Drawing.Color.Gold;
-            this.SNHUbook_lbl.Location = new System.Drawing.Point(6, 4);
-            this.SNHUbook_lbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.SNHUbook_lbl.Location = new System.Drawing.Point(2, 2);
+            this.SNHUbook_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SNHUbook_lbl.Name = "SNHUbook_lbl";
-            this.SNHUbook_lbl.Size = new System.Drawing.Size(414, 94);
+            this.SNHUbook_lbl.Size = new System.Drawing.Size(167, 38);
             this.SNHUbook_lbl.TabIndex = 0;
             this.SNHUbook_lbl.Text = "SNHUbook";
             // 
             // panel3
             // 
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(6);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(358, 1401);
+            this.panel3.Size = new System.Drawing.Size(134, 588);
             this.panel3.TabIndex = 9;
             // 
             // LogOutButton
             // 
-            this.LogOutButton.Location = new System.Drawing.Point(1018, 436);
+            this.LogOutButton.Location = new System.Drawing.Point(382, 183);
+            this.LogOutButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.LogOutButton.Name = "LogOutButton";
-            this.LogOutButton.Size = new System.Drawing.Size(350, 118);
+            this.LogOutButton.Size = new System.Drawing.Size(131, 49);
             this.LogOutButton.TabIndex = 6;
             this.LogOutButton.Text = "Log Out";
             this.LogOutButton.UseVisualStyleBackColor = true;
             // 
             // ChangeEmailButton
             // 
-            this.ChangeEmailButton.Location = new System.Drawing.Point(1426, 436);
+            this.ChangeEmailButton.Location = new System.Drawing.Point(535, 183);
+            this.ChangeEmailButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.ChangeEmailButton.Name = "ChangeEmailButton";
-            this.ChangeEmailButton.Size = new System.Drawing.Size(350, 118);
+            this.ChangeEmailButton.Size = new System.Drawing.Size(131, 49);
             this.ChangeEmailButton.TabIndex = 7;
             this.ChangeEmailButton.Text = "Change Email";
             this.ChangeEmailButton.UseVisualStyleBackColor = true;
             // 
             // ChangePasswordButton
             // 
-            this.ChangePasswordButton.Location = new System.Drawing.Point(1018, 590);
+            this.ChangePasswordButton.Location = new System.Drawing.Point(382, 247);
+            this.ChangePasswordButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.ChangePasswordButton.Name = "ChangePasswordButton";
-            this.ChangePasswordButton.Size = new System.Drawing.Size(350, 118);
+            this.ChangePasswordButton.Size = new System.Drawing.Size(131, 49);
             this.ChangePasswordButton.TabIndex = 8;
             this.ChangePasswordButton.Text = "Change Password";
             this.ChangePasswordButton.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1426, 590);
+            this.button4.Location = new System.Drawing.Point(535, 247);
+            this.button4.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(350, 118);
+            this.button4.Size = new System.Drawing.Size(131, 49);
             this.button4.TabIndex = 9;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(1018, 746);
+            this.button5.Location = new System.Drawing.Point(382, 313);
+            this.button5.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(350, 118);
+            this.button5.Size = new System.Drawing.Size(131, 49);
             this.button5.TabIndex = 10;
             this.button5.Text = "button5";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1426, 746);
+            this.button6.Location = new System.Drawing.Point(535, 313);
+            this.button6.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(350, 118);
+            this.button6.Size = new System.Drawing.Size(131, 49);
             this.button6.TabIndex = 11;
             this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // Return
             // 
-            this.Return.Location = new System.Drawing.Point(1224, 909);
+            this.Return.Location = new System.Drawing.Point(459, 381);
+            this.Return.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Return.Name = "Return";
-            this.Return.Size = new System.Drawing.Size(350, 118);
+            this.Return.Size = new System.Drawing.Size(131, 49);
             this.Return.TabIndex = 12;
             this.Return.Text = "Return";
             this.Return.UseVisualStyleBackColor = true;
@@ -232,9 +239,9 @@
             // 
             // SettingsPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2728, 1403);
+            this.ClientSize = new System.Drawing.Size(982, 501);
             this.Controls.Add(this.Return);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -243,6 +250,7 @@
             this.Controls.Add(this.ChangeEmailButton);
             this.Controls.Add(this.LogOutButton);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "SettingsPage";
             this.Text = "SettingsPage";
             this.panel2.ResumeLayout(false);
