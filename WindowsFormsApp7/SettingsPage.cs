@@ -13,11 +13,10 @@ namespace WindowsFormsApp7
     public partial class SettingsPage : Form
     {
         int returnform;
-
         public SettingsPage(int recievedform)
         {
             InitializeComponent();
-            int returnform = recievedform;
+            returnform = recievedform;
         }
         public SettingsPage()
         {
@@ -32,27 +31,21 @@ namespace WindowsFormsApp7
             switch (returnform)
             {
                 case 0:
-                    {
                     HomePage a = new HomePage();
                     a.ShowDialog();
                     this.Close();
                     break;
-                    }
-                /*case 1:
-                    {
-                    Form1 = new Form1();
-                    a.ShowDialog();
+                case 1:
+                    AccountPage b = new AccountPage();
+                    b.ShowDialog();
                     this.Close();
                     break;
-                    }
-                    */
                 default:
-                    { 
-                    HomePage a = new HomePage();
-                    a.ShowDialog();
+                    HomePage c = new HomePage();
+                    c.ShowDialog();
                     this.Close();
                     break;
-                    }
+                    
             }
         }
     }
