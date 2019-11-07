@@ -10,7 +10,7 @@ namespace WindowsFormsApp7
 {
     class MySQLFunctions
     {
-        public const string MYSQLPassword = "Sword144"; //Enter your own password here to log into your own database
+        public const string MYSQLPassword = "Caelarules1!"; //Enter your own password here to log into your own database
 
         public MySQLFunctions()
         {

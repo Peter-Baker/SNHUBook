@@ -87,7 +87,7 @@ namespace WindowsFormsApp7
             /*Panel newPanel = new Panel();
             newPanel.Size = new System.Drawing.Size(973, 170);
             newPanel.Location = new System.Drawing.Point(209, PanelLocation);
-            HomePage.Control.Add(newPanel);
+            HomePage.Add(newPanel);
             PanelLocation += 60;*/
             post_text.Text = post;
             panel4.Show();
