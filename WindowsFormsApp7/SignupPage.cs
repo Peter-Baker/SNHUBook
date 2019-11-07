@@ -124,6 +124,7 @@ namespace WindowsFormsApp7
         private void password_textbox_TextChanged(object sender, EventArgs e)
         {
             password = password_textbox.Text;
+            password_textbox.PasswordChar = '*';
         }
 
         private void SignUp_Load(object sender, EventArgs e)
