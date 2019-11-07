@@ -12,25 +12,48 @@ namespace WindowsFormsApp7
 {
     public partial class SettingsPage : Form
     {
-        
+        int returnform;
+
+        public SettingsPage(int recievedform)
+        {
+            InitializeComponent();
+            int returnform = recievedform;
+        }
         public SettingsPage()
         {
             InitializeComponent();
         }
-       /* public SettingsPage(Form recievedform)
-        {
-            InitializeComponent();
-            returnform = recievedform;
-        }*/
-
 
 
         private void Return_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HomePage a = new HomePage();
-            a.ShowDialog();
-            this.Close();
+
+            switch (returnform)
+            {
+                case 0:
+                    {
+                    HomePage a = new HomePage();
+                    a.ShowDialog();
+                    this.Close();
+                    break;
+                    }
+                /*case 1:
+                    {
+                    Form1 = new Form1();
+                    a.ShowDialog();
+                    this.Close();
+                    break;
+                    }
+                    */
+                default:
+                    { 
+                    HomePage a = new HomePage();
+                    a.ShowDialog();
+                    this.Close();
+                    break;
+                    }
+            }
         }
     }
 }
