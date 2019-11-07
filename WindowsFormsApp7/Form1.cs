@@ -37,5 +37,17 @@ namespace WindowsFormsApp7
             a.ShowDialog();
             Close();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void settings_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SettingsPage o = new SettingsPage();
+            o.ShowDialog();
+        }
     }
 }
