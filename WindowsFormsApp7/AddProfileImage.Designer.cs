@@ -33,7 +33,7 @@
             this.profileImageThree = new System.Windows.Forms.PictureBox();
             this.profileImageTwo = new System.Windows.Forms.PictureBox();
             this.profileImageOne = new System.Windows.Forms.PictureBox();
-            this.CancelButton = new System.Windows.Forms.Button();
+            this.CancelButtonProfilePhoto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profileImageFour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileImageThree)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileImageTwo)).BeginInit();
@@ -90,16 +90,16 @@
             this.profileImageOne.TabStop = false;
             this.profileImageOne.Click += new System.EventHandler(this.profileImageOne_Click);
             // 
-            // CancelButton
+            // CancelButtonProfilePhoto
             // 
-            this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelButton.Location = new System.Drawing.Point(322, 292);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(122, 49);
-            this.CancelButton.TabIndex = 5;
-            this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelButtonProfilePhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelButtonProfilePhoto.Location = new System.Drawing.Point(322, 292);
+            this.CancelButtonProfilePhoto.Name = "CancelButtonProfilePhoto";
+            this.CancelButtonProfilePhoto.Size = new System.Drawing.Size(122, 49);
+            this.CancelButtonProfilePhoto.TabIndex = 5;
+            this.CancelButtonProfilePhoto.Text = "Cancel";
+            this.CancelButtonProfilePhoto.UseVisualStyleBackColor = true;
+            this.CancelButtonProfilePhoto.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // AddProfileImage
             // 
@@ -107,7 +107,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.CancelButtonProfilePhoto);
             this.Controls.Add(this.profileImageFour);
             this.Controls.Add(this.profileImageThree);
             this.Controls.Add(this.profileImageTwo);
@@ -131,6 +131,6 @@
         private System.Windows.Forms.PictureBox profileImageTwo;
         private System.Windows.Forms.PictureBox profileImageThree;
         private System.Windows.Forms.PictureBox profileImageFour;
-        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button CancelButtonProfilePhoto;
     }
 }

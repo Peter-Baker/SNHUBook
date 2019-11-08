@@ -12,7 +12,7 @@ namespace WindowsFormsApp7
 {
     public partial class HomePage : Form
     {
-        int PanelLocation = 411;
+        //int PanelLocation = 411;
         string post;
         public HomePage()
         {

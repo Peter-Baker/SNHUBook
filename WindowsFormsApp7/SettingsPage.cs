@@ -18,11 +18,16 @@ namespace WindowsFormsApp7
             InitializeComponent();
             returnform = recievedform;
         }
-       /* public SettingsPage(Form recievedform)
+
+        public SettingsPage()
         {
-            InitializeComponent();
-            returnform = recievedform;
-        }*/
+        }
+
+        /* public SettingsPage(Form recievedform)
+{
+    InitializeComponent();
+    returnform = recievedform;
+}*/
 
 
 
@@ -56,6 +61,11 @@ namespace WindowsFormsApp7
                     break;
                     
             }
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

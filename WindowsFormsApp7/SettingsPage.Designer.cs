@@ -29,20 +29,19 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.settings_button = new System.Windows.Forms.Button();
             this.FriendRequest_button = new System.Windows.Forms.Button();
             this.home_button = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.user_button = new System.Windows.Forms.Button();
             this.SNHUbook_lbl = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.LogOutButton = new System.Windows.Forms.Button();
-            this.ChangeEmailButton = new System.Windows.Forms.Button();
             this.ChangePasswordButton = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.Return = new System.Windows.Forms.Button();
-            this.settings_button = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,10 +57,28 @@
             this.panel2.Controls.Add(this.SNHUbook_lbl);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(1, 1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1024, 43);
             this.panel2.TabIndex = 5;
+            // 
+            // settings_button
+            // 
+            this.settings_button.BackColor = System.Drawing.Color.Transparent;
+            this.settings_button.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.setting_icon;
+            this.settings_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.settings_button.FlatAppearance.BorderSize = 0;
+            this.settings_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.settings_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.settings_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settings_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settings_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.settings_button.Location = new System.Drawing.Point(979, 18);
+            this.settings_button.Margin = new System.Windows.Forms.Padding(2);
+            this.settings_button.Name = "settings_button";
+            this.settings_button.Size = new System.Drawing.Size(19, 20);
+            this.settings_button.TabIndex = 8;
+            this.settings_button.UseVisualStyleBackColor = false;
             // 
             // FriendRequest_button
             // 
@@ -73,7 +90,7 @@
             this.FriendRequest_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FriendRequest_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FriendRequest_button.Location = new System.Drawing.Point(790, 13);
-            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(2);
             this.FriendRequest_button.Name = "FriendRequest_button";
             this.FriendRequest_button.Size = new System.Drawing.Size(131, 30);
             this.FriendRequest_button.TabIndex = 7;
@@ -90,12 +107,26 @@
             this.home_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.home_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.home_button.Location = new System.Drawing.Point(681, 13);
-            this.home_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.home_button.Margin = new System.Windows.Forms.Padding(2);
             this.home_button.Name = "home_button";
             this.home_button.Size = new System.Drawing.Size(104, 30);
             this.home_button.TabIndex = 6;
             this.home_button.Text = "Home";
             this.home_button.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pictureBox1.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.nyc;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(540, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // user_button
             // 
@@ -107,7 +138,7 @@
             this.user_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.user_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.user_button.Location = new System.Drawing.Point(572, 13);
-            this.user_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.user_button.Margin = new System.Windows.Forms.Padding(2);
             this.user_button.Name = "user_button";
             this.user_button.Size = new System.Drawing.Size(104, 30);
             this.user_button.TabIndex = 1;
@@ -137,28 +168,19 @@
             // 
             // LogOutButton
             // 
-            this.LogOutButton.Location = new System.Drawing.Point(382, 183);
-            this.LogOutButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.LogOutButton.Location = new System.Drawing.Point(459, 184);
+            this.LogOutButton.Margin = new System.Windows.Forms.Padding(1);
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.Size = new System.Drawing.Size(131, 49);
             this.LogOutButton.TabIndex = 6;
             this.LogOutButton.Text = "Log Out";
             this.LogOutButton.UseVisualStyleBackColor = true;
-            // 
-            // ChangeEmailButton
-            // 
-            this.ChangeEmailButton.Location = new System.Drawing.Point(535, 183);
-            this.ChangeEmailButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.ChangeEmailButton.Name = "ChangeEmailButton";
-            this.ChangeEmailButton.Size = new System.Drawing.Size(131, 49);
-            this.ChangeEmailButton.TabIndex = 7;
-            this.ChangeEmailButton.Text = "Change Email";
-            this.ChangeEmailButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
             // 
             // ChangePasswordButton
             // 
             this.ChangePasswordButton.Location = new System.Drawing.Point(382, 247);
-            this.ChangePasswordButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ChangePasswordButton.Margin = new System.Windows.Forms.Padding(1);
             this.ChangePasswordButton.Name = "ChangePasswordButton";
             this.ChangePasswordButton.Size = new System.Drawing.Size(131, 49);
             this.ChangePasswordButton.TabIndex = 8;
@@ -168,7 +190,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(535, 247);
-            this.button4.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.button4.Margin = new System.Windows.Forms.Padding(1);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(131, 49);
             this.button4.TabIndex = 9;
@@ -178,7 +200,7 @@
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(382, 313);
-            this.button5.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.button5.Margin = new System.Windows.Forms.Padding(1);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(131, 49);
             this.button5.TabIndex = 10;
@@ -188,7 +210,7 @@
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(535, 313);
-            this.button6.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.button6.Margin = new System.Windows.Forms.Padding(1);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(131, 49);
             this.button6.TabIndex = 11;
@@ -198,45 +220,13 @@
             // Return
             // 
             this.Return.Location = new System.Drawing.Point(459, 381);
-            this.Return.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Return.Margin = new System.Windows.Forms.Padding(1);
             this.Return.Name = "Return";
             this.Return.Size = new System.Drawing.Size(131, 49);
             this.Return.TabIndex = 12;
             this.Return.Text = "Return";
             this.Return.UseVisualStyleBackColor = true;
             this.Return.Click += new System.EventHandler(this.Return_Click);
-            // 
-            // settings_button
-            // 
-            this.settings_button.BackColor = System.Drawing.Color.Transparent;
-            this.settings_button.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.setting_icon;
-            this.settings_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.settings_button.FlatAppearance.BorderSize = 0;
-            this.settings_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
-            this.settings_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
-            this.settings_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settings_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settings_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.settings_button.Location = new System.Drawing.Point(979, 18);
-            this.settings_button.Margin = new System.Windows.Forms.Padding(2);
-            this.settings_button.Name = "settings_button";
-            this.settings_button.Size = new System.Drawing.Size(19, 20);
-            this.settings_button.TabIndex = 8;
-            this.settings_button.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pictureBox1.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.nyc;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(540, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // SettingsPage
             // 
@@ -248,10 +238,9 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.ChangePasswordButton);
-            this.Controls.Add(this.ChangeEmailButton);
             this.Controls.Add(this.LogOutButton);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "SettingsPage";
             this.Text = "SettingsPage";
             this.panel2.ResumeLayout(false);
@@ -272,7 +261,6 @@
         private System.Windows.Forms.Label SNHUbook_lbl;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button LogOutButton;
-        private System.Windows.Forms.Button ChangeEmailButton;
         private System.Windows.Forms.Button ChangePasswordButton;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
