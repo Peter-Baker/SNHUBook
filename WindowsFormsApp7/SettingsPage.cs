@@ -12,10 +12,11 @@ namespace WindowsFormsApp7
 {
     public partial class SettingsPage : Form
     {
-        
-        public SettingsPage()
+        int returnform;
+        public SettingsPage(int recievedform)
         {
             InitializeComponent();
+            returnform = recievedform;
         }
        /* public SettingsPage(Form recievedform)
         {
@@ -36,6 +37,25 @@ namespace WindowsFormsApp7
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+            switch (returnform)
+            {
+                case 0:
+                    HomePage a = new HomePage();
+                    a.ShowDialog();
+                    this.Close();
+                    break;
+                case 1:
+                    AccountPage b = new AccountPage();
+                    b.ShowDialog();
+                    this.Close();
+                    break;
+                default:
+                    HomePage c = new HomePage();
+                    c.ShowDialog();
+                    this.Close();
+                    break;
+                    
+            }
         }
     }
 }

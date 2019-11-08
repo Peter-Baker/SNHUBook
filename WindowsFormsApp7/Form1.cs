@@ -46,7 +46,7 @@ namespace WindowsFormsApp7
         private void settings_button_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SettingsPage o = new SettingsPage();
+            SettingsPage o = new SettingsPage(1);
             o.ShowDialog();
         }
     }
