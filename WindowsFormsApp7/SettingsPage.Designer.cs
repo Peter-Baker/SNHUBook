@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.settings_button = new System.Windows.Forms.Button();
             this.FriendRequest_button = new System.Windows.Forms.Button();
             this.home_button = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.user_button = new System.Windows.Forms.Button();
             this.SNHUbook_lbl = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -43,6 +41,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.Return = new System.Windows.Forms.Button();
+            this.settings_button = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,24 +62,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1024, 43);
             this.panel2.TabIndex = 5;
-            // 
-            // settings_button
-            // 
-            this.settings_button.BackColor = System.Drawing.Color.Transparent;
-            this.settings_button.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.setting_icon;
-            this.settings_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.settings_button.FlatAppearance.BorderSize = 0;
-            this.settings_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
-            this.settings_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
-            this.settings_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settings_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settings_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.settings_button.Location = new System.Drawing.Point(979, 18);
-            this.settings_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.settings_button.Name = "settings_button";
-            this.settings_button.Size = new System.Drawing.Size(19, 20);
-            this.settings_button.TabIndex = 8;
-            this.settings_button.UseVisualStyleBackColor = false;
             // 
             // FriendRequest_button
             // 
@@ -114,19 +96,6 @@
             this.home_button.TabIndex = 6;
             this.home_button.Text = "Home";
             this.home_button.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pictureBox1.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.nyc;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(540, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // user_button
             // 
@@ -236,6 +205,38 @@
             this.Return.Text = "Return";
             this.Return.UseVisualStyleBackColor = true;
             this.Return.Click += new System.EventHandler(this.Return_Click);
+            // 
+            // settings_button
+            // 
+            this.settings_button.BackColor = System.Drawing.Color.Transparent;
+            this.settings_button.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.setting_icon;
+            this.settings_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.settings_button.FlatAppearance.BorderSize = 0;
+            this.settings_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.settings_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.settings_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settings_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settings_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.settings_button.Location = new System.Drawing.Point(979, 18);
+            this.settings_button.Margin = new System.Windows.Forms.Padding(2);
+            this.settings_button.Name = "settings_button";
+            this.settings_button.Size = new System.Drawing.Size(19, 20);
+            this.settings_button.TabIndex = 8;
+            this.settings_button.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pictureBox1.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.nyc;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(540, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // SettingsPage
             // 

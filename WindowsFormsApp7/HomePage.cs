@@ -105,9 +105,17 @@ namespace WindowsFormsApp7
 
         private void settings_button_Click(object sender, EventArgs e)
         {
-            int send = 0;
+            //Form sendform = Form.ActiveForm;
             this.Hide();
-            SettingsPage a = new SettingsPage(send);
+            SettingsPage a = new SettingsPage();
+            a.ShowDialog();
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddProfileImage a = new AddProfileImage();
             a.ShowDialog();
             this.Close();
         }
