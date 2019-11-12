@@ -62,7 +62,10 @@ namespace WindowsFormsApp7
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            AddProfileImage a = new AddProfileImage(email, true);
+            a.ShowDialog();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
