@@ -161,5 +161,57 @@ namespace WindowsFormsApp7
         {
             SQLCommand($"UPDATE accounts set Password = '{password}' where email = '{email}';");
         }
+
+        public static string getName(string email)
+        {
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT FirstName FROM accounts WHERE email LIKE '{email}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string firstName = string.Empty;
+
+
+            while (dr.Read())
+            {
+                firstName = dr.GetString(0);
+                Console.WriteLine(firstName);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+            query = $"SELECT LastName FROM accounts WHERE email LIKE '{email}';";
+
+            MySqlCommand cmdTwo = new MySqlCommand(query, cnn);
+
+            MySqlDataReader drTwo;
+
+            cnn.Open();
+            drTwo = cmdTwo.ExecuteReader();
+
+            string lastName = string.Empty;
+
+
+            while (drTwo.Read())
+            {
+                lastName = drTwo.GetString(0);
+                Console.WriteLine(lastName);
+            }
+
+            drTwo.Close();
+            cnn.Close();
+
+            return firstName + " " + lastName;
+        }
     }
 }

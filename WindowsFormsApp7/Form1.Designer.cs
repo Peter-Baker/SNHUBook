@@ -67,7 +67,7 @@
             this.panel2.Controls.Add(this.SNHUbook_lbl);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1024, 43);
             this.panel2.TabIndex = 4;
@@ -85,7 +85,7 @@
             this.settings_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settings_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.settings_button.Location = new System.Drawing.Point(979, 18);
-            this.settings_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.settings_button.Margin = new System.Windows.Forms.Padding(2);
             this.settings_button.Name = "settings_button";
             this.settings_button.Size = new System.Drawing.Size(19, 20);
             this.settings_button.TabIndex = 8;
@@ -102,7 +102,7 @@
             this.FriendRequest_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FriendRequest_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FriendRequest_button.Location = new System.Drawing.Point(790, 13);
-            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(2);
             this.FriendRequest_button.Name = "FriendRequest_button";
             this.FriendRequest_button.Size = new System.Drawing.Size(131, 30);
             this.FriendRequest_button.TabIndex = 7;
@@ -119,7 +119,7 @@
             this.home_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.home_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.home_button.Location = new System.Drawing.Point(681, 13);
-            this.home_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.home_button.Margin = new System.Windows.Forms.Padding(2);
             this.home_button.Name = "home_button";
             this.home_button.Size = new System.Drawing.Size(104, 30);
             this.home_button.TabIndex = 6;
@@ -133,7 +133,7 @@
             this.pictureBox1.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.nyc;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(540, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -151,7 +151,7 @@
             this.user_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.user_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.user_button.Location = new System.Drawing.Point(572, 13);
-            this.user_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.user_button.Margin = new System.Windows.Forms.Padding(2);
             this.user_button.Name = "user_button";
             this.user_button.Size = new System.Drawing.Size(104, 30);
             this.user_button.TabIndex = 1;
@@ -241,6 +241,7 @@
             this.username_lbl.Size = new System.Drawing.Size(111, 28);
             this.username_lbl.TabIndex = 0;
             this.username_lbl.Text = "UserName";
+            this.username_lbl.Click += new System.EventHandler(this.username_lbl_Click);
             // 
             // vScrollBar1
             // 

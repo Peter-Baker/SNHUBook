@@ -20,6 +20,8 @@ namespace WindowsFormsApp7
             Image myimage = new Bitmap(MySQLFunctions.getProfileImage(email));
             pictureBox1.BackgroundImage = myimage;
             ProfilePicture.BackgroundImage = myimage;
+            user_button.Text = MySQLFunctions.getName(email);
+            username_lbl.Text = MySQLFunctions.getName(email);
         }
 
         private void AccountPage_Load(object sender, EventArgs e)
@@ -82,6 +84,11 @@ namespace WindowsFormsApp7
         private void open_addbio_Click(object sender, EventArgs e)
         {
             add_bio_pnl.Show();
+        }
+
+        private void username_lbl_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void addbio_info_TextChanged(object sender, EventArgs e)

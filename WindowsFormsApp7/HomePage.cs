@@ -29,6 +29,7 @@ namespace WindowsFormsApp7
             //Below is checking which profile photo to load
             Image myimage = new Bitmap(MySQLFunctions.getProfileImage(email));
             pictureBox1.BackgroundImage = myimage;
+            user_button.Text = MySQLFunctions.getName(email);
         }
 
         private void FriendRequest_button_Click(object sender, EventArgs e)

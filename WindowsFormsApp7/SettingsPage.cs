@@ -21,6 +21,7 @@ namespace WindowsFormsApp7
             this.email = email;
             Image myimage = new Bitmap(MySQLFunctions.getProfileImage(email));
             pictureBox1.BackgroundImage = myimage;
+            user_button.Text = MySQLFunctions.getName(email);
         }
 
         private void Return_Click(object sender, EventArgs e)
@@ -105,6 +106,11 @@ namespace WindowsFormsApp7
         }
 
         private void pwDoesNotMatch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void user_button_Click(object sender, EventArgs e)
         {
 
         }

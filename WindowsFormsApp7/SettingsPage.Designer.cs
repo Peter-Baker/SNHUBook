@@ -147,6 +147,7 @@
             this.user_button.TabIndex = 1;
             this.user_button.Text = "UserName";
             this.user_button.UseVisualStyleBackColor = false;
+            this.user_button.Click += new System.EventHandler(this.user_button_Click);
             // 
             // SNHUbook_lbl
             // 
