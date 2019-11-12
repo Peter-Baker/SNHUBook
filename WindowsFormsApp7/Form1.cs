@@ -12,8 +12,7 @@ namespace WindowsFormsApp7
 {
     public partial class AccountPage : Form
     {
-        string email;
-
+        string email, add_bio;
         public AccountPage(String email)
         {
             InitializeComponent();
@@ -25,7 +24,7 @@ namespace WindowsFormsApp7
 
         private void AccountPage_Load(object sender, EventArgs e)
         {
-
+            add_bio_pnl.Hide();
         }
 
         private void user_button_Click(object sender, EventArgs e)
@@ -64,6 +63,27 @@ namespace WindowsFormsApp7
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Bio_lbl.Text = add_bio;
+            this.add_bio_pnl.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.add_bio_pnl.Hide();
+        }
+
+        private void open_addbio_Click(object sender, EventArgs e)
+        {
+            add_bio_pnl.Show();
+        }
+
+        private void addbio_info_TextChanged(object sender, EventArgs e)
+        {
+            addbio_info.Text = add_bio;
         }
     }
 }

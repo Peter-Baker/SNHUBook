@@ -12,15 +12,15 @@ namespace WindowsFormsApp7
 {
     public partial class HomePage : Form
     {
-        //int PanelLocation = 411;
+        int PanelLocation = 411;
         string post;
         string email;
-        /*
+        
         public HomePage()
         {
             InitializeComponent();
         }
-        */
+        
         public HomePage(string email) //Please use this one to transfer data.
         {
             InitializeComponent();
