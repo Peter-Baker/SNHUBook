@@ -13,10 +13,14 @@ namespace WindowsFormsApp7
     public partial class SettingsPage : Form
     {
         int returnform;
-        public SettingsPage(int recievedform)
+        string email;
+        public SettingsPage(int recievedform, string email)
         {
             InitializeComponent();
             returnform = recievedform;
+            this.email = email;
+            Image myimage = new Bitmap(MySQLFunctions.getProfileImage(email));
+            pictureBox1.BackgroundImage = myimage;
         }
 
         public SettingsPage()
@@ -34,7 +38,7 @@ namespace WindowsFormsApp7
         private void Return_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HomePage a = new HomePage();
+            HomePage a = new HomePage(email);
             a.ShowDialog();
             this.Close();
         }
@@ -45,17 +49,17 @@ namespace WindowsFormsApp7
             switch (returnform)
             {
                 case 0:
-                    HomePage a = new HomePage();
+                    HomePage a = new HomePage(email);
                     a.ShowDialog();
                     this.Close();
                     break;
                 case 1:
-                    AccountPage b = new AccountPage();
+                    AccountPage b = new AccountPage(email);
                     b.ShowDialog();
                     this.Close();
                     break;
                 default:
-                    HomePage c = new HomePage();
+                    HomePage c = new HomePage(email);
                     c.ShowDialog();
                     this.Close();
                     break;

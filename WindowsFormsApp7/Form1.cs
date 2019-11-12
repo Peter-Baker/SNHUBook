@@ -12,9 +12,15 @@ namespace WindowsFormsApp7
 {
     public partial class AccountPage : Form
     {
-        public AccountPage()
+        string email;
+
+        public AccountPage(String email)
         {
             InitializeComponent();
+            this.email = email;
+            Image myimage = new Bitmap(MySQLFunctions.getProfileImage(email));
+            pictureBox1.BackgroundImage = myimage;
+            ProfilePicture.BackgroundImage = myimage;
         }
 
         private void AccountPage_Load(object sender, EventArgs e)
@@ -25,7 +31,7 @@ namespace WindowsFormsApp7
         private void user_button_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AccountPage a = new AccountPage();
+            AccountPage a = new AccountPage(email);
             a.ShowDialog();
             Close();
         }
@@ -33,7 +39,7 @@ namespace WindowsFormsApp7
         private void home_button_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HomePage a = new HomePage();
+            HomePage a = new HomePage(email);
             a.ShowDialog();
             Close();
         }
@@ -46,8 +52,18 @@ namespace WindowsFormsApp7
         private void settings_button_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SettingsPage o = new SettingsPage(1);
+            SettingsPage o = new SettingsPage(1, email);
             o.ShowDialog();
+        }
+
+        private void ProfilePicture_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

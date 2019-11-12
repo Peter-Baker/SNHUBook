@@ -13,9 +13,11 @@ namespace WindowsFormsApp7
 {
     public partial class PhotoPage : Form
     {
-        public PhotoPage()
+        string email;
+        public PhotoPage(String email)
         {
             InitializeComponent();
+            this.email = email;
         }
 
         private void Read_File_bn_Click(object sender, EventArgs e)
@@ -63,5 +65,10 @@ namespace WindowsFormsApp7
             {
                 return false;
             }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
