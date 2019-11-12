@@ -94,7 +94,7 @@ namespace WindowsFormsApp7
                     tempString = tempString + firstName + "', '";
                     tempString = tempString + lastName + "', '";
                     tempString = tempString + email + "', '";
-                    tempString = tempString + password + "','NULL','NULL')";
+                    tempString = tempString + password + "','nyc.jpg','NULL')";
 
                     MySQLFunctions.SQLCommand(tempString);
 

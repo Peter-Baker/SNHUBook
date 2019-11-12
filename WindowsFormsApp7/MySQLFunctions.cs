@@ -12,6 +12,8 @@ namespace WindowsFormsApp7
     {
         public const string MYSQLPassword = "Caelarules1!"; //Enter your own password here to log into your own database
 
+        public const string pathForResources = @"C:\Users\peter\Desktop\WindowsFormsApp7\WindowsFormsApp7\Resources\"; //Enter in your path of the resource folder here
+
         public MySQLFunctions()
         {
 
@@ -120,6 +122,39 @@ namespace WindowsFormsApp7
 
 
             return Convert.ToInt32(userID);
+        }
+
+        public static string getProfileImage(string email) //Returns entire path
+        {
+
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT profImage_path FROM accounts WHERE email LIKE '{email}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string storedProfPath = string.Empty;
+
+
+            while (dr.Read())
+            {
+                storedProfPath = dr.GetString(0);
+                Console.WriteLine(storedProfPath);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+
+            return $@"C:\Users\peter\Desktop\WindowsFormsApp7\WindowsFormsApp7\Resources\{storedProfPath}";
         }
     }
 }
