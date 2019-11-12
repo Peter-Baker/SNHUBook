@@ -156,5 +156,10 @@ namespace WindowsFormsApp7
 
             return pathForResources + storedProfPath;
         }
+
+        public static void changePassword(string email, string password)
+        {
+            SQLCommand($"UPDATE accounts set Password = '{password}' where email = '{email}';");
+        }
     }
 }

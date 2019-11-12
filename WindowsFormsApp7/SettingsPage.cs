@@ -23,18 +23,6 @@ namespace WindowsFormsApp7
             pictureBox1.BackgroundImage = myimage;
         }
 
-        public SettingsPage()
-        {
-        }
-
-        /* public SettingsPage(Form recievedform)
-{
-    InitializeComponent();
-    returnform = recievedform;
-}*/
-
-
-
         private void Return_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -68,6 +56,55 @@ namespace WindowsFormsApp7
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            WelcomePage d = new WelcomePage();
+            d.ShowDialog();
+            this.Close();
+        }
+
+        private void ChangePasswordButton_Click(object sender, EventArgs e)
+        {
+            if (passwordTextBox.Text.Length == 0)
+            {
+                invalid.Visible = true;
+            }else if (!passwordTextBox.Text.Equals(retypeTextBox.Text))
+            {
+                pwDoesNotMatch.Visible = true;
+            }
+            else
+            {
+                //Change password
+                MySQLFunctions.changePassword(email, passwordTextBox.Text);
+                MessageBox.Show("Password has been changed!");
+            }
+        }
+
+        private void retypeTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (!passwordTextBox.Text.Equals(retypeTextBox.Text))
+            {
+                pwDoesNotMatch.Visible = true;
+            }
+            else
+            {
+                pwDoesNotMatch.Visible = false;
+            }
+        }
+
+        private void passwordTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if(passwordTextBox.Text.Length == 0)
+            {
+                invalid.Visible = true;
+            }
+            else
+            {
+                invalid.Visible = false;
+            }
+        }
+
+        private void pwDoesNotMatch_Click(object sender, EventArgs e)
         {
 
         }
