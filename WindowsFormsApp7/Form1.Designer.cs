@@ -255,7 +255,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1023, 476);
+            this.ClientSize = new System.Drawing.Size(501, 390);
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.ProfilePicture);
             this.Controls.Add(this.panel2);
