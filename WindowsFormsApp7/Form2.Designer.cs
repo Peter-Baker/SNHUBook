@@ -46,8 +46,9 @@
             this.SNHUbook.BackColor = System.Drawing.SystemColors.HotTrack;
             this.SNHUbook.Controls.Add(this.SNHUbook_lbl);
             this.SNHUbook.Location = new System.Drawing.Point(0, 0);
+            this.SNHUbook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SNHUbook.Name = "SNHUbook";
-            this.SNHUbook.Size = new System.Drawing.Size(584, 54);
+            this.SNHUbook.Size = new System.Drawing.Size(438, 44);
             this.SNHUbook.TabIndex = 0;
             // 
             // SNHUbook_lbl
@@ -55,19 +56,22 @@
             this.SNHUbook_lbl.AutoSize = true;
             this.SNHUbook_lbl.Font = new System.Drawing.Font("Franklin Gothic Heavy", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SNHUbook_lbl.ForeColor = System.Drawing.Color.Gold;
-            this.SNHUbook_lbl.Location = new System.Drawing.Point(13, 13);
+            this.SNHUbook_lbl.Location = new System.Drawing.Point(10, 11);
+            this.SNHUbook_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SNHUbook_lbl.Name = "SNHUbook_lbl";
-            this.SNHUbook_lbl.Size = new System.Drawing.Size(154, 36);
+            this.SNHUbook_lbl.Size = new System.Drawing.Size(121, 28);
             this.SNHUbook_lbl.TabIndex = 0;
             this.SNHUbook_lbl.Text = "SNHUbook";
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(0, 52);
+            this.richTextBox1.Location = new System.Drawing.Point(0, 42);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(581, 317);
+            this.richTextBox1.Size = new System.Drawing.Size(437, 258);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // Read_File_bn
             // 
@@ -75,9 +79,10 @@
             this.Read_File_bn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Read_File_bn.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Read_File_bn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Read_File_bn.Location = new System.Drawing.Point(45, 391);
+            this.Read_File_bn.Location = new System.Drawing.Point(34, 318);
+            this.Read_File_bn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Read_File_bn.Name = "Read_File_bn";
-            this.Read_File_bn.Size = new System.Drawing.Size(90, 33);
+            this.Read_File_bn.Size = new System.Drawing.Size(68, 27);
             this.Read_File_bn.TabIndex = 2;
             this.Read_File_bn.Text = "Browse...";
             this.Read_File_bn.UseVisualStyleBackColor = false;
@@ -89,23 +94,25 @@
             this.Add.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Add.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Add.Location = new System.Drawing.Point(448, 391);
+            this.Add.Location = new System.Drawing.Point(336, 318);
+            this.Add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(90, 33);
+            this.Add.Size = new System.Drawing.Size(68, 27);
             this.Add.TabIndex = 3;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = false;
             // 
             // PhotoPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(582, 436);
+            this.ClientSize = new System.Drawing.Size(436, 354);
             this.Controls.Add(this.Add);
             this.Controls.Add(this.Read_File_bn);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.SNHUbook);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PhotoPage";
             this.Text = "PhotoPage";
             this.SNHUbook.ResumeLayout(false);

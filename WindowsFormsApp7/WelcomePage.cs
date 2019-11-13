@@ -51,7 +51,7 @@ namespace WindowsFormsApp7
                 if (password == MySQLFunctions.getPass(username))
                 {
                     this.Hide();
-                    HomePage d = new HomePage();
+                    HomePage d = new HomePage(username);
                     d.ShowDialog();
                     this.Close();
                 }

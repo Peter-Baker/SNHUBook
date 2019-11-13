@@ -14,9 +14,22 @@ namespace WindowsFormsApp7
     {
         int PanelLocation = 411;
         string post;
+        string email;
+        
         public HomePage()
         {
             InitializeComponent();
+        }
+        
+        public HomePage(string email) //Please use this one to transfer data.
+        {
+            InitializeComponent();
+            this.email = email;
+
+            //Below is checking which profile photo to load
+            Image myimage = new Bitmap(MySQLFunctions.getProfileImage(email));
+            pictureBox1.BackgroundImage = myimage;
+            user_button.Text = MySQLFunctions.getName(email);
         }
 
         private void FriendRequest_button_Click(object sender, EventArgs e)
@@ -32,7 +45,7 @@ namespace WindowsFormsApp7
         private void user_button_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AccountPage a = new AccountPage();
+            AccountPage a = new AccountPage(email);
             a.ShowDialog();
             Close();
         }
@@ -40,7 +53,7 @@ namespace WindowsFormsApp7
         private void Photo_Video_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PhotoPage b = new PhotoPage();
+            PhotoPage b = new PhotoPage(email);
             b.ShowDialog();
             Close();
         }
@@ -48,7 +61,7 @@ namespace WindowsFormsApp7
         private void home_button_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HomePage a = new HomePage();
+            HomePage a = new HomePage(email);
             a.ShowDialog();
             Close();
         }
@@ -84,13 +97,14 @@ namespace WindowsFormsApp7
 
         private void Submit_post_button_Click(object sender, EventArgs e)
         {
-            /*Panel newPanel = new Panel();
+            Panel newPanel = new Panel();
             newPanel.Size = new System.Drawing.Size(973, 170);
             newPanel.Location = new System.Drawing.Point(209, PanelLocation);
-            HomePage.Control.Add(newPanel);
-            PanelLocation += 60;*/
-            post_text.Text = post;
-            panel4.Show();
+            this.Controls.Add(newPanel);
+            PanelLocation += 60;
+            newPanel.Show();
+            /*post_text.Text = post;
+            panel4.Show();*/
         }
 
         private void date_lbl_Click(object sender, EventArgs e)
@@ -105,9 +119,17 @@ namespace WindowsFormsApp7
 
         private void settings_button_Click(object sender, EventArgs e)
         {
-            int send = 0;
+            //Form sendform = Form.ActiveForm;
             this.Hide();
-            SettingsPage a = new SettingsPage(send);
+            SettingsPage a = new SettingsPage(1, email);
+            a.ShowDialog();
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddProfileImage a = new AddProfileImage(email, false);
             a.ShowDialog();
             this.Close();
         }

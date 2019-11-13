@@ -12,6 +12,8 @@ namespace WindowsFormsApp7
     {
         public const string MYSQLPassword = "Sword144"; //Enter your own password here to log into your own database
 
+        public const string pathForResources = @"C:\Users\peter\Desktop\WindowsFormsApp7\WindowsFormsApp7\Resources\"; //Enter in your path of the resource folder here
+
         public MySQLFunctions()
         {
 
@@ -120,6 +122,96 @@ namespace WindowsFormsApp7
 
 
             return Convert.ToInt32(userID);
+        }
+
+        public static string getProfileImage(string email) //Returns entire path
+        {
+
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT profImage_path FROM accounts WHERE email LIKE '{email}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string storedProfPath = string.Empty;
+
+
+            while (dr.Read())
+            {
+                storedProfPath = dr.GetString(0);
+                Console.WriteLine(storedProfPath);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+
+            return pathForResources + storedProfPath;
+        }
+
+        public static void changePassword(string email, string password)
+        {
+            SQLCommand($"UPDATE accounts set Password = '{password}' where email = '{email}';");
+        }
+
+        public static string getName(string email)
+        {
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT FirstName FROM accounts WHERE email LIKE '{email}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string firstName = string.Empty;
+
+
+            while (dr.Read())
+            {
+                firstName = dr.GetString(0);
+                Console.WriteLine(firstName);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+            query = $"SELECT LastName FROM accounts WHERE email LIKE '{email}';";
+
+            MySqlCommand cmdTwo = new MySqlCommand(query, cnn);
+
+            MySqlDataReader drTwo;
+
+            cnn.Open();
+            drTwo = cmdTwo.ExecuteReader();
+
+            string lastName = string.Empty;
+
+
+            while (drTwo.Read())
+            {
+                lastName = drTwo.GetString(0);
+                Console.WriteLine(lastName);
+            }
+
+            drTwo.Close();
+            cnn.Close();
+
+            return firstName + " " + lastName;
         }
     }
 }

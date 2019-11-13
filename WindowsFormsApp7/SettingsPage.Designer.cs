@@ -37,12 +37,14 @@
             this.SNHUbook_lbl = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.LogOutButton = new System.Windows.Forms.Button();
-            this.ChangeEmailButton = new System.Windows.Forms.Button();
             this.ChangePasswordButton = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.Return = new System.Windows.Forms.Button();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.retypeTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.invalid = new System.Windows.Forms.Label();
+            this.pwDoesNotMatch = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +60,7 @@
             this.panel2.Controls.Add(this.SNHUbook_lbl);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(1, 1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1024, 43);
             this.panel2.TabIndex = 5;
@@ -75,7 +77,7 @@
             this.settings_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settings_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.settings_button.Location = new System.Drawing.Point(979, 18);
-            this.settings_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.settings_button.Margin = new System.Windows.Forms.Padding(2);
             this.settings_button.Name = "settings_button";
             this.settings_button.Size = new System.Drawing.Size(19, 20);
             this.settings_button.TabIndex = 8;
@@ -91,7 +93,7 @@
             this.FriendRequest_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FriendRequest_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FriendRequest_button.Location = new System.Drawing.Point(790, 13);
-            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(2);
             this.FriendRequest_button.Name = "FriendRequest_button";
             this.FriendRequest_button.Size = new System.Drawing.Size(131, 30);
             this.FriendRequest_button.TabIndex = 7;
@@ -108,7 +110,7 @@
             this.home_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.home_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.home_button.Location = new System.Drawing.Point(681, 13);
-            this.home_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.home_button.Margin = new System.Windows.Forms.Padding(2);
             this.home_button.Name = "home_button";
             this.home_button.Size = new System.Drawing.Size(104, 30);
             this.home_button.TabIndex = 6;
@@ -121,12 +123,13 @@
             this.pictureBox1.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.nyc;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(540, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // user_button
             // 
@@ -138,12 +141,13 @@
             this.user_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.user_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.user_button.Location = new System.Drawing.Point(572, 13);
-            this.user_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.user_button.Margin = new System.Windows.Forms.Padding(2);
             this.user_button.Name = "user_button";
             this.user_button.Size = new System.Drawing.Size(104, 30);
             this.user_button.TabIndex = 1;
             this.user_button.Text = "UserName";
             this.user_button.UseVisualStyleBackColor = false;
+            this.user_button.Click += new System.EventHandler(this.user_button_Click);
             // 
             // SNHUbook_lbl
             // 
@@ -168,68 +172,30 @@
             // 
             // LogOutButton
             // 
-            this.LogOutButton.Location = new System.Drawing.Point(382, 183);
-            this.LogOutButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.LogOutButton.Location = new System.Drawing.Point(532, 357);
+            this.LogOutButton.Margin = new System.Windows.Forms.Padding(1);
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.Size = new System.Drawing.Size(131, 49);
             this.LogOutButton.TabIndex = 6;
             this.LogOutButton.Text = "Log Out";
             this.LogOutButton.UseVisualStyleBackColor = true;
-            // 
-            // ChangeEmailButton
-            // 
-            this.ChangeEmailButton.Location = new System.Drawing.Point(535, 183);
-            this.ChangeEmailButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.ChangeEmailButton.Name = "ChangeEmailButton";
-            this.ChangeEmailButton.Size = new System.Drawing.Size(131, 49);
-            this.ChangeEmailButton.TabIndex = 7;
-            this.ChangeEmailButton.Text = "Change Email";
-            this.ChangeEmailButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
             // 
             // ChangePasswordButton
             // 
-            this.ChangePasswordButton.Location = new System.Drawing.Point(382, 247);
-            this.ChangePasswordButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ChangePasswordButton.Location = new System.Drawing.Point(452, 207);
+            this.ChangePasswordButton.Margin = new System.Windows.Forms.Padding(1);
             this.ChangePasswordButton.Name = "ChangePasswordButton";
             this.ChangePasswordButton.Size = new System.Drawing.Size(131, 49);
             this.ChangePasswordButton.TabIndex = 8;
             this.ChangePasswordButton.Text = "Change Password";
             this.ChangePasswordButton.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(535, 247);
-            this.button4.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(131, 49);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(382, 313);
-            this.button5.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(131, 49);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(535, 313);
-            this.button6.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(131, 49);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.ChangePasswordButton.Click += new System.EventHandler(this.ChangePasswordButton_Click);
             // 
             // Return
             // 
-            this.Return.Location = new System.Drawing.Point(459, 381);
-            this.Return.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Return.Location = new System.Drawing.Point(373, 357);
+            this.Return.Margin = new System.Windows.Forms.Padding(1);
             this.Return.Name = "Return";
             this.Return.Size = new System.Drawing.Size(131, 49);
             this.Return.TabIndex = 12;
@@ -237,26 +203,88 @@
             this.Return.UseVisualStyleBackColor = true;
             this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.Location = new System.Drawing.Point(498, 272);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(133, 20);
+            this.passwordTextBox.TabIndex = 13;
+            this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
+            // 
+            // retypeTextBox
+            // 
+            this.retypeTextBox.Location = new System.Drawing.Point(498, 309);
+            this.retypeTextBox.Name = "retypeTextBox";
+            this.retypeTextBox.Size = new System.Drawing.Size(133, 20);
+            this.retypeTextBox.TabIndex = 14;
+            this.retypeTextBox.TextChanged += new System.EventHandler(this.retypeTextBox_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(370, 272);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 16);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "New Password:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(316, 309);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(168, 16);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Retype New Password:";
+            // 
+            // invalid
+            // 
+            this.invalid.AutoSize = true;
+            this.invalid.ForeColor = System.Drawing.Color.Red;
+            this.invalid.Location = new System.Drawing.Point(495, 257);
+            this.invalid.Name = "invalid";
+            this.invalid.Size = new System.Drawing.Size(96, 13);
+            this.invalid.TabIndex = 17;
+            this.invalid.Text = "Password is invalid";
+            this.invalid.Visible = false;
+            // 
+            // pwDoesNotMatch
+            // 
+            this.pwDoesNotMatch.AutoSize = true;
+            this.pwDoesNotMatch.ForeColor = System.Drawing.Color.Red;
+            this.pwDoesNotMatch.Location = new System.Drawing.Point(495, 295);
+            this.pwDoesNotMatch.Name = "pwDoesNotMatch";
+            this.pwDoesNotMatch.Size = new System.Drawing.Size(128, 13);
+            this.pwDoesNotMatch.TabIndex = 18;
+            this.pwDoesNotMatch.Text = "Passwords Do Not Match";
+            this.pwDoesNotMatch.Visible = false;
+            this.pwDoesNotMatch.Click += new System.EventHandler(this.pwDoesNotMatch_Click);
+            // 
             // SettingsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 501);
+            this.Controls.Add(this.pwDoesNotMatch);
+            this.Controls.Add(this.invalid);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.retypeTextBox);
+            this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.Return);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.ChangePasswordButton);
-            this.Controls.Add(this.ChangeEmailButton);
             this.Controls.Add(this.LogOutButton);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "SettingsPage";
             this.Text = "SettingsPage";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -271,11 +299,13 @@
         private System.Windows.Forms.Label SNHUbook_lbl;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button LogOutButton;
-        private System.Windows.Forms.Button ChangeEmailButton;
         private System.Windows.Forms.Button ChangePasswordButton;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button Return;
+        private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.TextBox retypeTextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label invalid;
+        private System.Windows.Forms.Label pwDoesNotMatch;
     }
 }
