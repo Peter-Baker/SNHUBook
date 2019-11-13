@@ -22,6 +22,13 @@ namespace WindowsFormsApp7
             this.textboxE = email;
             this.textboxP = password;
         }
+        public signup()
+        {
+        }
+        public signup(string password)
+        {
+            this.textboxP = password;
+        }
 
         WelcomePage a = new WelcomePage();
 
