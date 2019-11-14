@@ -23,10 +23,13 @@ namespace WindowsFormsApp7
             pictureBox1.BackgroundImage = myimage;
             user_button.Text = MySQLFunctions.getName(email);
             ChangePasswordPanel.Visible = false;
+            LogoutPanel.Visible = false;
         }
         public SettingsPage()
         {
             InitializeComponent();
+            ChangePasswordPanel.Visible = false;
+            LogoutPanel.Visible = false;
         }
         private void Return_Click(object sender, EventArgs e)
         {
@@ -128,11 +131,13 @@ namespace WindowsFormsApp7
 
         private void ChangePasswordOpener_Click(object sender, EventArgs e)
         {
+            if(!LogoutPanel.Visible)
             ChangePasswordPanel.Visible = true;
         }
 
         private void CancellogoutButton_Click(object sender, EventArgs e)
         {
+            if(!ChangePasswordPanel.Visible)
             LogoutPanel.Visible = false;
         }
 
