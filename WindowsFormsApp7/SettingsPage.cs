@@ -22,38 +22,47 @@ namespace WindowsFormsApp7
             Image myimage = new Bitmap(MySQLFunctions.getProfileImage(email));
             pictureBox1.BackgroundImage = myimage;
             user_button.Text = MySQLFunctions.getName(email);
+            ChangePasswordPanel.Visible = false;
+            LogoutPanel.Visible = false;
         }
-
+        public SettingsPage()
+        {
+            InitializeComponent();
+            ChangePasswordPanel.Visible = false;
+            LogoutPanel.Visible = false;
+        }
         private void Return_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            HomePage a = new HomePage(email);
-            a.ShowDialog();
-            this.Close();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
             switch (returnform)
             {
                 case 0:
+                    this.Hide();
                     HomePage a = new HomePage(email);
                     a.ShowDialog();
                     this.Close();
                     break;
                 case 1:
+                    this.Hide();
                     AccountPage b = new AccountPage(email);
                     b.ShowDialog();
                     this.Close();
                     break;
                 default:
+                    this.Hide();
                     HomePage c = new HomePage(email);
                     c.ShowDialog();
                     this.Close();
                     break;
-                    
+
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomePage a = new HomePage(email);
+            a.ShowDialog();
+            this.Close();
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)
@@ -113,6 +122,34 @@ namespace WindowsFormsApp7
         private void user_button_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ChangeLogoutOpener_Click(object sender, EventArgs e)
+        {
+            if (!ChangePasswordPanel.Visible)
+            {
+                LogoutPanel.Visible = true;
+            }
+        }
+
+        private void ChangePasswordOpener_Click(object sender, EventArgs e)
+        {
+            if(!LogoutPanel.Visible)
+            {
+                ChangePasswordPanel.Visible = true;
+
+            }
+        }
+        private void CancellogoutButton_Click(object sender, EventArgs e)
+        {
+         
+                LogoutPanel.Visible = false; 
+            
+        }
+
+        private void PasswordCancel_Click(object sender, EventArgs e)
+        {
+            ChangePasswordPanel.Visible = false;
         }
     }
 }
