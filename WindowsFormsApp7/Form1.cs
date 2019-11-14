@@ -16,6 +16,7 @@ namespace WindowsFormsApp7
         public AccountPage(String email)
         {
             InitializeComponent();
+
             this.email = email;
             Image myimage = new Bitmap(MySQLFunctions.getProfileImage(email));
             pictureBox1.BackgroundImage = myimage;
@@ -26,7 +27,13 @@ namespace WindowsFormsApp7
 
         private void AccountPage_Load(object sender, EventArgs e)
         {
-            add_bio_pnl.Hide();
+            AddBio_Text.Hide();
+            Add_bn.Hide();
+            Cancel_bn.Hide();
+
+            hometown_text.Hide();
+            cancel_home_bn.Hide();
+            add_home_bn.Hide();
         }
 
         private void user_button_Click(object sender, EventArgs e)
@@ -47,7 +54,7 @@ namespace WindowsFormsApp7
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void settings_button_Click(object sender, EventArgs e)
@@ -59,41 +66,79 @@ namespace WindowsFormsApp7
 
         private void ProfilePicture_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
             this.Hide();
             AddProfileImage a = new AddProfileImage(email, true);
             a.ShowDialog();
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Bio_lbl.Text = add_bio;
-            this.add_bio_pnl.Hide();
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Bio_lbl_Click(object sender, EventArgs e)
         {
-            this.add_bio_pnl.Hide();
+
         }
 
         private void open_addbio_Click(object sender, EventArgs e)
         {
-            add_bio_pnl.Show();
+            AddBio_Text.Show();
+            Cancel_bn.Show();
+            Add_bn.Show();
         }
 
-        private void username_lbl_Click(object sender, EventArgs e)
+        private void Cancel_bn_Click(object sender, EventArgs e)
+        {
+            AddBio_Text.Hide();
+            Add_bn.Hide();
+            Cancel_bn.Hide();
+        }
+
+        private void AddBio_Text_TextChanged(object sender, EventArgs e)
+        {
+            add_bio = AddBio_Text.Text;
+        }
+
+        private void add_home_bn_Click(object sender, EventArgs e)
+        {
+            home_lbl.Text = hometown_text.Text;
+            add_home_bn.Hide();
+            cancel_home_bn.Hide();
+            hometown_text.Hide();
+        }
+
+        private void hometown_text_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void addbio_info_TextChanged(object sender, EventArgs e)
+        private void cancel_home_bn_Click(object sender, EventArgs e)
         {
-            addbio_info.Text = add_bio;
+            hometown_text.Hide();
+            cancel_home_bn.Hide();
+            add_home_bn.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            hometown_text.Show();
+            cancel_home_bn.Show();
+            add_home_bn.Show();
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void Add_bn_Click(object sender, EventArgs e)
+        {
+            Bio_lbl.Text = add_bio;
+            AddBio_Text.Hide();
+            Add_bn.Hide();
+            Cancel_bn.Hide();
         }
     }
 }

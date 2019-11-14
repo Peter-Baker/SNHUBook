@@ -47,7 +47,6 @@
             this.Messages_Button = new System.Windows.Forms.Button();
             this.Recent_Posts = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.post_text = new System.Windows.Forms.Label();
             this.date_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -318,26 +317,13 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel4.Controls.Add(this.post_text);
             this.panel4.Controls.Add(this.date_lbl);
             this.panel4.Location = new System.Drawing.Point(209, 411);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(973, 170);
             this.panel4.TabIndex = 5;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint_1);
-            // 
-            // post_text
-            // 
-            this.post_text.AutoSize = true;
-            this.post_text.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.post_text.ForeColor = System.Drawing.SystemColors.Window;
-            this.post_text.Location = new System.Drawing.Point(39, 55);
-            this.post_text.Name = "post_text";
-            this.post_text.Size = new System.Drawing.Size(17, 25);
-            this.post_text.TabIndex = 2;
-            this.post_text.Text = "l";
-            this.post_text.Click += new System.EventHandler(this.post_text_Click);
             // 
             // date_lbl
             // 
@@ -401,6 +387,5 @@
         private System.Windows.Forms.Button Submit_post_button;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label date_lbl;
-        private System.Windows.Forms.Label post_text;
     }
 }

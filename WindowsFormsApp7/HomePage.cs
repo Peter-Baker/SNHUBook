@@ -12,9 +12,11 @@ namespace WindowsFormsApp7
 {
     public partial class HomePage : Form
     {
-        int PanelLocation = 411;
+        int PanelLocation = 55;
+        int number = 0;
         string post;
         string email;
+        //private Label post_lbl = new Label();
         
         public HomePage()
         {
@@ -97,14 +99,21 @@ namespace WindowsFormsApp7
 
         private void Submit_post_button_Click(object sender, EventArgs e)
         {
-            Panel newPanel = new Panel();
-            newPanel.Size = new System.Drawing.Size(973, 170);
-            newPanel.Location = new System.Drawing.Point(209, PanelLocation);
-            this.Controls.Add(newPanel);
-            PanelLocation += 60;
-            newPanel.Show();
-            /*post_text.Text = post;
-            panel4.Show();*/
+            DateTime date = DateTime.Now;
+            date_lbl.Text = date.ToString().Substring(0,10);
+
+            Label post_lbl = new Label();
+            post_lbl.Location = new System.Drawing.Point(39, PanelLocation);
+            post_lbl.Name = "post_lbl" + number;
+            post_lbl.ForeColor = System.Drawing.SystemColors.Window;
+            post_lbl.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            post_lbl.Text = textBox1.Text;
+            panel4.Controls.Add(post_lbl);
+
+            date_lbl.Show();
+            panel4.Show();
+            post_lbl.Show();
+            number++;
         }
 
         private void date_lbl_Click(object sender, EventArgs e)
@@ -114,7 +123,7 @@ namespace WindowsFormsApp7
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            post = textBox1.Text;
+            //post = textBox1.Text;
         }
 
         private void settings_button_Click(object sender, EventArgs e)
