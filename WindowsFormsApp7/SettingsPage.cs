@@ -126,19 +126,25 @@ namespace WindowsFormsApp7
 
         private void ChangeLogoutOpener_Click(object sender, EventArgs e)
         {
-            LogoutPanel.Visible = true;
+            if (!ChangePasswordPanel.Visible)
+            {
+                LogoutPanel.Visible = true;
+            }
         }
 
         private void ChangePasswordOpener_Click(object sender, EventArgs e)
         {
             if(!LogoutPanel.Visible)
-            ChangePasswordPanel.Visible = true;
-        }
+            {
+                ChangePasswordPanel.Visible = true;
 
+            }
+        }
         private void CancellogoutButton_Click(object sender, EventArgs e)
         {
-            if(!ChangePasswordPanel.Visible)
-            LogoutPanel.Visible = false;
+         
+                LogoutPanel.Visible = false; 
+            
         }
 
         private void PasswordCancel_Click(object sender, EventArgs e)
