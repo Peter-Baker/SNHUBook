@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.settings_button = new System.Windows.Forms.Button();
             this.FriendRequest_button = new System.Windows.Forms.Button();
             this.home_button = new System.Windows.Forms.Button();
             this.user_button = new System.Windows.Forms.Button();
@@ -48,6 +47,7 @@
             this.Biography = new System.Windows.Forms.Label();
             this.username_lbl = new System.Windows.Forms.Label();
             this.ProfilePicture = new System.Windows.Forms.PictureBox();
+            this.settings_button = new System.Windows.Forms.Button();
             this.CoverPicture = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -70,25 +70,6 @@
             this.panel2.Size = new System.Drawing.Size(1024, 43);
             this.panel2.TabIndex = 4;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // settings_button
-            // 
-            this.settings_button.BackColor = System.Drawing.Color.Transparent;
-            this.settings_button.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.setting_icon;
-            this.settings_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.settings_button.FlatAppearance.BorderSize = 0;
-            this.settings_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
-            this.settings_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
-            this.settings_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settings_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settings_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.settings_button.Location = new System.Drawing.Point(977, 20);
-            this.settings_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.settings_button.Name = "settings_button";
-            this.settings_button.Size = new System.Drawing.Size(19, 20);
-            this.settings_button.TabIndex = 8;
-            this.settings_button.UseVisualStyleBackColor = false;
-            this.settings_button.Click += new System.EventHandler(this.settings_button_Click);
             // 
             // FriendRequest_button
             // 
@@ -330,6 +311,25 @@
             this.ProfilePicture.TabStop = false;
             this.ProfilePicture.Click += new System.EventHandler(this.ProfilePicture_Click);
             // 
+            // settings_button
+            // 
+            this.settings_button.BackColor = System.Drawing.Color.Transparent;
+            this.settings_button.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.setting_icon;
+            this.settings_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.settings_button.FlatAppearance.BorderSize = 0;
+            this.settings_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.settings_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.settings_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settings_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settings_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.settings_button.Location = new System.Drawing.Point(977, 20);
+            this.settings_button.Margin = new System.Windows.Forms.Padding(2);
+            this.settings_button.Name = "settings_button";
+            this.settings_button.Size = new System.Drawing.Size(19, 20);
+            this.settings_button.TabIndex = 8;
+            this.settings_button.UseVisualStyleBackColor = false;
+            this.settings_button.Click += new System.EventHandler(this.settings_button_Click);
+            // 
             // CoverPicture
             // 
             this.CoverPicture.BackgroundImage = global::WindowsFormsApp7.Properties.Resources._10759301728_IMG_9920;
@@ -340,6 +340,7 @@
             this.CoverPicture.Size = new System.Drawing.Size(1024, 397);
             this.CoverPicture.TabIndex = 5;
             this.CoverPicture.TabStop = false;
+            this.CoverPicture.Click += new System.EventHandler(this.CoverPicture_Click);
             // 
             // AccountPage
             // 

@@ -157,6 +157,39 @@ namespace WindowsFormsApp7
             return pathForResources + storedProfPath;
         }
 
+        public static string getBackgroundImage(string email) //Returns entire path
+        {
+
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT backgroundImage_path FROM accounts WHERE email LIKE '{email}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string storedProfPath = string.Empty;
+
+
+            while (dr.Read())
+            {
+                storedProfPath = dr.GetString(0);
+                Console.WriteLine(storedProfPath);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+
+            return pathForResources + storedProfPath;
+        }
+
         public static void changePassword(string email, string password)
         {
             SQLCommand($"UPDATE accounts set Password = '{password}' where email = '{email}';");

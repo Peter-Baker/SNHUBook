@@ -24,6 +24,8 @@ namespace WindowsFormsApp7
             username_lbl.Text = MySQLFunctions.getName(email);
             Bio_lbl.Text = MySQLFunctions.getBio(email);
             home_lbl.Text = MySQLFunctions.getHome(email);
+            Image backImage = new Bitmap(MySQLFunctions.getBackgroundImage(email));
+            CoverPicture.BackgroundImage = backImage;
         }
 
         private void AccountPage_Load(object sender, EventArgs e)
@@ -147,6 +149,14 @@ namespace WindowsFormsApp7
             hometown_text.Show();
             cancel_home_bn.Show();
             add_home_bn.Show();
+        }
+
+        private void CoverPicture_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddBackground a = new AddBackground(email);
+            a.ShowDialog();
+            this.Close();
         }
 
         private void Add_bn_Click(object sender, EventArgs e)
