@@ -22,6 +22,8 @@ namespace WindowsFormsApp7
             ProfilePicture.BackgroundImage = myimage;
             user_button.Text = MySQLFunctions.getName(email);
             username_lbl.Text = MySQLFunctions.getName(email);
+            Bio_lbl.Text = MySQLFunctions.getBio(email);
+            home_lbl.Text = MySQLFunctions.getHome(email);
         }
 
         private void AccountPage_Load(object sender, EventArgs e)
@@ -106,6 +108,7 @@ namespace WindowsFormsApp7
             add_home_bn.Hide();
             cancel_home_bn.Hide();
             hometown_text.Hide();
+            MySQLFunctions.SQLCommand($"UPDATE accounts SET Home='{hometown_text.Text}' where Email = '{email}'");
         }
 
         private void hometown_text_TextChanged(object sender, EventArgs e)
@@ -152,6 +155,7 @@ namespace WindowsFormsApp7
             AddBio_Text.Hide();
             Add_bn.Hide();
             Cancel_bn.Hide();
+            MySQLFunctions.SQLCommand($"UPDATE accounts SET Bio='{add_bio}' where Email = '{email}'");
         }
     }
 }

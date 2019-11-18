@@ -213,5 +213,67 @@ namespace WindowsFormsApp7
 
             return firstName + " " + lastName;
         }
+
+        public static string getBio(string email)
+        {
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT Bio FROM accounts WHERE email LIKE '{email}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string bio = string.Empty;
+
+
+            while (dr.Read())
+            {
+                bio = dr.GetString(0);
+                Console.WriteLine(bio);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+            return bio;
+        }
+
+        public static string getHome(string email)
+        {
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT Home FROM accounts WHERE email LIKE '{email}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string home = string.Empty;
+
+
+            while (dr.Read())
+            {
+                home = dr.GetString(0);
+                Console.WriteLine(home);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+            return home;
+        }
     }
 }
