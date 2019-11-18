@@ -44,7 +44,7 @@
             // 
             this.selectImageText.AutoSize = true;
             this.selectImageText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectImageText.Location = new System.Drawing.Point(231, 56);
+            this.selectImageText.Location = new System.Drawing.Point(294, 78);
             this.selectImageText.Name = "selectImageText";
             this.selectImageText.Size = new System.Drawing.Size(320, 31);
             this.selectImageText.TabIndex = 0;
@@ -64,7 +64,7 @@
             // profileImageFour
             // 
             this.profileImageFour.Image = global::WindowsFormsApp7.Properties.Resources.FemaleAvatar2;
-            this.profileImageFour.Location = new System.Drawing.Point(648, 116);
+            this.profileImageFour.Location = new System.Drawing.Point(711, 138);
             this.profileImageFour.Name = "profileImageFour";
             this.profileImageFour.Size = new System.Drawing.Size(140, 140);
             this.profileImageFour.TabIndex = 4;
@@ -74,7 +74,7 @@
             // profileImageThree
             // 
             this.profileImageThree.Image = global::WindowsFormsApp7.Properties.Resources.FemaleAvatar1;
-            this.profileImageThree.Location = new System.Drawing.Point(425, 116);
+            this.profileImageThree.Location = new System.Drawing.Point(488, 138);
             this.profileImageThree.Name = "profileImageThree";
             this.profileImageThree.Size = new System.Drawing.Size(140, 140);
             this.profileImageThree.TabIndex = 3;
@@ -84,7 +84,7 @@
             // profileImageTwo
             // 
             this.profileImageTwo.Image = global::WindowsFormsApp7.Properties.Resources.MaleAvatar2;
-            this.profileImageTwo.Location = new System.Drawing.Point(210, 116);
+            this.profileImageTwo.Location = new System.Drawing.Point(273, 138);
             this.profileImageTwo.Name = "profileImageTwo";
             this.profileImageTwo.Size = new System.Drawing.Size(140, 140);
             this.profileImageTwo.TabIndex = 2;
@@ -94,19 +94,30 @@
             // profileImageOne
             // 
             this.profileImageOne.Image = global::WindowsFormsApp7.Properties.Resources.MaleAvatar1;
-            this.profileImageOne.Location = new System.Drawing.Point(12, 116);
+            this.profileImageOne.Location = new System.Drawing.Point(75, 138);
             this.profileImageOne.Name = "profileImageOne";
             this.profileImageOne.Size = new System.Drawing.Size(140, 140);
             this.profileImageOne.TabIndex = 1;
             this.profileImageOne.TabStop = false;
             this.profileImageOne.Click += new System.EventHandler(this.profileImageOne_Click);
             // 
+            // CancelButtonProfilePhoto
+            // 
+            this.CancelButtonProfilePhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelButtonProfilePhoto.Location = new System.Drawing.Point(385, 314);
+            this.CancelButtonProfilePhoto.Name = "CancelButtonProfilePhoto";
+            this.CancelButtonProfilePhoto.Size = new System.Drawing.Size(122, 49);
+            this.CancelButtonProfilePhoto.TabIndex = 5;
+            this.CancelButtonProfilePhoto.Text = "Cancel";
+            this.CancelButtonProfilePhoto.UseVisualStyleBackColor = true;
+            this.CancelButtonProfilePhoto.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
             // AddProfileImage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(934, 491);
             this.Controls.Add(this.CancelButtonProfilePhoto);
             this.Controls.Add(this.profileImageFour);
             this.Controls.Add(this.profileImageThree);

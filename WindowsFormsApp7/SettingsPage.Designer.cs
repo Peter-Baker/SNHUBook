@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.settings_button = new System.Windows.Forms.Button();
             this.FriendRequest_button = new System.Windows.Forms.Button();
             this.home_button = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.user_button = new System.Windows.Forms.Button();
             this.SNHUbook_lbl = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -52,10 +50,12 @@
             this.CancellogoutButton = new System.Windows.Forms.Button();
             this.ChangePasswordOpener = new System.Windows.Forms.Button();
             this.ChangeLogoutOpener = new System.Windows.Forms.Button();
+            this.settings_button = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ChangePasswordPanel.SuspendLayout();
             this.LogoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -69,28 +69,10 @@
             this.panel2.Controls.Add(this.SNHUbook_lbl);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(3, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(2731, 103);
             this.panel2.TabIndex = 5;
-            // 
-            // settings_button
-            // 
-            this.settings_button.BackColor = System.Drawing.Color.Transparent;
-            this.settings_button.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.setting_icon;
-            this.settings_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.settings_button.FlatAppearance.BorderSize = 0;
-            this.settings_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
-            this.settings_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
-            this.settings_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settings_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settings_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.settings_button.Location = new System.Drawing.Point(2611, 43);
-            this.settings_button.Margin = new System.Windows.Forms.Padding(5);
-            this.settings_button.Name = "settings_button";
-            this.settings_button.Size = new System.Drawing.Size(51, 48);
-            this.settings_button.TabIndex = 8;
-            this.settings_button.UseVisualStyleBackColor = false;
             // 
             // FriendRequest_button
             // 
@@ -102,7 +84,7 @@
             this.FriendRequest_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FriendRequest_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FriendRequest_button.Location = new System.Drawing.Point(2107, 31);
-            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(5);
+            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.FriendRequest_button.Name = "FriendRequest_button";
             this.FriendRequest_button.Size = new System.Drawing.Size(349, 72);
             this.FriendRequest_button.TabIndex = 7;
@@ -119,26 +101,12 @@
             this.home_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.home_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.home_button.Location = new System.Drawing.Point(1816, 31);
-            this.home_button.Margin = new System.Windows.Forms.Padding(5);
+            this.home_button.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.home_button.Name = "home_button";
             this.home_button.Size = new System.Drawing.Size(277, 72);
             this.home_button.TabIndex = 6;
             this.home_button.Text = "Home";
             this.home_button.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pictureBox1.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.nyc;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(1440, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 72);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // user_button
             // 
@@ -150,7 +118,7 @@
             this.user_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.user_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.user_button.Location = new System.Drawing.Point(1525, 31);
-            this.user_button.Margin = new System.Windows.Forms.Padding(5);
+            this.user_button.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.user_button.Name = "user_button";
             this.user_button.Size = new System.Drawing.Size(277, 72);
             this.user_button.TabIndex = 1;
@@ -192,7 +160,7 @@
             // 
             // ChangePasswordButton
             // 
-            this.ChangePasswordButton.Location = new System.Drawing.Point(526, 212);
+            this.ChangePasswordButton.Location = new System.Drawing.Point(525, 212);
             this.ChangePasswordButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ChangePasswordButton.Name = "ChangePasswordButton";
             this.ChangePasswordButton.Size = new System.Drawing.Size(227, 81);
@@ -203,7 +171,7 @@
             // 
             // Return
             // 
-            this.Return.Location = new System.Drawing.Point(1026, 579);
+            this.Return.Location = new System.Drawing.Point(1027, 579);
             this.Return.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Return.Name = "Return";
             this.Return.Size = new System.Drawing.Size(349, 117);
@@ -214,7 +182,7 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(528, 49);
+            this.passwordTextBox.Location = new System.Drawing.Point(528, 50);
             this.passwordTextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(348, 38);
@@ -223,7 +191,7 @@
             // 
             // retypeTextBox
             // 
-            this.retypeTextBox.Location = new System.Drawing.Point(528, 137);
+            this.retypeTextBox.Location = new System.Drawing.Point(528, 136);
             this.retypeTextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.retypeTextBox.Name = "retypeTextBox";
             this.retypeTextBox.Size = new System.Drawing.Size(348, 38);
@@ -234,7 +202,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(187, 49);
+            this.label1.Location = new System.Drawing.Point(187, 50);
             this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(259, 38);
@@ -245,7 +213,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(67, 137);
+            this.label2.Location = new System.Drawing.Point(67, 136);
             this.label2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(379, 38);
@@ -256,7 +224,7 @@
             // 
             this.invalid.AutoSize = true;
             this.invalid.ForeColor = System.Drawing.Color.Red;
-            this.invalid.Location = new System.Drawing.Point(520, 13);
+            this.invalid.Location = new System.Drawing.Point(520, 12);
             this.invalid.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.invalid.Name = "invalid";
             this.invalid.Size = new System.Drawing.Size(257, 32);
@@ -287,14 +255,15 @@
             this.ChangePasswordPanel.Controls.Add(this.invalid);
             this.ChangePasswordPanel.Controls.Add(this.label1);
             this.ChangePasswordPanel.Controls.Add(this.label2);
-            this.ChangePasswordPanel.Location = new System.Drawing.Point(1503, 177);
+            this.ChangePasswordPanel.Location = new System.Drawing.Point(1504, 176);
+            this.ChangePasswordPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ChangePasswordPanel.Name = "ChangePasswordPanel";
-            this.ChangePasswordPanel.Size = new System.Drawing.Size(943, 376);
+            this.ChangePasswordPanel.Size = new System.Drawing.Size(944, 377);
             this.ChangePasswordPanel.TabIndex = 19;
             // 
             // PasswordCancel
             // 
-            this.PasswordCancel.Location = new System.Drawing.Point(194, 212);
+            this.PasswordCancel.Location = new System.Drawing.Point(195, 212);
             this.PasswordCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PasswordCancel.Name = "PasswordCancel";
             this.PasswordCancel.Size = new System.Drawing.Size(227, 81);
@@ -308,9 +277,10 @@
             this.LogoutPanel.Controls.Add(this.label3);
             this.LogoutPanel.Controls.Add(this.CancellogoutButton);
             this.LogoutPanel.Controls.Add(this.LogOutButton);
-            this.LogoutPanel.Location = new System.Drawing.Point(1503, 592);
+            this.LogoutPanel.Location = new System.Drawing.Point(1504, 591);
+            this.LogoutPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LogoutPanel.Name = "LogoutPanel";
-            this.LogoutPanel.Size = new System.Drawing.Size(943, 416);
+            this.LogoutPanel.Size = new System.Drawing.Size(944, 415);
             this.LogoutPanel.TabIndex = 20;
             // 
             // label3
@@ -326,7 +296,7 @@
             // 
             // CancellogoutButton
             // 
-            this.CancellogoutButton.Location = new System.Drawing.Point(218, 200);
+            this.CancellogoutButton.Location = new System.Drawing.Point(219, 200);
             this.CancellogoutButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CancellogoutButton.Name = "CancellogoutButton";
             this.CancellogoutButton.Size = new System.Drawing.Size(227, 81);
@@ -337,7 +307,7 @@
             // 
             // ChangePasswordOpener
             // 
-            this.ChangePasswordOpener.Location = new System.Drawing.Point(1026, 214);
+            this.ChangePasswordOpener.Location = new System.Drawing.Point(1027, 215);
             this.ChangePasswordOpener.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ChangePasswordOpener.Name = "ChangePasswordOpener";
             this.ChangePasswordOpener.Size = new System.Drawing.Size(349, 117);
@@ -348,7 +318,7 @@
             // 
             // ChangeLogoutOpener
             // 
-            this.ChangeLogoutOpener.Location = new System.Drawing.Point(1026, 395);
+            this.ChangeLogoutOpener.Location = new System.Drawing.Point(1027, 396);
             this.ChangeLogoutOpener.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ChangeLogoutOpener.Name = "ChangeLogoutOpener";
             this.ChangeLogoutOpener.Size = new System.Drawing.Size(349, 117);
@@ -357,11 +327,43 @@
             this.ChangeLogoutOpener.UseVisualStyleBackColor = true;
             this.ChangeLogoutOpener.Click += new System.EventHandler(this.ChangeLogoutOpener_Click);
             // 
+            // settings_button
+            // 
+            this.settings_button.BackColor = System.Drawing.Color.Transparent;
+            this.settings_button.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.setting_icon;
+            this.settings_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.settings_button.FlatAppearance.BorderSize = 0;
+            this.settings_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.settings_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.settings_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settings_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settings_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.settings_button.Location = new System.Drawing.Point(2611, 43);
+            this.settings_button.Margin = new System.Windows.Forms.Padding(5);
+            this.settings_button.Name = "settings_button";
+            this.settings_button.Size = new System.Drawing.Size(51, 48);
+            this.settings_button.TabIndex = 8;
+            this.settings_button.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pictureBox1.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.nyc;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(1440, 17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 72);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // SettingsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2619, 1195);
+            this.ClientSize = new System.Drawing.Size(2536, 1054);
             this.Controls.Add(this.ChangeLogoutOpener);
             this.Controls.Add(this.ChangePasswordOpener);
             this.Controls.Add(this.LogoutPanel);
@@ -373,11 +375,11 @@
             this.Text = "SettingsPage";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ChangePasswordPanel.ResumeLayout(false);
             this.ChangePasswordPanel.PerformLayout();
             this.LogoutPanel.ResumeLayout(false);
             this.LogoutPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
