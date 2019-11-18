@@ -14,7 +14,6 @@ namespace WindowsFormsApp7
     {
         int PanelLocation = 55;
         int number = 0;
-        string post;
         string email;
         //private Label post_lbl = new Label();
         

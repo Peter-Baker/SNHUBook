@@ -19,7 +19,6 @@ namespace WindowsFormsApp7
 
             this.email = email;
             Image myimage = new Bitmap(MySQLFunctions.getProfileImage(email));
-            pictureBox1.BackgroundImage = myimage;
             ProfilePicture.BackgroundImage = myimage;
             user_button.Text = MySQLFunctions.getName(email);
             username_lbl.Text = MySQLFunctions.getName(email);
@@ -131,6 +130,20 @@ namespace WindowsFormsApp7
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
 
+        }
+
+        private void Biography_Click(object sender, EventArgs e)
+        {
+            AddBio_Text.Show();
+            Cancel_bn.Show();
+            Add_bn.Show();
+        }
+
+        private void hometown_lbl_Click(object sender, EventArgs e)
+        {
+            hometown_text.Show();
+            cancel_home_bn.Show();
+            add_home_bn.Show();
         }
 
         private void Add_bn_Click(object sender, EventArgs e)

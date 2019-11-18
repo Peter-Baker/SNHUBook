@@ -10,9 +10,9 @@ namespace WindowsFormsApp7
 {
     class MySQLFunctions
     {
-        public const string MYSQLPassword = "Caelarules1!"; //Enter your own password here to log into your own database
+        public const string MYSQLPassword = "Sword144"; //Enter your own password here to log into your own database
 
-        public const string pathForResources = @"F:\GitHub\CS203SNHUBook\WindowsFormsApp7\Resources\"; //Enter in your path of the resource folder here
+        public const string pathForResources = @"C:\Users\peter\Desktop\WindowsFormsApp7\WindowsFormsApp7\Resources\"; //Enter in your path of the resource folder here
 
         public MySQLFunctions()
         {
