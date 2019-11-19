@@ -19,10 +19,13 @@ namespace WindowsFormsApp7
 
             this.email = email;
             Image myimage = new Bitmap(MySQLFunctions.getProfileImage(email));
-            pictureBox1.BackgroundImage = myimage;
             ProfilePicture.BackgroundImage = myimage;
             user_button.Text = MySQLFunctions.getName(email);
             username_lbl.Text = MySQLFunctions.getName(email);
+            Bio_lbl.Text = MySQLFunctions.getBio(email);
+            home_lbl.Text = MySQLFunctions.getHome(email);
+            Image backImage = new Bitmap(MySQLFunctions.getBackgroundImage(email));
+            CoverPicture.BackgroundImage = backImage;
         }
 
         private void AccountPage_Load(object sender, EventArgs e)
@@ -107,6 +110,7 @@ namespace WindowsFormsApp7
             add_home_bn.Hide();
             cancel_home_bn.Hide();
             hometown_text.Hide();
+            MySQLFunctions.SQLCommand($"UPDATE accounts SET Home='{hometown_text.Text}' where Email = '{email}'");
         }
 
         private void hometown_text_TextChanged(object sender, EventArgs e)
@@ -133,12 +137,35 @@ namespace WindowsFormsApp7
 
         }
 
+        private void Biography_Click(object sender, EventArgs e)
+        {
+            AddBio_Text.Show();
+            Cancel_bn.Show();
+            Add_bn.Show();
+        }
+
+        private void hometown_lbl_Click(object sender, EventArgs e)
+        {
+            hometown_text.Show();
+            cancel_home_bn.Show();
+            add_home_bn.Show();
+        }
+
+        private void CoverPicture_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddBackground a = new AddBackground(email);
+            a.ShowDialog();
+            this.Close();
+        }
+
         private void Add_bn_Click(object sender, EventArgs e)
         {
             Bio_lbl.Text = add_bio;
             AddBio_Text.Hide();
             Add_bn.Hide();
             Cancel_bn.Hide();
+            MySQLFunctions.SQLCommand($"UPDATE accounts SET Bio='{add_bio}' where Email = '{email}'");
         }
     }
 }

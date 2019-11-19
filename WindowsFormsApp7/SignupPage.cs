@@ -90,11 +90,11 @@ namespace WindowsFormsApp7
                     else
                     {
 
-                    string tempString = "INSERT INTO accounts (FirstName, LastName, Email, Password, profImage_path, backgroundImage_path) Values('";
+                    string tempString = "INSERT INTO accounts (FirstName, LastName, Email, Password, profImage_path, backgroundImage_path, Bio, Home) Values('";
                     tempString = tempString + firstName + "', '";
                     tempString = tempString + lastName + "', '";
                     tempString = tempString + email + "', '";
-                    tempString = tempString + password + "','nyc.jpg','NULL')";
+                    tempString = tempString + password + "','nyc.jpg','10759301728_IMG_9920.jpg', 'NULL', 'NULL')";
 
                     MySQLFunctions.SQLCommand(tempString);
 

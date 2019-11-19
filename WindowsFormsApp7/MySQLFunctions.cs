@@ -10,9 +10,9 @@ namespace WindowsFormsApp7
 {
     class MySQLFunctions
     {
-        public const string MYSQLPassword = "Caelarules1!"; //Enter your own password here to log into your own database
+        public const string MYSQLPassword = "Sword144"; //Enter your own password here to log into your own database
 
-        public const string pathForResources = @"F:\GitHub\CS203SNHUBook\WindowsFormsApp7\Resources\"; //Enter in your path of the resource folder here
+        public const string pathForResources = @"C:\Users\peter\Desktop\WindowsFormsApp7\WindowsFormsApp7\Resources\"; //Enter in your path of the resource folder here
 
         public MySQLFunctions()
         {
@@ -157,6 +157,39 @@ namespace WindowsFormsApp7
             return pathForResources + storedProfPath;
         }
 
+        public static string getBackgroundImage(string email) //Returns entire path
+        {
+
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT backgroundImage_path FROM accounts WHERE email LIKE '{email}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string storedProfPath = string.Empty;
+
+
+            while (dr.Read())
+            {
+                storedProfPath = dr.GetString(0);
+                Console.WriteLine(storedProfPath);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+
+            return pathForResources + storedProfPath;
+        }
+
         public static void changePassword(string email, string password)
         {
             SQLCommand($"UPDATE accounts set Password = '{password}' where email = '{email}';");
@@ -212,6 +245,68 @@ namespace WindowsFormsApp7
             cnn.Close();
 
             return firstName + " " + lastName;
+        }
+
+        public static string getBio(string email)
+        {
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT Bio FROM accounts WHERE email LIKE '{email}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string bio = string.Empty;
+
+
+            while (dr.Read())
+            {
+                bio = dr.GetString(0);
+                Console.WriteLine(bio);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+            return bio;
+        }
+
+        public static string getHome(string email)
+        {
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT Home FROM accounts WHERE email LIKE '{email}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string home = string.Empty;
+
+
+            while (dr.Read())
+            {
+                home = dr.GetString(0);
+                Console.WriteLine(home);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+            return home;
         }
     }
 }

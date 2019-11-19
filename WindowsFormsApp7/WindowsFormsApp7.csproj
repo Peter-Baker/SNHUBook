@@ -52,6 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddPost.cs" />
+    <Compile Include="AddBackground.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBackground.Designer.cs">
+      <DependentUpon>AddBackground.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddProfileImage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddBackground.resx">
+      <DependentUpon>AddBackground.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddProfileImage.resx">
       <DependentUpon>AddProfileImage.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +185,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\post.png" />
+    <None Include="Resources\Background2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background4.jpg" />
+    <None Include="Resources\Flower2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flower4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flowers1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flowers3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

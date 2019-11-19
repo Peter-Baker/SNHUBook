@@ -13,6 +13,8 @@ namespace WindowsFormsApp7
     public partial class HomePage : Form
     {
         private static int PanelLocation = 200;
+        int PanelLocation = 55;
+        int number = 0;
         string email;
         
         public HomePage()
