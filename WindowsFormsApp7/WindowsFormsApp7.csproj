@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPost.cs" />
     <Compile Include="AddProfileImage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +173,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FemaleAvatar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\post.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

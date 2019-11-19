@@ -12,11 +12,8 @@ namespace WindowsFormsApp7
 {
     public partial class HomePage : Form
     {
-        int PanelLocation = 55;
-        int number = 0;
-        string post;
+        private static int PanelLocation = 200;
         string email;
-        //private Label post_lbl = new Label();
         
         public HomePage()
         {
@@ -71,10 +68,10 @@ namespace WindowsFormsApp7
         private void HomePage_Load(object sender, EventArgs e)
         {
             panel4.Hide();
-            DateTime now = DateTime.Now;
+            /*DateTime now = DateTime.Now;
             string date = now.ToString();
             date = date.Substring(0, 9);
-            date_lbl.Text = ("Date: " + date);
+            date_lbl.Text = ("Date: " + date);*/
 
         }
 
@@ -99,21 +96,19 @@ namespace WindowsFormsApp7
 
         private void Submit_post_button_Click(object sender, EventArgs e)
         {
-            DateTime date = DateTime.Now;
-            date_lbl.Text = date.ToString().Substring(0,10);
+            AddPost a = new AddPost();
+            
+            a.post_lbl.Text = textBox1.Text;
+            a.post_lbl.Size = new System.Drawing.Size(700, 25);
 
-            Label post_lbl = new Label();
-            post_lbl.Location = new System.Drawing.Point(39, PanelLocation);
-            post_lbl.Name = "post_lbl" + number;
-            post_lbl.ForeColor = System.Drawing.SystemColors.Window;
-            post_lbl.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            post_lbl.Text = textBox1.Text;
-            panel4.Controls.Add(post_lbl);
+            this.Controls.Add(a.post_background);
+            a.post_background.Controls.Add(a.post_lbl);
+            a.post_background.Controls.Add(a.date_lbl);
 
-            date_lbl.Show();
-            panel4.Show();
-            post_lbl.Show();
-            number++;
+            a.post_lbl.Show();
+            a.date_lbl.Show();
+            a.post_background.Show();
+            PanelLocation += 100;
         }
 
         private void date_lbl_Click(object sender, EventArgs e)
@@ -123,7 +118,7 @@ namespace WindowsFormsApp7
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            //post = textBox1.Text;
+            
         }
 
         private void settings_button_Click(object sender, EventArgs e)
