@@ -14,6 +14,8 @@ namespace WindowsFormsApp7
     {
         private static int PanelLocation = 200;
         int number = 0;
+        //int PanelLocation = 55;
+        //int number = 0;
         string email;
         
         public HomePage()
