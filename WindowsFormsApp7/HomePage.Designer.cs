@@ -169,6 +169,7 @@
             this.settings_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.settings_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settings_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.settings_button.Image = global::WindowsFormsApp7.Properties.Resources.setting_icon;
             this.settings_button.Location = new System.Drawing.Point(2312, 43);
             this.settings_button.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.settings_button.Name = "settings_button";
@@ -279,7 +280,7 @@
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel4.Controls.Add(this.label1);
             this.panel4.Location = new System.Drawing.Point(418, 756);
-            this.panel4.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.panel4.Margin = new System.Windows.Forms.Padding(8);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1946, 260);
             this.panel4.TabIndex = 5;
