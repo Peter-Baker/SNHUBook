@@ -22,7 +22,28 @@ namespace WindowsFormsApp7
             InitializeComponent();
             this.email = email;
             this.isPersonalPage = isPersonalPage;
-          
+            Random num = new Random();
+            int r = num.Next(0, 3);
+            switch (r)
+            {
+                case 0:
+                    this.BackgroundImage = Properties.Resources.Flowers1;
+                    break;
+                case 1:
+                    this.BackgroundImage = Properties.Resources.Flower2;
+                    break;
+                case 2:
+                    this.BackgroundImage = Properties.Resources.Flowers3;
+                    break;
+                case 3:
+                    this.BackgroundImage = Properties.Resources.Flower4;
+                    break;
+                default:
+                    this.BackgroundImage = Properties.Resources.Flowers1;
+                    break;
+
+            }
+
         }
 
         public AddProfileImage() 
