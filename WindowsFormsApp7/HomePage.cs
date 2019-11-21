@@ -13,9 +13,6 @@ namespace WindowsFormsApp7
     public partial class HomePage : Form
     {
         private static int PanelLocation = 200;
-        int number = 0;
-        //int PanelLocation = 55;
-        //int number = 0;
         string email;
         
         public HomePage()
@@ -142,6 +139,16 @@ namespace WindowsFormsApp7
         }
 
         private void panel4_Paint_2(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void homepage_scrollbar_Scroll(object sender, ScrollEventArgs e)
         {
 
         }
