@@ -43,7 +43,6 @@
             this.user_button = new System.Windows.Forms.Button();
             this.SNHUbook_lbl = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.homepage_scrollbar = new System.Windows.Forms.VScrollBar();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -159,14 +158,18 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBox1.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.FemaleAvatar1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(625, 15);
+            this.pictureBox1.Image = global::WindowsFormsApp7.Properties.Resources.post_template;
+            this.pictureBox1.Location = new System.Drawing.Point(616, 13);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 31);
-            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.Size = new System.Drawing.Size(44, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // settings_button
             // 
@@ -223,19 +226,6 @@
             this.home_button.UseVisualStyleBackColor = false;
             this.home_button.Click += new System.EventHandler(this.home_button_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // user_button
             // 
             this.user_button.BackColor = System.Drawing.Color.Transparent;
@@ -275,16 +265,10 @@
             this.panel3.Size = new System.Drawing.Size(188, 903);
             this.panel3.TabIndex = 4;
             // 
-            // homepage_scrollbar
-            // 
-            this.homepage_scrollbar.Location = new System.Drawing.Point(1220, 0);
-            this.homepage_scrollbar.Name = "homepage_scrollbar";
-            this.homepage_scrollbar.Size = new System.Drawing.Size(28, 953);
-            this.homepage_scrollbar.TabIndex = 6;
-            // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.post_template;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel4.Location = new System.Drawing.Point(209, 390);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
@@ -308,9 +292,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1247, 953);
-            this.Controls.Add(this.homepage_scrollbar);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -345,7 +329,6 @@
         private System.Windows.Forms.Button settings_button;
         private System.Windows.Forms.Button Submit_post_button;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.VScrollBar homepage_scrollbar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
 

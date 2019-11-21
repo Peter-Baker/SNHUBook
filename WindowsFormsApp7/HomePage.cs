@@ -147,5 +147,10 @@ namespace WindowsFormsApp7
         {
             
         }
+
+        private void homepage_scrollbar_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
     }
 }
