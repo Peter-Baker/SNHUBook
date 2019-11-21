@@ -45,6 +45,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.homepage_scrollbar = new System.Windows.Forms.VScrollBar();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -222,6 +223,19 @@
             this.home_button.UseVisualStyleBackColor = false;
             this.home_button.Click += new System.EventHandler(this.home_button_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // user_button
             // 
             this.user_button.BackColor = System.Drawing.Color.Transparent;
@@ -279,6 +293,17 @@
             this.panel4.TabIndex = 5;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint_1);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(146, 145);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(505, 47);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "I want to see how this works";
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -322,5 +347,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.VScrollBar homepage_scrollbar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+
     }
 }
