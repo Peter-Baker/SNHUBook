@@ -46,10 +46,6 @@
             this.homepage_scrollbar = new System.Windows.Forms.VScrollBar();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -165,10 +161,6 @@
             // 
             // settings_button
             // 
-            this.settings_button.Location = new System.Drawing.Point(0, 0);
-            this.settings_button.Name = "settings_button";
-            this.settings_button.Size = new System.Drawing.Size(75, 23);
-            this.settings_button.TabIndex = 0;
             this.settings_button.BackColor = System.Drawing.Color.Transparent;
             this.settings_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.settings_button.FlatAppearance.BorderSize = 0;
@@ -226,12 +218,12 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(1214, 17);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(74, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
@@ -284,11 +276,6 @@
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(209, 399);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(973, 100);
-            this.panel4.TabIndex = 7;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint_2);
             this.panel4.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel4.Controls.Add(this.label1);
@@ -310,14 +297,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "I want to see how this works";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -337,9 +316,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -369,6 +345,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.VScrollBar homepage_scrollbar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+
     }
 }
