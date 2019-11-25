@@ -163,9 +163,8 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBox1.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.FemaleAvatar1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::WindowsFormsApp7.Properties.Resources.post_template;
-            this.pictureBox1.Location = new System.Drawing.Point(1240, 19);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(465, 8);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -237,8 +236,8 @@
             this.user_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.user_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.user_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.user_button.Location = new System.Drawing.Point(1332, 31);
-            this.user_button.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.user_button.Location = new System.Drawing.Point(489, 13);
+            this.user_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.user_button.Name = "user_button";
             this.user_button.Size = new System.Drawing.Size(104, 30);
             this.user_button.TabIndex = 1;
