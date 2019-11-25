@@ -77,6 +77,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="FriendRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FriendRequest.Designer.cs">
+      <DependentUpon>FriendRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="ImageFunctions.cs" />
     <Compile Include="MySQLFunctions.cs" />
     <Compile Include="SettingsPage.cs">
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FriendRequest.resx">
+      <DependentUpon>FriendRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsPage.resx">
       <DependentUpon>SettingsPage.cs</DependentUpon>
@@ -205,6 +214,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\post_template.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gradient.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

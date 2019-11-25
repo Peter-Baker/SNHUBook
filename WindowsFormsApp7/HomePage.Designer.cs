@@ -48,6 +48,7 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
@@ -58,11 +59,6 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(945, 132);
-            this.textBox1.Location = new System.Drawing.Point(10, 28);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(710, 108);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -79,10 +75,6 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(973, 223);
-            this.panel1.Location = new System.Drawing.Point(157, 122);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(730, 181);
             this.panel1.TabIndex = 2;
             // 
             // Submit_post_button
@@ -94,10 +86,6 @@
             this.Submit_post_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Submit_post_button.Name = "Submit_post_button";
             this.Submit_post_button.Size = new System.Drawing.Size(107, 36);
-            this.Submit_post_button.Location = new System.Drawing.Point(617, 141);
-            this.Submit_post_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Submit_post_button.Name = "Submit_post_button";
-            this.Submit_post_button.Size = new System.Drawing.Size(80, 29);
             this.Submit_post_button.TabIndex = 4;
             this.Submit_post_button.Text = "Submit";
             this.Submit_post_button.UseVisualStyleBackColor = false;
@@ -112,10 +100,6 @@
             this.Create_Post_lbl.Location = new System.Drawing.Point(15, 0);
             this.Create_Post_lbl.Name = "Create_Post_lbl";
             this.Create_Post_lbl.Size = new System.Drawing.Size(182, 36);
-            this.Create_Post_lbl.Location = new System.Drawing.Point(11, 0);
-            this.Create_Post_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Create_Post_lbl.Name = "Create_Post_lbl";
-            this.Create_Post_lbl.Size = new System.Drawing.Size(145, 28);
             this.Create_Post_lbl.TabIndex = 3;
             this.Create_Post_lbl.Text = "Create a Post";
             // 
@@ -128,10 +112,6 @@
             this.Check_In.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Check_In.Name = "Check_In";
             this.Check_In.Size = new System.Drawing.Size(107, 36);
-            this.Check_In.Location = new System.Drawing.Point(338, 141);
-            this.Check_In.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Check_In.Name = "Check_In";
-            this.Check_In.Size = new System.Drawing.Size(80, 29);
             this.Check_In.TabIndex = 2;
             this.Check_In.Text = "Check In";
             this.Check_In.UseVisualStyleBackColor = false;
@@ -145,10 +125,6 @@
             this.Tag_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tag_button.Name = "Tag_button";
             this.Tag_button.Size = new System.Drawing.Size(115, 36);
-            this.Tag_button.Location = new System.Drawing.Point(203, 141);
-            this.Tag_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Tag_button.Name = "Tag_button";
-            this.Tag_button.Size = new System.Drawing.Size(86, 29);
             this.Tag_button.TabIndex = 1;
             this.Tag_button.Text = "Tag Friends";
             this.Tag_button.UseVisualStyleBackColor = false;
@@ -161,10 +137,6 @@
             this.Photo_Video.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Photo_Video.Name = "Photo_Video";
             this.Photo_Video.Size = new System.Drawing.Size(120, 36);
-            this.Photo_Video.Location = new System.Drawing.Point(66, 141);
-            this.Photo_Video.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Photo_Video.Name = "Photo_Video";
-            this.Photo_Video.Size = new System.Drawing.Size(90, 29);
             this.Photo_Video.TabIndex = 0;
             this.Photo_Video.Text = "Photo/Video";
             this.Photo_Video.UseVisualStyleBackColor = false;
@@ -183,9 +155,6 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1228, 53);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(921, 43);
             this.panel2.TabIndex = 3;
             // 
             // pictureBox1
@@ -194,10 +163,10 @@
             this.pictureBox1.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.FemaleAvatar1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::WindowsFormsApp7.Properties.Resources.post_template;
-            this.pictureBox1.Location = new System.Drawing.Point(616, 13);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(620, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 39);
+            this.pictureBox1.Size = new System.Drawing.Size(40, 37);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -218,10 +187,6 @@
             this.settings_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.settings_button.Name = "settings_button";
             this.settings_button.Size = new System.Drawing.Size(25, 25);
-            this.settings_button.Location = new System.Drawing.Point(867, 18);
-            this.settings_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.settings_button.Name = "settings_button";
-            this.settings_button.Size = new System.Drawing.Size(19, 20);
             this.settings_button.TabIndex = 8;
             this.settings_button.UseVisualStyleBackColor = false;
             this.settings_button.Click += new System.EventHandler(this.settings_button_Click);
@@ -239,10 +204,6 @@
             this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FriendRequest_button.Name = "FriendRequest_button";
             this.FriendRequest_button.Size = new System.Drawing.Size(175, 37);
-            this.FriendRequest_button.Location = new System.Drawing.Point(684, 13);
-            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.FriendRequest_button.Name = "FriendRequest_button";
-            this.FriendRequest_button.Size = new System.Drawing.Size(131, 30);
             this.FriendRequest_button.TabIndex = 7;
             this.FriendRequest_button.Text = "Friend Requests";
             this.FriendRequest_button.UseVisualStyleBackColor = false;
@@ -261,27 +222,10 @@
             this.home_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.home_button.Name = "home_button";
             this.home_button.Size = new System.Drawing.Size(139, 37);
-            this.home_button.Location = new System.Drawing.Point(585, 13);
-            this.home_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.home_button.Name = "home_button";
-            this.home_button.Size = new System.Drawing.Size(104, 30);
             this.home_button.TabIndex = 6;
             this.home_button.Text = "Home";
             this.home_button.UseVisualStyleBackColor = false;
             this.home_button.Click += new System.EventHandler(this.home_button_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(465, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // user_button
             // 
@@ -296,10 +240,6 @@
             this.user_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.user_button.Name = "user_button";
             this.user_button.Size = new System.Drawing.Size(139, 37);
-            this.user_button.Location = new System.Drawing.Point(489, 13);
-            this.user_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.user_button.Name = "user_button";
-            this.user_button.Size = new System.Drawing.Size(104, 30);
             this.user_button.TabIndex = 1;
             this.user_button.Text = "UserName";
             this.user_button.UseVisualStyleBackColor = false;
@@ -314,10 +254,6 @@
             this.SNHUbook_lbl.Location = new System.Drawing.Point(3, 2);
             this.SNHUbook_lbl.Name = "SNHUbook_lbl";
             this.SNHUbook_lbl.Size = new System.Drawing.Size(210, 44);
-            this.SNHUbook_lbl.Location = new System.Drawing.Point(2, 2);
-            this.SNHUbook_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.SNHUbook_lbl.Name = "SNHUbook_lbl";
-            this.SNHUbook_lbl.Size = new System.Drawing.Size(167, 38);
             this.SNHUbook_lbl.TabIndex = 0;
             this.SNHUbook_lbl.Text = "SNHUbook";
             // 
@@ -330,32 +266,16 @@
             this.panel3.Size = new System.Drawing.Size(188, 903);
             this.panel3.TabIndex = 4;
             // 
-            this.panel3.Location = new System.Drawing.Point(1, 41);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(141, 734);
-            this.panel3.TabIndex = 4;
-            // 
-            // homepage_scrollbar
-            // 
-            this.homepage_scrollbar.Location = new System.Drawing.Point(915, 0);
-            this.homepage_scrollbar.Name = "homepage_scrollbar";
-            this.homepage_scrollbar.Size = new System.Drawing.Size(28, 774);
-            this.homepage_scrollbar.TabIndex = 6;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.post_template;
+            this.panel4.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.gradient;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Controls.Add(this.label1);
             this.panel4.Location = new System.Drawing.Point(209, 390);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(973, 134);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(157, 317);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(730, 109);
             this.panel4.TabIndex = 5;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint_1);
             // 
@@ -363,29 +283,24 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(55, 61);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(73, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 21);
+            this.label1.Size = new System.Drawing.Size(254, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "I want to see how this works";
             // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1247, 953);
-            this.ClientSize = new System.Drawing.Size(908, 452);
-            this.Controls.Add(this.homepage_scrollbar);
+            this.ClientSize = new System.Drawing.Size(1232, 577);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "HomePage";
             this.Text = "HomePage";
             this.Load += new System.EventHandler(this.HomePage_Load);
@@ -394,6 +309,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }

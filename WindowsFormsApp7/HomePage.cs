@@ -33,7 +33,9 @@ namespace WindowsFormsApp7
 
         private void FriendRequest_button_Click(object sender, EventArgs e)
         {
-
+            FriendRequest a = new FriendRequest();
+            a.ShowDialog();
+            this.Hide();
         }
 
         private void Recent_Posts_Click(object sender, EventArgs e)
