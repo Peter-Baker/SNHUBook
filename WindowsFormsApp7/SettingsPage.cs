@@ -121,6 +121,10 @@ namespace WindowsFormsApp7
 
         private void user_button_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            AccountPage a = new AccountPage(email);
+            a.ShowDialog();
+            this.Close();
 
         }
 
@@ -150,6 +154,22 @@ namespace WindowsFormsApp7
         private void PasswordCancel_Click(object sender, EventArgs e)
         {
             ChangePasswordPanel.Visible = false;
+        }
+
+        private void home_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomePage a = new HomePage(email);
+            a.ShowDialog();
+            this.Close();
+        }
+
+        private void FriendRequest_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FriendRequest a = new FriendRequest();
+            a.ShowDialog();
+            this.Close();
         }
     }
 }
