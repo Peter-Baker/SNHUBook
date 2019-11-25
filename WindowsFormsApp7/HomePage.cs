@@ -48,7 +48,7 @@ namespace WindowsFormsApp7
             this.Hide();
             AccountPage a = new AccountPage(email);
             a.ShowDialog();
-            Close();
+            this.Close();
         }
 
         private void Photo_Video_Click(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace WindowsFormsApp7
             this.Hide();
             PhotoPage b = new PhotoPage(email);
             b.ShowDialog();
-            Close();
+            this.Close();
         }
 
         private void home_button_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace WindowsFormsApp7
             this.Hide();
             HomePage a = new HomePage(email);
             a.ShowDialog();
-            Close();
+            this.Close();
         }
 
         private void HomePage_Load(object sender, EventArgs e)
