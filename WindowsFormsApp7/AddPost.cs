@@ -24,7 +24,8 @@ namespace WindowsFormsApp7
 
             post_background.Name = ("post_background" + number.ToString()); //panel that holds all of the info
             post_background.Location = new System.Drawing.Point(157, PanelLocation);
-            post_background.BackColor = System.Drawing.SystemColors.HotTrack;
+            post_background.BackColor = System.Drawing.Color.Transparent;
+            this.post_background.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.blue_gradient_background;
             post_background.Size = new System.Drawing.Size(730, 100);
             PanelLocation = 120 + PanelLocation;
 
@@ -37,7 +38,7 @@ namespace WindowsFormsApp7
 
             post_lbl.Location = new System.Drawing.Point(39, LabelLocation);
             post_lbl.Name = ("post_lbl" + number.ToString());
-            post_lbl.ForeColor = System.Drawing.SystemColors.Window;
+            post_lbl.ForeColor = System.Drawing.Color.Transparent;
             post_lbl.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         }
     }
