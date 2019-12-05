@@ -16,5 +16,20 @@ namespace WindowsFormsApp7
         {
             InitializeComponent();
         }
+
+        private void addFriendButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void removeFriendButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
