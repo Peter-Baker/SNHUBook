@@ -70,7 +70,7 @@
             this.panel2.Controls.Add(this.SNHUbook_lbl);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(3, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(2731, 103);
             this.panel2.TabIndex = 5;
@@ -87,7 +87,7 @@
             this.settings_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settings_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.settings_button.Location = new System.Drawing.Point(2611, 43);
-            this.settings_button.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.settings_button.Margin = new System.Windows.Forms.Padding(5);
             this.settings_button.Name = "settings_button";
             this.settings_button.Size = new System.Drawing.Size(51, 48);
             this.settings_button.TabIndex = 8;
@@ -103,7 +103,7 @@
             this.FriendRequest_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FriendRequest_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FriendRequest_button.Location = new System.Drawing.Point(2107, 31);
-            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(5);
             this.FriendRequest_button.Name = "FriendRequest_button";
             this.FriendRequest_button.Size = new System.Drawing.Size(349, 72);
             this.FriendRequest_button.TabIndex = 7;
@@ -120,7 +120,7 @@
             this.home_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.home_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.home_button.Location = new System.Drawing.Point(1816, 31);
-            this.home_button.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.home_button.Margin = new System.Windows.Forms.Padding(5);
             this.home_button.Name = "home_button";
             this.home_button.Size = new System.Drawing.Size(277, 72);
             this.home_button.TabIndex = 6;
@@ -133,7 +133,7 @@
             this.pictureBox1.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.nyc;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(1440, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 72);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -151,7 +151,7 @@
             this.user_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.user_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.user_button.Location = new System.Drawing.Point(1525, 31);
-            this.user_button.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.user_button.Margin = new System.Windows.Forms.Padding(5);
             this.user_button.Name = "user_button";
             this.user_button.Size = new System.Drawing.Size(277, 72);
             this.user_button.TabIndex = 1;
@@ -288,10 +288,10 @@
             this.ChangePasswordPanel.Controls.Add(this.invalid);
             this.ChangePasswordPanel.Controls.Add(this.label1);
             this.ChangePasswordPanel.Controls.Add(this.label2);
-            this.ChangePasswordPanel.Location = new System.Drawing.Point(1504, 176);
+            this.ChangePasswordPanel.Location = new System.Drawing.Point(3, 2);
             this.ChangePasswordPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ChangePasswordPanel.Name = "ChangePasswordPanel";
-            this.ChangePasswordPanel.Size = new System.Drawing.Size(944, 377);
+            this.ChangePasswordPanel.Size = new System.Drawing.Size(944, 579);
             this.ChangePasswordPanel.TabIndex = 19;
             // 
             // PasswordCancel
@@ -310,10 +310,11 @@
             this.LogoutPanel.Controls.Add(this.label3);
             this.LogoutPanel.Controls.Add(this.CancellogoutButton);
             this.LogoutPanel.Controls.Add(this.LogOutButton);
-            this.LogoutPanel.Location = new System.Drawing.Point(1504, 591);
+            this.LogoutPanel.Controls.Add(this.ChangePasswordPanel);
+            this.LogoutPanel.Location = new System.Drawing.Point(742, 185);
             this.LogoutPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LogoutPanel.Name = "LogoutPanel";
-            this.LogoutPanel.Size = new System.Drawing.Size(944, 415);
+            this.LogoutPanel.Size = new System.Drawing.Size(944, 579);
             this.LogoutPanel.TabIndex = 20;
             // 
             // label3
@@ -367,10 +368,9 @@
             this.ClientSize = new System.Drawing.Size(2501, 1042);
             this.Controls.Add(this.ChangeLogoutOpener);
             this.Controls.Add(this.ChangePasswordOpener);
-            this.Controls.Add(this.LogoutPanel);
-            this.Controls.Add(this.ChangePasswordPanel);
             this.Controls.Add(this.Return);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.LogoutPanel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SettingsPage";
             this.Text = "SettingsPage";
