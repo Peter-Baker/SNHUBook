@@ -44,7 +44,7 @@ namespace WindowsFormsApp7
             this.Hide();
             AccountPage a = new AccountPage(email);
             a.ShowDialog();
-            this.Close();
+            Close();
         }
 
         private void home_button_Click(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace WindowsFormsApp7
             this.Hide();
             HomePage a = new HomePage(email);
             a.ShowDialog();
-            this.Close();
+            Close();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -157,15 +157,6 @@ namespace WindowsFormsApp7
             AddBackground a = new AddBackground(email);
             a.ShowDialog();
             this.Close();
-        }
-
-        private void FriendRequest_button_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FriendRequest a = new FriendRequest();
-            a.ShowDialog();
-            this.Close();
-
         }
 
         private void Add_bn_Click(object sender, EventArgs e)

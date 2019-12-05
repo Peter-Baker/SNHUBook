@@ -218,5 +218,8 @@
   <ItemGroup>
     <None Include="Resources\gradient.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-gradient-background.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

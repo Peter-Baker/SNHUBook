@@ -44,18 +44,20 @@
             // 
             this.selectImageText.AutoSize = true;
             this.selectImageText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectImageText.Location = new System.Drawing.Point(235, 59);
+            this.selectImageText.Location = new System.Drawing.Point(627, 141);
+            this.selectImageText.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.selectImageText.Name = "selectImageText";
-            this.selectImageText.Size = new System.Drawing.Size(320, 31);
+            this.selectImageText.Size = new System.Drawing.Size(766, 78);
             this.selectImageText.TabIndex = 1;
             this.selectImageText.Text = "Select an Image Below:";
             // 
             // CancelButtonProfilePhoto
             // 
             this.CancelButtonProfilePhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelButtonProfilePhoto.Location = new System.Drawing.Point(331, 303);
+            this.CancelButtonProfilePhoto.Location = new System.Drawing.Point(883, 723);
+            this.CancelButtonProfilePhoto.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.CancelButtonProfilePhoto.Name = "CancelButtonProfilePhoto";
-            this.CancelButtonProfilePhoto.Size = new System.Drawing.Size(122, 49);
+            this.CancelButtonProfilePhoto.Size = new System.Drawing.Size(325, 117);
             this.CancelButtonProfilePhoto.TabIndex = 6;
             this.CancelButtonProfilePhoto.Text = "Cancel";
             this.CancelButtonProfilePhoto.UseVisualStyleBackColor = true;
@@ -65,9 +67,10 @@
             // 
             this.BackgroundImage4.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage4.Image = global::WindowsFormsApp7.Properties.Resources.Background4;
-            this.BackgroundImage4.Location = new System.Drawing.Point(610, 144);
+            this.BackgroundImage4.Location = new System.Drawing.Point(1627, 343);
+            this.BackgroundImage4.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.BackgroundImage4.Name = "BackgroundImage4";
-            this.BackgroundImage4.Size = new System.Drawing.Size(163, 112);
+            this.BackgroundImage4.Size = new System.Drawing.Size(435, 267);
             this.BackgroundImage4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BackgroundImage4.TabIndex = 5;
             this.BackgroundImage4.TabStop = false;
@@ -76,9 +79,10 @@
             // BackgroundImage3
             // 
             this.BackgroundImage3.Image = global::WindowsFormsApp7.Properties.Resources.Background3;
-            this.BackgroundImage3.Location = new System.Drawing.Point(414, 144);
+            this.BackgroundImage3.Location = new System.Drawing.Point(1104, 343);
+            this.BackgroundImage3.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.BackgroundImage3.Name = "BackgroundImage3";
-            this.BackgroundImage3.Size = new System.Drawing.Size(163, 112);
+            this.BackgroundImage3.Size = new System.Drawing.Size(435, 267);
             this.BackgroundImage3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BackgroundImage3.TabIndex = 4;
             this.BackgroundImage3.TabStop = false;
@@ -87,9 +91,10 @@
             // BackgroundImage2
             // 
             this.BackgroundImage2.Image = global::WindowsFormsApp7.Properties.Resources.Background2;
-            this.BackgroundImage2.Location = new System.Drawing.Point(219, 144);
+            this.BackgroundImage2.Location = new System.Drawing.Point(584, 343);
+            this.BackgroundImage2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.BackgroundImage2.Name = "BackgroundImage2";
-            this.BackgroundImage2.Size = new System.Drawing.Size(163, 112);
+            this.BackgroundImage2.Size = new System.Drawing.Size(435, 267);
             this.BackgroundImage2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BackgroundImage2.TabIndex = 3;
             this.BackgroundImage2.TabStop = false;
@@ -98,9 +103,10 @@
             // BackgroundImage1
             // 
             this.BackgroundImage1.Image = global::WindowsFormsApp7.Properties.Resources._10759301728_IMG_9920;
-            this.BackgroundImage1.Location = new System.Drawing.Point(23, 144);
+            this.BackgroundImage1.Location = new System.Drawing.Point(61, 343);
+            this.BackgroundImage1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.BackgroundImage1.Name = "BackgroundImage1";
-            this.BackgroundImage1.Size = new System.Drawing.Size(163, 112);
+            this.BackgroundImage1.Size = new System.Drawing.Size(435, 267);
             this.BackgroundImage1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BackgroundImage1.TabIndex = 2;
             this.BackgroundImage1.TabStop = false;
@@ -108,16 +114,18 @@
             // 
             // AddBackground
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.blue_gradient_background;
+            this.ClientSize = new System.Drawing.Size(2133, 1073);
             this.Controls.Add(this.CancelButtonProfilePhoto);
             this.Controls.Add(this.BackgroundImage4);
             this.Controls.Add(this.BackgroundImage3);
             this.Controls.Add(this.BackgroundImage2);
             this.Controls.Add(this.BackgroundImage1);
             this.Controls.Add(this.selectImageText);
+            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "AddBackground";
             this.Text = "AddBackground";
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundImage4)).EndInit();

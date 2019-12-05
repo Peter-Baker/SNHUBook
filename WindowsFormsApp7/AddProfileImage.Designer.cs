@@ -53,7 +53,7 @@
             // CancelButtonProfilePhoto
             // 
             this.CancelButtonProfilePhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelButtonProfilePhoto.Location = new System.Drawing.Point(322, 292);
+            this.CancelButtonProfilePhoto.Location = new System.Drawing.Point(385, 314);
             this.CancelButtonProfilePhoto.Name = "CancelButtonProfilePhoto";
             this.CancelButtonProfilePhoto.Size = new System.Drawing.Size(122, 49);
             this.CancelButtonProfilePhoto.TabIndex = 5;
@@ -101,23 +101,14 @@
             this.profileImageOne.TabStop = false;
             this.profileImageOne.Click += new System.EventHandler(this.profileImageOne_Click);
             // 
-            // CancelButtonProfilePhoto
-            // 
-            this.CancelButtonProfilePhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelButtonProfilePhoto.Location = new System.Drawing.Point(385, 314);
-            this.CancelButtonProfilePhoto.Name = "CancelButtonProfilePhoto";
-            this.CancelButtonProfilePhoto.Size = new System.Drawing.Size(122, 49);
-            this.CancelButtonProfilePhoto.TabIndex = 5;
-            this.CancelButtonProfilePhoto.Text = "Cancel";
-            this.CancelButtonProfilePhoto.UseVisualStyleBackColor = true;
-            this.CancelButtonProfilePhoto.Click += new System.EventHandler(this.CancelButton_Click);
-            // 
             // AddProfileImage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(934, 491);
+            this.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.blue_gradient_background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(934, 408);
             this.Controls.Add(this.CancelButtonProfilePhoto);
             this.Controls.Add(this.profileImageFour);
             this.Controls.Add(this.profileImageThree);

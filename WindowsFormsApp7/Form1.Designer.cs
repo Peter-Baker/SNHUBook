@@ -28,13 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.settings_button = new System.Windows.Forms.Button();
-            this.FriendRequest_button = new System.Windows.Forms.Button();
-            this.home_button = new System.Windows.Forms.Button();
-            this.user_button = new System.Windows.Forms.Button();
-            this.SNHUbook_lbl = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.add_home_bn = new System.Windows.Forms.Button();
             this.home_lbl = new System.Windows.Forms.Label();
@@ -48,126 +41,24 @@
             this.Biography = new System.Windows.Forms.Label();
             this.username_lbl = new System.Windows.Forms.Label();
             this.ProfilePicture = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.settings_button = new System.Windows.Forms.Button();
+            this.FriendRequest_button = new System.Windows.Forms.Button();
+            this.home_button = new System.Windows.Forms.Button();
+            this.user_button = new System.Windows.Forms.Button();
+            this.SNHUbook_lbl = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.CoverPicture = new System.Windows.Forms.PictureBox();
-            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CoverPicture)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel2.Controls.Add(this.settings_button);
-            this.panel2.Controls.Add(this.FriendRequest_button);
-            this.panel2.Controls.Add(this.home_button);
-            this.panel2.Controls.Add(this.user_button);
-            this.panel2.Controls.Add(this.SNHUbook_lbl);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2731, 103);
-            this.panel2.TabIndex = 4;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // settings_button
-            // 
-            this.settings_button.BackColor = System.Drawing.Color.Transparent;
-            this.settings_button.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.setting_icon;
-            this.settings_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.settings_button.FlatAppearance.BorderSize = 0;
-            this.settings_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
-            this.settings_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
-            this.settings_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settings_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settings_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.settings_button.Location = new System.Drawing.Point(2605, 48);
-            this.settings_button.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.settings_button.Name = "settings_button";
-            this.settings_button.Size = new System.Drawing.Size(51, 48);
-            this.settings_button.TabIndex = 8;
-            this.settings_button.UseVisualStyleBackColor = false;
-            this.settings_button.Click += new System.EventHandler(this.settings_button_Click);
-            // 
-            // FriendRequest_button
-            // 
-            this.FriendRequest_button.BackColor = System.Drawing.Color.Transparent;
-            this.FriendRequest_button.FlatAppearance.BorderSize = 0;
-            this.FriendRequest_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
-            this.FriendRequest_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
-            this.FriendRequest_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FriendRequest_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FriendRequest_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.FriendRequest_button.Location = new System.Drawing.Point(2107, 31);
-            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.FriendRequest_button.Name = "FriendRequest_button";
-            this.FriendRequest_button.Size = new System.Drawing.Size(349, 72);
-            this.FriendRequest_button.TabIndex = 7;
-            this.FriendRequest_button.Text = "Friend Requests";
-            this.FriendRequest_button.UseVisualStyleBackColor = false;
-            this.FriendRequest_button.Click += new System.EventHandler(this.FriendRequest_button_Click);
-            // 
-            // home_button
-            // 
-            this.home_button.BackColor = System.Drawing.Color.Transparent;
-            this.home_button.FlatAppearance.BorderSize = 0;
-            this.home_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
-            this.home_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
-            this.home_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.home_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.home_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.home_button.Location = new System.Drawing.Point(1816, 31);
-            this.home_button.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.home_button.Name = "home_button";
-            this.home_button.Size = new System.Drawing.Size(277, 72);
-            this.home_button.TabIndex = 6;
-            this.home_button.Text = "Home";
-            this.home_button.UseVisualStyleBackColor = false;
-            this.home_button.Click += new System.EventHandler(this.home_button_Click);
-            // 
-            // user_button
-            // 
-            this.user_button.BackColor = System.Drawing.Color.Transparent;
-            this.user_button.FlatAppearance.BorderSize = 0;
-            this.user_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
-            this.user_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
-            this.user_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.user_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.user_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.user_button.Location = new System.Drawing.Point(1525, 31);
-            this.user_button.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.user_button.Name = "user_button";
-            this.user_button.Size = new System.Drawing.Size(277, 72);
-            this.user_button.TabIndex = 1;
-            this.user_button.Text = "UserName";
-            this.user_button.UseVisualStyleBackColor = false;
-            this.user_button.Click += new System.EventHandler(this.user_button_Click);
-            // 
-            // SNHUbook_lbl
-            // 
-            this.SNHUbook_lbl.AutoSize = true;
-            this.SNHUbook_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.SNHUbook_lbl.Font = new System.Drawing.Font("Franklin Gothic Heavy", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SNHUbook_lbl.ForeColor = System.Drawing.Color.Gold;
-            this.SNHUbook_lbl.Location = new System.Drawing.Point(5, 5);
-            this.SNHUbook_lbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.SNHUbook_lbl.Name = "SNHUbook_lbl";
-            this.SNHUbook_lbl.Size = new System.Drawing.Size(414, 94);
-            this.SNHUbook_lbl.TabIndex = 0;
-            this.SNHUbook_lbl.Text = "SNHUbook";
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(357, 1402);
-            this.panel3.TabIndex = 9;
-            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.blue_gradient_background;
             this.panel1.Controls.Add(this.add_home_bn);
             this.panel1.Controls.Add(this.home_lbl);
             this.panel1.Controls.Add(this.cancel_home_bn);
@@ -331,6 +222,116 @@
             this.ProfilePicture.TabStop = false;
             this.ProfilePicture.Click += new System.EventHandler(this.ProfilePicture_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.blue_gradient_background;
+            this.panel2.Controls.Add(this.settings_button);
+            this.panel2.Controls.Add(this.FriendRequest_button);
+            this.panel2.Controls.Add(this.home_button);
+            this.panel2.Controls.Add(this.user_button);
+            this.panel2.Controls.Add(this.SNHUbook_lbl);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(2731, 103);
+            this.panel2.TabIndex = 4;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // settings_button
+            // 
+            this.settings_button.BackColor = System.Drawing.Color.Transparent;
+            this.settings_button.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.setting_icon;
+            this.settings_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.settings_button.FlatAppearance.BorderSize = 0;
+            this.settings_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.settings_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.settings_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settings_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settings_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.settings_button.Location = new System.Drawing.Point(2605, 48);
+            this.settings_button.Margin = new System.Windows.Forms.Padding(5);
+            this.settings_button.Name = "settings_button";
+            this.settings_button.Size = new System.Drawing.Size(51, 48);
+            this.settings_button.TabIndex = 8;
+            this.settings_button.UseVisualStyleBackColor = false;
+            this.settings_button.Click += new System.EventHandler(this.settings_button_Click);
+            // 
+            // FriendRequest_button
+            // 
+            this.FriendRequest_button.BackColor = System.Drawing.Color.Transparent;
+            this.FriendRequest_button.FlatAppearance.BorderSize = 0;
+            this.FriendRequest_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.FriendRequest_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.FriendRequest_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FriendRequest_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FriendRequest_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.FriendRequest_button.Location = new System.Drawing.Point(2107, 31);
+            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(5);
+            this.FriendRequest_button.Name = "FriendRequest_button";
+            this.FriendRequest_button.Size = new System.Drawing.Size(349, 72);
+            this.FriendRequest_button.TabIndex = 7;
+            this.FriendRequest_button.Text = "Friend Requests";
+            this.FriendRequest_button.UseVisualStyleBackColor = false;
+            // 
+            // home_button
+            // 
+            this.home_button.BackColor = System.Drawing.Color.Transparent;
+            this.home_button.FlatAppearance.BorderSize = 0;
+            this.home_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.home_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.home_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.home_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.home_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.home_button.Location = new System.Drawing.Point(1816, 31);
+            this.home_button.Margin = new System.Windows.Forms.Padding(5);
+            this.home_button.Name = "home_button";
+            this.home_button.Size = new System.Drawing.Size(277, 72);
+            this.home_button.TabIndex = 6;
+            this.home_button.Text = "Home";
+            this.home_button.UseVisualStyleBackColor = false;
+            this.home_button.Click += new System.EventHandler(this.home_button_Click);
+            // 
+            // user_button
+            // 
+            this.user_button.BackColor = System.Drawing.Color.Transparent;
+            this.user_button.FlatAppearance.BorderSize = 0;
+            this.user_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.user_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.user_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.user_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.user_button.Location = new System.Drawing.Point(1525, 31);
+            this.user_button.Margin = new System.Windows.Forms.Padding(5);
+            this.user_button.Name = "user_button";
+            this.user_button.Size = new System.Drawing.Size(277, 72);
+            this.user_button.TabIndex = 1;
+            this.user_button.Text = "UserName";
+            this.user_button.UseVisualStyleBackColor = false;
+            this.user_button.Click += new System.EventHandler(this.user_button_Click);
+            // 
+            // SNHUbook_lbl
+            // 
+            this.SNHUbook_lbl.AutoSize = true;
+            this.SNHUbook_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.SNHUbook_lbl.Font = new System.Drawing.Font("Franklin Gothic Heavy", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SNHUbook_lbl.ForeColor = System.Drawing.Color.Gold;
+            this.SNHUbook_lbl.Location = new System.Drawing.Point(5, 5);
+            this.SNHUbook_lbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.SNHUbook_lbl.Name = "SNHUbook_lbl";
+            this.SNHUbook_lbl.Size = new System.Drawing.Size(414, 94);
+            this.SNHUbook_lbl.TabIndex = 0;
+            this.SNHUbook_lbl.Text = "SNHUbook";
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(357, 1402);
+            this.panel3.TabIndex = 9;
+            // 
             // CoverPicture
             // 
             this.CoverPicture.BackgroundImage = global::WindowsFormsApp7.Properties.Resources._10759301728_IMG_9920;
@@ -356,11 +357,11 @@
             this.Name = "AccountPage";
             this.Text = "AccountPage";
             this.Load += new System.EventHandler(this.AccountPage_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CoverPicture)).EndInit();
             this.ResumeLayout(false);
 

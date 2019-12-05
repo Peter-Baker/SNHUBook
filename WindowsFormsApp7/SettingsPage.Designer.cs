@@ -60,7 +60,8 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.blue_gradient_background;
             this.panel2.Controls.Add(this.settings_button);
             this.panel2.Controls.Add(this.FriendRequest_button);
             this.panel2.Controls.Add(this.home_button);
@@ -108,7 +109,6 @@
             this.FriendRequest_button.TabIndex = 7;
             this.FriendRequest_button.Text = "Friend Requests";
             this.FriendRequest_button.UseVisualStyleBackColor = false;
-            this.FriendRequest_button.Click += new System.EventHandler(this.FriendRequest_button_Click);
             // 
             // home_button
             // 
@@ -126,7 +126,6 @@
             this.home_button.TabIndex = 6;
             this.home_button.Text = "Home";
             this.home_button.UseVisualStyleBackColor = false;
-            this.home_button.Click += new System.EventHandler(this.home_button_Click);
             // 
             // pictureBox1
             // 
