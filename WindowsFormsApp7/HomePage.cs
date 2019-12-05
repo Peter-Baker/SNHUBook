@@ -36,6 +36,7 @@ namespace WindowsFormsApp7
             FriendRequest a = new FriendRequest();
             a.ShowDialog();
             this.Hide();
+            this.Close();
         }
 
         private void Recent_Posts_Click(object sender, EventArgs e)
@@ -70,11 +71,6 @@ namespace WindowsFormsApp7
         private void HomePage_Load(object sender, EventArgs e)
         {
             panel4.Hide();
-            /*DateTime now = DateTime.Now;
-            string date = now.ToString();
-            date = date.Substring(0, 9);
-            date_lbl.Text = ("Date: " + date);*/
-
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
