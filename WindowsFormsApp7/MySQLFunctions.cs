@@ -10,9 +10,9 @@ namespace WindowsFormsApp7
 {
     class MySQLFunctions
     {
-        public const string MYSQLPassword = "Caelarules1!   "; //Enter your own password here to log into your own database
+        public const string MYSQLPassword = "Sword144"; //Enter your own password here to log into your own database
 
-        public const string pathForResources = @"F:\GitHub\CS203SNHUBook\WindowsFormsApp7\Resources\"; //Enter in your path of the resource folder here
+        public const string pathForResources = @"C:\Users\peter\Desktop\WindowsFormsApp7\WindowsFormsApp7\Resources\"; //Enter in your path of the resource folder here
 
         public MySQLFunctions()
         {
@@ -307,6 +307,137 @@ namespace WindowsFormsApp7
             cnn.Close();
 
             return home;
+        }
+
+        public static string getID(string email)
+        {
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT ID FROM accounts WHERE email LIKE '{email}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string home = string.Empty;
+
+
+            while (dr.Read())
+            {
+                home = dr.GetString(0);
+                Console.WriteLine(home);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+            return home;
+        }
+
+        public static string getTotalPosts(string email)
+        {
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string AccountID = getID(email);
+            string query = $"SELECT COUNT(*) FROM Posts WHERE AccountID like {AccountID};";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string home = string.Empty;
+
+
+            while (dr.Read())
+            {
+                home = dr.GetString(0);
+                Console.WriteLine(home);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+            return home;
+        }
+
+        public static string getPost(string email, string id)
+        {
+
+            string idNum = getID(email);
+
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT value FROM posts WHERE AccountID like {idNum} and ID LIKE '{id}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string home = string.Empty;
+
+
+            while (dr.Read())
+            {
+                home = dr.GetString(0);
+                Console.WriteLine(home);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+            return home;
+        }
+
+        public static void savePost(string email, string post)
+        {
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string AccountID = getID(email);
+            string newPostID = getTotalPosts(email);
+            int tempNewPostID = int.Parse(newPostID);
+            tempNewPostID++;
+            newPostID = tempNewPostID.ToString();
+            string query = $"INSERT INTO Posts values({AccountID}, {newPostID}, '{post}');";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string home = string.Empty;
+
+
+            while (dr.Read())
+            {
+                home = dr.GetString(0);
+                Console.WriteLine(home);
+            }
+
+            dr.Close();
+            cnn.Close();
         }
     }
 }
