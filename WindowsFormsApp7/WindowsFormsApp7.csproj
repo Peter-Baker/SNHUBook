@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddFriend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFriend.Designer.cs">
+      <DependentUpon>AddFriend.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddPost.cs" />
     <Compile Include="AddBackground.cs">
       <SubType>Form</SubType>
@@ -114,6 +120,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddBackground.resx">
       <DependentUpon>AddBackground.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFriend.resx">
+      <DependentUpon>AddFriend.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddProfileImage.resx">
       <DependentUpon>AddProfileImage.cs</DependentUpon>

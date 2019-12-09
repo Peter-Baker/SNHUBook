@@ -150,5 +150,11 @@ namespace WindowsFormsApp7
         {
 
         }
+
+        private void Tag_button_Click(object sender, EventArgs e)
+        {
+            AddFriend a = new AddFriend();
+            a.ShowDialog();
+        }
     }
 }
