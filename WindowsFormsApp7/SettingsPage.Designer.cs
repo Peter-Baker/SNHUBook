@@ -92,6 +92,7 @@
             this.settings_button.Size = new System.Drawing.Size(19, 20);
             this.settings_button.TabIndex = 8;
             this.settings_button.UseVisualStyleBackColor = false;
+            this.settings_button.Click += new System.EventHandler(this.settings_button_Click);
             // 
             // FriendRequest_button
             // 
@@ -109,6 +110,7 @@
             this.FriendRequest_button.TabIndex = 7;
             this.FriendRequest_button.Text = "Friend Requests";
             this.FriendRequest_button.UseVisualStyleBackColor = false;
+            this.FriendRequest_button.Click += new System.EventHandler(this.FriendRequest_button_Click);
             // 
             // home_button
             // 
@@ -126,6 +128,7 @@
             this.home_button.TabIndex = 6;
             this.home_button.Text = "Home";
             this.home_button.UseVisualStyleBackColor = false;
+            this.home_button.Click += new System.EventHandler(this.home_button_Click);
             // 
             // pictureBox1
             // 

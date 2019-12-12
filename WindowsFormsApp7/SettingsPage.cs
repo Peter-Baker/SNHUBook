@@ -121,7 +121,10 @@ namespace WindowsFormsApp7
 
         private void user_button_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            AccountPage a = new AccountPage(email);
+            a.ShowDialog();
+            Close();
         }
 
         private void ChangeLogoutOpener_Click(object sender, EventArgs e)
@@ -157,6 +160,27 @@ namespace WindowsFormsApp7
         private void SettingsPage_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void home_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomePage a = new HomePage(email);
+            a.ShowDialog();
+            this.Close();
+        }
+
+        private void FriendRequest_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FriendRequest a = new FriendRequest(email);
+            a.ShowDialog();
+            this.Close();
+        }
+
+        private void settings_button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You are already on the settings page.");
         }
     }
 }
