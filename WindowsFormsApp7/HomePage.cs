@@ -75,10 +75,6 @@ namespace WindowsFormsApp7
 
         private void Photo_Video_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            PhotoPage b = new PhotoPage(email);
-            b.ShowDialog();
-            this.Close();
         }
 
         private void home_button_Click(object sender, EventArgs e)
@@ -163,7 +159,7 @@ namespace WindowsFormsApp7
         {
             //Form sendform = Form.ActiveForm;
             this.Hide();
-            SettingsPage a = new SettingsPage(1, email);
+            SettingsPage a = new SettingsPage(0, email);
             a.ShowDialog();
             this.Close();
         }

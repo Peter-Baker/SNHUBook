@@ -41,17 +41,17 @@
             this.LogoutPanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.CancellogoutButton = new System.Windows.Forms.Button();
+            this.ChangePasswordPanel = new System.Windows.Forms.Panel();
+            this.PasswordCancel = new System.Windows.Forms.Button();
+            this.ChangePasswordButton = new System.Windows.Forms.Button();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.pwDoesNotMatch = new System.Windows.Forms.Label();
+            this.retypeTextBox = new System.Windows.Forms.TextBox();
+            this.invalid = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.ChangePasswordOpener = new System.Windows.Forms.Button();
             this.ChangeLogoutOpener = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.invalid = new System.Windows.Forms.Label();
-            this.retypeTextBox = new System.Windows.Forms.TextBox();
-            this.pwDoesNotMatch = new System.Windows.Forms.Label();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.ChangePasswordButton = new System.Windows.Forms.Button();
-            this.PasswordCancel = new System.Windows.Forms.Button();
-            this.ChangePasswordPanel = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.LogoutPanel.SuspendLayout();
@@ -70,7 +70,7 @@
             this.panel2.Controls.Add(this.SNHUbook_lbl);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(1, 1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1024, 43);
             this.panel2.TabIndex = 5;
@@ -87,7 +87,7 @@
             this.settings_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settings_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.settings_button.Location = new System.Drawing.Point(979, 18);
-            this.settings_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.settings_button.Margin = new System.Windows.Forms.Padding(2);
             this.settings_button.Name = "settings_button";
             this.settings_button.Size = new System.Drawing.Size(19, 20);
             this.settings_button.TabIndex = 8;
@@ -103,7 +103,7 @@
             this.FriendRequest_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FriendRequest_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FriendRequest_button.Location = new System.Drawing.Point(790, 13);
-            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(2);
             this.FriendRequest_button.Name = "FriendRequest_button";
             this.FriendRequest_button.Size = new System.Drawing.Size(131, 30);
             this.FriendRequest_button.TabIndex = 7;
@@ -120,7 +120,7 @@
             this.home_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.home_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.home_button.Location = new System.Drawing.Point(681, 13);
-            this.home_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.home_button.Margin = new System.Windows.Forms.Padding(2);
             this.home_button.Name = "home_button";
             this.home_button.Size = new System.Drawing.Size(104, 30);
             this.home_button.TabIndex = 6;
@@ -133,7 +133,7 @@
             this.pictureBox1.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.nyc;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(540, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -151,7 +151,7 @@
             this.user_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.user_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.user_button.Location = new System.Drawing.Point(572, 13);
-            this.user_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.user_button.Margin = new System.Windows.Forms.Padding(2);
             this.user_button.Name = "user_button";
             this.user_button.Size = new System.Drawing.Size(104, 30);
             this.user_button.TabIndex = 1;
@@ -182,8 +182,8 @@
             // 
             // LogOutButton
             // 
-            this.LogOutButton.Location = new System.Drawing.Point(201, 84);
-            this.LogOutButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.LogOutButton.Location = new System.Drawing.Point(185, 84);
+            this.LogOutButton.Margin = new System.Windows.Forms.Padding(1);
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.Size = new System.Drawing.Size(85, 34);
             this.LogOutButton.TabIndex = 6;
@@ -194,7 +194,7 @@
             // Return
             // 
             this.Return.Location = new System.Drawing.Point(385, 243);
-            this.Return.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Return.Margin = new System.Windows.Forms.Padding(1);
             this.Return.Name = "Return";
             this.Return.Size = new System.Drawing.Size(131, 49);
             this.Return.TabIndex = 12;
@@ -207,18 +207,17 @@
             this.LogoutPanel.Controls.Add(this.label3);
             this.LogoutPanel.Controls.Add(this.CancellogoutButton);
             this.LogoutPanel.Controls.Add(this.LogOutButton);
-            this.LogoutPanel.Controls.Add(this.ChangePasswordPanel);
-            this.LogoutPanel.Location = new System.Drawing.Point(278, 78);
-            this.LogoutPanel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.LogoutPanel.Location = new System.Drawing.Point(276, 202);
+            this.LogoutPanel.Margin = new System.Windows.Forms.Padding(1);
             this.LogoutPanel.Name = "LogoutPanel";
-            this.LogoutPanel.Size = new System.Drawing.Size(354, 243);
+            this.LogoutPanel.Size = new System.Drawing.Size(354, 136);
             this.LogoutPanel.TabIndex = 20;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(79, 40);
+            this.label3.Location = new System.Drawing.Point(51, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(241, 16);
             this.label3.TabIndex = 16;
@@ -226,8 +225,8 @@
             // 
             // CancellogoutButton
             // 
-            this.CancellogoutButton.Location = new System.Drawing.Point(82, 84);
-            this.CancellogoutButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.CancellogoutButton.Location = new System.Drawing.Point(64, 84);
+            this.CancellogoutButton.Margin = new System.Windows.Forms.Padding(1);
             this.CancellogoutButton.Name = "CancellogoutButton";
             this.CancellogoutButton.Size = new System.Drawing.Size(85, 34);
             this.CancellogoutButton.TabIndex = 7;
@@ -235,66 +234,51 @@
             this.CancellogoutButton.UseVisualStyleBackColor = true;
             this.CancellogoutButton.Click += new System.EventHandler(this.CancellogoutButton_Click);
             // 
-            // ChangePasswordOpener
+            // ChangePasswordPanel
             // 
-            this.ChangePasswordOpener.Location = new System.Drawing.Point(385, 90);
-            this.ChangePasswordOpener.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.ChangePasswordOpener.Name = "ChangePasswordOpener";
-            this.ChangePasswordOpener.Size = new System.Drawing.Size(131, 49);
-            this.ChangePasswordOpener.TabIndex = 21;
-            this.ChangePasswordOpener.Text = "Change Password";
-            this.ChangePasswordOpener.UseVisualStyleBackColor = true;
-            this.ChangePasswordOpener.Click += new System.EventHandler(this.ChangePasswordOpener_Click);
+            this.ChangePasswordPanel.Controls.Add(this.PasswordCancel);
+            this.ChangePasswordPanel.Controls.Add(this.ChangePasswordButton);
+            this.ChangePasswordPanel.Controls.Add(this.passwordTextBox);
+            this.ChangePasswordPanel.Controls.Add(this.pwDoesNotMatch);
+            this.ChangePasswordPanel.Controls.Add(this.retypeTextBox);
+            this.ChangePasswordPanel.Controls.Add(this.invalid);
+            this.ChangePasswordPanel.Controls.Add(this.label1);
+            this.ChangePasswordPanel.Controls.Add(this.label2);
+            this.ChangePasswordPanel.Location = new System.Drawing.Point(276, 64);
+            this.ChangePasswordPanel.Margin = new System.Windows.Forms.Padding(1);
+            this.ChangePasswordPanel.Name = "ChangePasswordPanel";
+            this.ChangePasswordPanel.Size = new System.Drawing.Size(354, 136);
+            this.ChangePasswordPanel.TabIndex = 19;
             // 
-            // ChangeLogoutOpener
+            // PasswordCancel
             // 
-            this.ChangeLogoutOpener.Location = new System.Drawing.Point(385, 166);
-            this.ChangeLogoutOpener.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.ChangeLogoutOpener.Name = "ChangeLogoutOpener";
-            this.ChangeLogoutOpener.Size = new System.Drawing.Size(131, 49);
-            this.ChangeLogoutOpener.TabIndex = 22;
-            this.ChangeLogoutOpener.Text = "Logout";
-            this.ChangeLogoutOpener.UseVisualStyleBackColor = true;
-            this.ChangeLogoutOpener.Click += new System.EventHandler(this.ChangeLogoutOpener_Click);
+            this.PasswordCancel.Location = new System.Drawing.Point(73, 89);
+            this.PasswordCancel.Margin = new System.Windows.Forms.Padding(1);
+            this.PasswordCancel.Name = "PasswordCancel";
+            this.PasswordCancel.Size = new System.Drawing.Size(85, 34);
+            this.PasswordCancel.TabIndex = 17;
+            this.PasswordCancel.Text = "Cancel";
+            this.PasswordCancel.UseVisualStyleBackColor = true;
+            this.PasswordCancel.Click += new System.EventHandler(this.PasswordCancel_Click);
             // 
-            // label2
+            // ChangePasswordButton
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 16);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Retype New Password:";
+            this.ChangePasswordButton.Location = new System.Drawing.Point(197, 89);
+            this.ChangePasswordButton.Margin = new System.Windows.Forms.Padding(1);
+            this.ChangePasswordButton.Name = "ChangePasswordButton";
+            this.ChangePasswordButton.Size = new System.Drawing.Size(85, 34);
+            this.ChangePasswordButton.TabIndex = 8;
+            this.ChangePasswordButton.Text = "Change Password";
+            this.ChangePasswordButton.UseVisualStyleBackColor = true;
+            this.ChangePasswordButton.Click += new System.EventHandler(this.ChangePasswordButton_Click);
             // 
-            // label1
+            // passwordTextBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(70, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 16);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "New Password:";
-            // 
-            // invalid
-            // 
-            this.invalid.AutoSize = true;
-            this.invalid.ForeColor = System.Drawing.Color.Red;
-            this.invalid.Location = new System.Drawing.Point(195, 5);
-            this.invalid.Name = "invalid";
-            this.invalid.Size = new System.Drawing.Size(96, 13);
-            this.invalid.TabIndex = 17;
-            this.invalid.Text = "Password is invalid";
-            this.invalid.Visible = false;
-            // 
-            // retypeTextBox
-            // 
-            this.retypeTextBox.Location = new System.Drawing.Point(198, 57);
-            this.retypeTextBox.Name = "retypeTextBox";
-            this.retypeTextBox.Size = new System.Drawing.Size(133, 20);
-            this.retypeTextBox.TabIndex = 14;
-            this.retypeTextBox.TextChanged += new System.EventHandler(this.retypeTextBox_TextChanged);
+            this.passwordTextBox.Location = new System.Drawing.Point(198, 21);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(133, 20);
+            this.passwordTextBox.TabIndex = 13;
+            this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
             // 
             // pwDoesNotMatch
             // 
@@ -308,51 +292,66 @@
             this.pwDoesNotMatch.Visible = false;
             this.pwDoesNotMatch.Click += new System.EventHandler(this.pwDoesNotMatch_Click);
             // 
-            // passwordTextBox
+            // retypeTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(198, 21);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(133, 20);
-            this.passwordTextBox.TabIndex = 13;
-            this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
+            this.retypeTextBox.Location = new System.Drawing.Point(198, 57);
+            this.retypeTextBox.Name = "retypeTextBox";
+            this.retypeTextBox.Size = new System.Drawing.Size(133, 20);
+            this.retypeTextBox.TabIndex = 14;
+            this.retypeTextBox.TextChanged += new System.EventHandler(this.retypeTextBox_TextChanged);
             // 
-            // ChangePasswordButton
+            // invalid
             // 
-            this.ChangePasswordButton.Location = new System.Drawing.Point(197, 89);
-            this.ChangePasswordButton.Margin = new System.Windows.Forms.Padding(1);
-            this.ChangePasswordButton.Name = "ChangePasswordButton";
-            this.ChangePasswordButton.Size = new System.Drawing.Size(85, 34);
-            this.ChangePasswordButton.TabIndex = 8;
-            this.ChangePasswordButton.Text = "Change Password";
-            this.ChangePasswordButton.UseVisualStyleBackColor = true;
-            this.ChangePasswordButton.Click += new System.EventHandler(this.ChangePasswordButton_Click);
+            this.invalid.AutoSize = true;
+            this.invalid.ForeColor = System.Drawing.Color.Red;
+            this.invalid.Location = new System.Drawing.Point(195, 5);
+            this.invalid.Name = "invalid";
+            this.invalid.Size = new System.Drawing.Size(96, 13);
+            this.invalid.TabIndex = 17;
+            this.invalid.Text = "Password is invalid";
+            this.invalid.Visible = false;
             // 
-            // PasswordCancel
+            // label1
             // 
-            this.PasswordCancel.Location = new System.Drawing.Point(73, 89);
-            this.PasswordCancel.Margin = new System.Windows.Forms.Padding(1);
-            this.PasswordCancel.Name = "PasswordCancel";
-            this.PasswordCancel.Size = new System.Drawing.Size(85, 34);
-            this.PasswordCancel.TabIndex = 17;
-            this.PasswordCancel.Text = "Cancel";
-            this.PasswordCancel.UseVisualStyleBackColor = true;
-            this.PasswordCancel.Click += new System.EventHandler(this.PasswordCancel_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(70, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 16);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "New Password:";
             // 
-            // ChangePasswordPanel
+            // label2
             // 
-            this.ChangePasswordPanel.Controls.Add(this.PasswordCancel);
-            this.ChangePasswordPanel.Controls.Add(this.ChangePasswordButton);
-            this.ChangePasswordPanel.Controls.Add(this.passwordTextBox);
-            this.ChangePasswordPanel.Controls.Add(this.pwDoesNotMatch);
-            this.ChangePasswordPanel.Controls.Add(this.retypeTextBox);
-            this.ChangePasswordPanel.Controls.Add(this.invalid);
-            this.ChangePasswordPanel.Controls.Add(this.label1);
-            this.ChangePasswordPanel.Controls.Add(this.label2);
-            this.ChangePasswordPanel.Location = new System.Drawing.Point(1, 1);
-            this.ChangePasswordPanel.Margin = new System.Windows.Forms.Padding(1);
-            this.ChangePasswordPanel.Name = "ChangePasswordPanel";
-            this.ChangePasswordPanel.Size = new System.Drawing.Size(354, 243);
-            this.ChangePasswordPanel.TabIndex = 19;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(25, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(168, 16);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Retype New Password:";
+            // 
+            // ChangePasswordOpener
+            // 
+            this.ChangePasswordOpener.Location = new System.Drawing.Point(385, 90);
+            this.ChangePasswordOpener.Margin = new System.Windows.Forms.Padding(1);
+            this.ChangePasswordOpener.Name = "ChangePasswordOpener";
+            this.ChangePasswordOpener.Size = new System.Drawing.Size(131, 49);
+            this.ChangePasswordOpener.TabIndex = 21;
+            this.ChangePasswordOpener.Text = "Change Password";
+            this.ChangePasswordOpener.UseVisualStyleBackColor = true;
+            this.ChangePasswordOpener.Click += new System.EventHandler(this.ChangePasswordOpener_Click);
+            // 
+            // ChangeLogoutOpener
+            // 
+            this.ChangeLogoutOpener.Location = new System.Drawing.Point(385, 166);
+            this.ChangeLogoutOpener.Margin = new System.Windows.Forms.Padding(1);
+            this.ChangeLogoutOpener.Name = "ChangeLogoutOpener";
+            this.ChangeLogoutOpener.Size = new System.Drawing.Size(131, 49);
+            this.ChangeLogoutOpener.TabIndex = 22;
+            this.ChangeLogoutOpener.Text = "Logout";
+            this.ChangeLogoutOpener.UseVisualStyleBackColor = true;
+            this.ChangeLogoutOpener.Click += new System.EventHandler(this.ChangeLogoutOpener_Click);
             // 
             // SettingsPage
             // 
@@ -362,11 +361,13 @@
             this.Controls.Add(this.ChangeLogoutOpener);
             this.Controls.Add(this.ChangePasswordOpener);
             this.Controls.Add(this.Return);
+            this.Controls.Add(this.ChangePasswordPanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.LogoutPanel);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "SettingsPage";
             this.Text = "SettingsPage";
+            this.Load += new System.EventHandler(this.SettingsPage_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
