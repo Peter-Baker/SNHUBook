@@ -31,29 +31,6 @@ namespace WindowsFormsApp7
             user_button.Text = MySQLFunctions.getName(email);
 
             //Below will be pulling previous posts
-            if (MySQLFunctions.getTotalPosts(email) != "0")
-            {
-                int totalPosts = int.Parse(MySQLFunctions.getTotalPosts(email));
-                string post = "";
-                for (int i = 1; i <= totalPosts; i++)
-                {
-                    post = MySQLFunctions.getPost(email, i.ToString());
-
-                    AddPost a = new AddPost();
-
-                    a.post_lbl.Text = post;
-                    a.post_lbl.Size = new System.Drawing.Size(700, 25);
-
-                    this.Controls.Add(a.post_background);
-                    a.post_background.Controls.Add(a.post_lbl);
-                    a.post_background.Controls.Add(a.date_lbl);
-
-                    a.post_lbl.Show();
-                    a.date_lbl.Show();
-                    a.post_background.Show();
-                    PanelLocation += 100;
-                }
-            }
             
 
         }
@@ -98,6 +75,31 @@ namespace WindowsFormsApp7
         private void HomePage_Load(object sender, EventArgs e)
         {
             panel4.Hide();
+            if (MySQLFunctions.getTotalPosts(email) != "0")
+            {
+                int totalPosts = int.Parse(MySQLFunctions.getTotalPosts(email));
+                string post = "";
+                for (int i = 1; i <= totalPosts; i++)
+                {
+                    post = MySQLFunctions.getPost(email, i.ToString());
+
+                    AddPost a = new AddPost();
+
+                    a.post_lbl.Text = post;
+                    a.post_lbl.Size = new System.Drawing.Size(700, 25);
+
+                    this.Controls.Add(a.post_background);
+                    a.post_background.Controls.Add(a.post_lbl);
+                    a.post_background.Controls.Add(a.date_lbl);
+                    a.post_background.Controls.Add(a.delete_lbl);
+
+                    a.post_lbl.Show();
+                    a.date_lbl.Show();
+                    a.post_background.Show();
+                    a.delete_lbl.Show();
+                    PanelLocation += 100;
+                }
+            }
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -122,16 +124,17 @@ namespace WindowsFormsApp7
         private void Submit_post_button_Click(object sender, EventArgs e)
         {
             AddPost a = new AddPost();
-            
             a.post_lbl.Text = textBox1.Text;
             a.post_lbl.Size = new System.Drawing.Size(700, 25);
 
             this.Controls.Add(a.post_background);
             a.post_background.Controls.Add(a.post_lbl);
             a.post_background.Controls.Add(a.date_lbl);
+            a.post_background.Controls.Add(a.delete_lbl);
 
             a.post_lbl.Show();
             a.date_lbl.Show();
+            a.delete_lbl.Show();
             a.post_background.Show();
             PanelLocation += 100;
 
@@ -141,18 +144,21 @@ namespace WindowsFormsApp7
         public void loadPosts(String post)
         {
             AddPost a = new AddPost();
-
+            string delete_lbl_name;
             a.post_lbl.Text = post;
             a.post_lbl.Size = new System.Drawing.Size(700, 25);
 
             this.Controls.Add(a.post_background);
             a.post_background.Controls.Add(a.post_lbl);
             a.post_background.Controls.Add(a.date_lbl);
+            a.post_background.Controls.Add(a.delete_lbl);
 
             a.post_lbl.Show();
             a.date_lbl.Show();
+            a.delete_lbl.Show();
             a.post_background.Show();
             PanelLocation += 100;
+            delete_lbl_name = a.delete_name;
         }
 
         private void date_lbl_Click(object sender, EventArgs e)
@@ -199,7 +205,7 @@ namespace WindowsFormsApp7
 
         private void Tag_button_Click(object sender, EventArgs e)
         {
-            AddFriend a = new AddFriend();
+            TagFriend a = new TagFriend();
             a.ShowDialog();
         }
     }
