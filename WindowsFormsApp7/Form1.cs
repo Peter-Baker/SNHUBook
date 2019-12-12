@@ -99,7 +99,7 @@ namespace WindowsFormsApp7
             Cancel_bn.Hide();
         }
 
-        private void AddBio_Text_TextChanged(object sender, EventArgs e)
+        private void AddBio_Text_TextChanged(object sender, EventArgs e) //Add bio textbox
         {
             add_bio = AddBio_Text.Text;
         }
@@ -107,13 +107,17 @@ namespace WindowsFormsApp7
         private void add_home_bn_Click(object sender, EventArgs e)
         {
             home_lbl.Text = hometown_text.Text;
-            add_home_bn.Hide();
-            cancel_home_bn.Hide();
+            AddBio_Text.Hide();
+            Add_bn.Hide();
+            Cancel_bn.Hide();
             hometown_text.Hide();
+            cancel_home_bn.Hide();
+            add_home_bn.Hide();
+
             MySQLFunctions.SQLCommand($"UPDATE accounts SET Home='{hometown_text.Text}' where Email = '{email}'");
         }
 
-        private void hometown_text_TextChanged(object sender, EventArgs e)
+        private void hometown_text_TextChanged(object sender, EventArgs e) //Add hometown textbox
         {
 
         }
@@ -139,16 +143,30 @@ namespace WindowsFormsApp7
 
         private void Biography_Click(object sender, EventArgs e)
         {
+            hometown_text.Hide();
+            cancel_home_bn.Hide();
+            add_home_bn.Hide();
             AddBio_Text.Show();
             Cancel_bn.Show();
             Add_bn.Show();
+
+            AddBio_Text.BringToFront();
+            Cancel_bn.BringToFront();
+            Add_bn.BringToFront();
         }
 
         private void hometown_lbl_Click(object sender, EventArgs e)
         {
+            AddBio_Text.Hide();
+            Cancel_bn.Hide();
+            Add_bn.Hide();
             hometown_text.Show();
             cancel_home_bn.Show();
             add_home_bn.Show();
+
+            hometown_text.BringToFront();
+            cancel_home_bn.BringToFront();
+            add_home_bn.BringToFront();
         }
 
         private void CoverPicture_Click(object sender, EventArgs e)
@@ -165,6 +183,9 @@ namespace WindowsFormsApp7
             AddBio_Text.Hide();
             Add_bn.Hide();
             Cancel_bn.Hide();
+            hometown_text.Hide();
+            cancel_home_bn.Hide();
+            add_home_bn.Hide();
             MySQLFunctions.SQLCommand($"UPDATE accounts SET Bio='{add_bio}' where Email = '{email}'");
         }
     }

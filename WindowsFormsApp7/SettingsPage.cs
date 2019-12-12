@@ -27,12 +27,7 @@ namespace WindowsFormsApp7
             LogoutPanel.Visible = false;
             LogoutPanel.BringToFront();
         }
-        public SettingsPage()
-        {
-            InitializeComponent();
-            ChangePasswordPanel.Visible = false;
-            LogoutPanel.Visible = false;
-        }
+
         private void Return_Click(object sender, EventArgs e)
         {
             switch (returnform)
@@ -89,6 +84,9 @@ namespace WindowsFormsApp7
                 //Change password
                 MySQLFunctions.changePassword(email, passwordTextBox.Text);
                 MessageBox.Show("Password has been changed!");
+                passwordTextBox.Text = "";
+                retypeTextBox.Text = "";
+                ChangePasswordPanel.Visible = false;
             }
         }
 
@@ -123,32 +121,32 @@ namespace WindowsFormsApp7
 
         private void user_button_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            AccountPage a = new AccountPage(email);
+            a.ShowDialog();
+            Close();
         }
 
         private void ChangeLogoutOpener_Click(object sender, EventArgs e)
         {
-            if (!ChangePasswordPanel.Visible)
-            {
-                LogoutPanel.BringToFront();
-                LogoutPanel.Visible = true;
-            }
+            ChangePasswordPanel.SendToBack();
+            ChangePasswordPanel.Visible = false;
+            LogoutPanel.BringToFront();
+            LogoutPanel.Visible = true;
         }
 
         private void ChangePasswordOpener_Click(object sender, EventArgs e)
         {
-            
-            if(!LogoutPanel.Visible)
-            {
-                ChangePasswordPanel.BringToFront();
-                ChangePasswordPanel.Visible = true;
-                
-            }
+            LogoutPanel.SendToBack();
+            LogoutPanel.Visible = false;
+            ChangePasswordPanel.BringToFront();
+            ChangePasswordPanel.Visible = true;
         }
         private void CancellogoutButton_Click(object sender, EventArgs e)
         {
 
-            LogoutPanel.SendToBack();   
+            LogoutPanel.SendToBack();
+            ChangePasswordPanel.SendToBack();
             LogoutPanel.Visible = false; 
             
         }
@@ -157,6 +155,32 @@ namespace WindowsFormsApp7
         {
             ChangePasswordPanel.SendToBack();
             ChangePasswordPanel.Visible = false;
+        }
+
+        private void SettingsPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void home_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomePage a = new HomePage(email);
+            a.ShowDialog();
+            this.Close();
+        }
+
+        private void FriendRequest_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FriendRequest a = new FriendRequest(email);
+            a.ShowDialog();
+            this.Close();
+        }
+
+        private void settings_button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You are already on the settings page.");
         }
     }
 }
