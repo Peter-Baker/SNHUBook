@@ -14,11 +14,6 @@ namespace WindowsFormsApp7
     {
         private static int PanelLocation = 200;
         string email;
-        /*
-        public HomePage()
-        {
-            InitializeComponent();
-        }*/
         
         public HomePage(string email) //Please use this one to transfer data.
         {
@@ -35,15 +30,16 @@ namespace WindowsFormsApp7
             {
                 int totalPosts = int.Parse(MySQLFunctions.getTotalPosts(email));
                 string post = "";
+                string date = "";
                 for (int i = 1; i <= totalPosts; i++)
                 {
                     post = MySQLFunctions.getPost(email, i.ToString());
-
+                    date = MySQLFunctions.getDate(email, i.ToString());
                     AddPost a = new AddPost();
 
                     a.post_lbl.Text = post;
                     a.post_lbl.Size = new System.Drawing.Size(700, 25);
-
+                    a.date_lbl.Text = date;
                     this.Controls.Add(a.post_background);
                     a.post_background.Controls.Add(a.post_lbl);
                     a.post_background.Controls.Add(a.date_lbl);
@@ -54,15 +50,13 @@ namespace WindowsFormsApp7
                     PanelLocation += 100;
                 }
             }
-            
-
         }
 
         private void FriendRequest_button_Click(object sender, EventArgs e)
         {
-            FriendRequest a = new FriendRequest();
-            a.ShowDialog();
             this.Hide();
+            FriendRequest a = new FriendRequest(email);
+            a.ShowDialog();
             this.Close();
         }
 
@@ -135,7 +129,7 @@ namespace WindowsFormsApp7
             a.post_background.Show();
             PanelLocation += 100;
 
-            MySQLFunctions.savePost(email, textBox1.Text);
+            MySQLFunctions.savePost(email, textBox1.Text, a.date_lbl.Text);
         }
 
         public void loadPosts(String post)
