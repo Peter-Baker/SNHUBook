@@ -24,34 +24,6 @@ namespace WindowsFormsApp7
             Image myimage = new Bitmap(MySQLFunctions.getProfileImage(email));
             pictureBox1.BackgroundImage = myimage;
             user_button.Text = MySQLFunctions.getName(email);
-
-            //Below will be pulling previous posts
-            
-
-            if (MySQLFunctions.getTotalPosts(email) != "0")
-            {
-                int totalPosts = int.Parse(MySQLFunctions.getTotalPosts(email));
-                string post = "";
-                string date = "";
-                for (int i = 1; i <= totalPosts; i++)
-                {
-                    post = MySQLFunctions.getPost(email, i.ToString());
-                    date = MySQLFunctions.getDate(email, i.ToString());
-                    AddPost a = new AddPost();
-
-                    a.post_lbl.Text = post;
-                    a.post_lbl.Size = new System.Drawing.Size(700, 25);
-                    a.date_lbl.Text = date;
-                    this.Controls.Add(a.post_background);
-                    a.post_background.Controls.Add(a.post_lbl);
-                    a.post_background.Controls.Add(a.date_lbl);
-
-                    a.post_lbl.Show();
-                    a.date_lbl.Show();
-                    a.post_background.Show();
-                    PanelLocation += 100;
-                }
-            }
         }
 
         private void FriendRequest_button_Click(object sender, EventArgs e)
@@ -99,7 +71,6 @@ namespace WindowsFormsApp7
                     post = MySQLFunctions.getPost(email, i.ToString());
 
                     AddPost a = new AddPost();
-
                     a.post_lbl.Text = post;
                     a.post_lbl.Size = new System.Drawing.Size(700, 25);
 
