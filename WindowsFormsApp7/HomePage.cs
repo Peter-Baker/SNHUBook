@@ -13,12 +13,16 @@ namespace WindowsFormsApp7
     public partial class HomePage : Form
     {
         private static int PanelLocation = 200;
+        private int postCurrentNum = 1;
         string email;
+
+        bool isNewPage = true;
         
         public HomePage(string email) //Please use this one to transfer data.
         {
             InitializeComponent();
             this.email = email;
+
 
             //Below is checking which profile photo to load
             Image myimage = new Bitmap(MySQLFunctions.getProfileImage(email));
@@ -28,6 +32,7 @@ namespace WindowsFormsApp7
 
         private void FriendRequest_button_Click(object sender, EventArgs e)
         {
+            PanelLocation = 200;
             this.Hide();
             FriendRequest a = new FriendRequest(email, 0);
             a.ShowDialog();
@@ -41,6 +46,7 @@ namespace WindowsFormsApp7
 
         private void user_button_Click(object sender, EventArgs e)
         {
+            PanelLocation = 200;
             this.Hide();
             AccountPage a = new AccountPage(email);
             a.ShowDialog();
@@ -53,6 +59,7 @@ namespace WindowsFormsApp7
 
         private void home_button_Click(object sender, EventArgs e)
         {
+            PanelLocation = 200;
             this.Hide();
             HomePage a = new HomePage(email);
             a.ShowDialog();
@@ -66,14 +73,18 @@ namespace WindowsFormsApp7
             {
                 int totalPosts = int.Parse(MySQLFunctions.getTotalPosts(email));
                 string post = "";
-                for (int i = 1; i <= totalPosts; i++)
+                for (int i = totalPosts; i >= 0; i--)
                 {
                     post = MySQLFunctions.getPost(email, i.ToString());
 
-                    AddPost a = new AddPost();
+                    
+                    AddPost a = new AddPost(i, isNewPage);
                     a.post_lbl.Text = post;
                     a.post_lbl.Size = new System.Drawing.Size(700, 25);
 
+                    isNewPage = false;
+                    postCurrentNum = i;
+                    
                     this.Controls.Add(a.post_background);
                     a.post_background.Controls.Add(a.post_lbl);
                     a.post_background.Controls.Add(a.date_lbl);
@@ -83,7 +94,7 @@ namespace WindowsFormsApp7
                     a.date_lbl.Show();
                     a.post_background.Show();
                     a.delete_lbl.Show();
-                    PanelLocation += 100;
+                    PanelLocation += 100; //Adding an amount
                 }
             }
         }
@@ -109,27 +120,35 @@ namespace WindowsFormsApp7
 
         private void Submit_post_button_Click(object sender, EventArgs e)
         {
-            AddPost a = new AddPost();
-            a.post_lbl.Text = textBox1.Text;
-            a.post_lbl.Size = new System.Drawing.Size(700, 25);
+            AddPost ah = new AddPost(postCurrentNum, isNewPage);
+            ah.post_lbl.Text = textBox1.Text;
+            ah.post_lbl.Size = new System.Drawing.Size(700, 25);
 
-            this.Controls.Add(a.post_background);
-            a.post_background.Controls.Add(a.post_lbl);
-            a.post_background.Controls.Add(a.date_lbl);
-            a.post_background.Controls.Add(a.delete_lbl);
+            this.Controls.Add(ah.post_background);
+            ah.post_background.Controls.Add(ah.post_lbl);
+            ah.post_background.Controls.Add(ah.date_lbl);
+            ah.post_background.Controls.Add(ah.delete_lbl);
 
-            a.post_lbl.Show();
-            a.date_lbl.Show();
-            a.delete_lbl.Show();
-            a.post_background.Show();
+            ah.post_lbl.Show();
+            ah.date_lbl.Show();
+            ah.delete_lbl.Show();
+            ah.post_background.Show();
+            
             PanelLocation += 100;
 
-            MySQLFunctions.savePost(email, textBox1.Text, a.date_lbl.Text);
+            MySQLFunctions.savePost(email, textBox1.Text, ah.date_lbl.Text);
+
+            //New Post added to end
+            //Delete all Posts, reload
+
+            this.Hide();
+            AddProfileImage a = new AddProfileImage(1, email);
+            this.Close();
         }
 
         public void loadPosts(String post)
         {
-            AddPost a = new AddPost();
+            AddPost a = new AddPost(postCurrentNum, isNewPage);
             string delete_lbl_name;
             a.post_lbl.Text = post;
             a.post_lbl.Size = new System.Drawing.Size(700, 25);
@@ -159,6 +178,7 @@ namespace WindowsFormsApp7
 
         private void settings_button_Click(object sender, EventArgs e)
         {
+            PanelLocation = 200;
             //Form sendform = Form.ActiveForm;
             this.Hide();
             SettingsPage a = new SettingsPage(0, email);
@@ -168,6 +188,7 @@ namespace WindowsFormsApp7
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            PanelLocation = 200;
             this.Hide();
             AddProfileImage a = new AddProfileImage(email, false);
             a.ShowDialog();

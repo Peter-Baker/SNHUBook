@@ -21,9 +21,13 @@ namespace WindowsFormsApp7
         public Label delete_lbl = new Label();
         public string delete_name;
 
-        public AddPost()
+        public AddPost(int num, bool isNewPage)
         {
-            number++;
+            if(isNewPage == true)
+            {
+                resetPostPositions();
+            }
+            number = num;
 
             post_background.Name = ("post_background" + number.ToString()); //panel that holds all of the info
             post_background.Location = new System.Drawing.Point(157, PanelLocation);
@@ -50,6 +54,14 @@ namespace WindowsFormsApp7
             delete_lbl.ForeColor = System.Drawing.Color.White;
             delete_lbl.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             delete_lbl.Text = "Delete";
+        }
+
+        public void resetPostPositions()
+        {
+            PanelLocation = 320;
+            LabelLocation = 55;
+            DateLocation = 15;
+            DeleteLocation = 15;
         }
     }
 }
