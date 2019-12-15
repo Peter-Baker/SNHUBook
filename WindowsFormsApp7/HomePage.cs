@@ -73,7 +73,7 @@ namespace WindowsFormsApp7
             {
                 int totalPosts = int.Parse(MySQLFunctions.getTotalPosts(email));
                 string post = "";
-                for (int i = totalPosts; i >= 0; i--)
+                for (int i = totalPosts; i > 0; i--)
                 {
                     post = MySQLFunctions.getPost(email, i.ToString());
 
@@ -89,6 +89,8 @@ namespace WindowsFormsApp7
                     a.post_background.Controls.Add(a.post_lbl);
                     a.post_background.Controls.Add(a.date_lbl);
                     a.post_background.Controls.Add(a.delete_lbl);
+
+                    a.date_lbl.Text = MySQLFunctions.getDate(email, i.ToString());
 
                     a.post_lbl.Show();
                     a.date_lbl.Show();
