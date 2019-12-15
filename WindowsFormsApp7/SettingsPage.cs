@@ -44,10 +44,16 @@ namespace WindowsFormsApp7
                     b.ShowDialog();
                     this.Close();
                     break;
+                case 3:
+                    this.Hide();
+                    FriendRequest c = new FriendRequest(email, 3);
+                    c.ShowDialog();
+                    this.Close();
+                    break;
                 default:
                     this.Hide();
-                    HomePage c = new HomePage(email);
-                    c.ShowDialog();
+                    HomePage d = new HomePage(email);
+                    d.ShowDialog();
                     this.Close();
                     break;
 
@@ -173,7 +179,7 @@ namespace WindowsFormsApp7
         private void FriendRequest_button_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FriendRequest a = new FriendRequest(email);
+            FriendRequest a = new FriendRequest(email, 3);
             a.ShowDialog();
             this.Close();
         }

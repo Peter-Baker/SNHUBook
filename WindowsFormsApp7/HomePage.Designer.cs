@@ -36,9 +36,6 @@ namespace WindowsFormsApp7
             this.panel1 = new System.Windows.Forms.Panel();
             this.Submit_post_button = new System.Windows.Forms.Button();
             this.Create_Post_lbl = new System.Windows.Forms.Label();
-            this.Check_In = new System.Windows.Forms.Button();
-            this.Tag_button = new System.Windows.Forms.Button();
-            this.Photo_Video = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.settings_button = new System.Windows.Forms.Button();
@@ -60,7 +57,7 @@ namespace WindowsFormsApp7
             // 
             this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(10, 28);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(710, 108);
@@ -74,12 +71,9 @@ namespace WindowsFormsApp7
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.Controls.Add(this.Submit_post_button);
             this.panel1.Controls.Add(this.Create_Post_lbl);
-            this.panel1.Controls.Add(this.Check_In);
-            this.panel1.Controls.Add(this.Tag_button);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.Photo_Video);
             this.panel1.Location = new System.Drawing.Point(157, 122);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(730, 181);
             this.panel1.TabIndex = 2;
@@ -90,7 +84,7 @@ namespace WindowsFormsApp7
             this.Submit_post_button.Cursor = System.Windows.Forms.Cursors.Default;
             this.Submit_post_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Submit_post_button.Location = new System.Drawing.Point(617, 141);
-            this.Submit_post_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Submit_post_button.Margin = new System.Windows.Forms.Padding(2);
             this.Submit_post_button.Name = "Submit_post_button";
             this.Submit_post_button.Size = new System.Drawing.Size(80, 29);
             this.Submit_post_button.TabIndex = 4;
@@ -111,46 +105,6 @@ namespace WindowsFormsApp7
             this.Create_Post_lbl.TabIndex = 3;
             this.Create_Post_lbl.Text = "Create a Post";
             // 
-            // Check_In
-            // 
-            this.Check_In.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Check_In.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Check_In.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Check_In.Location = new System.Drawing.Point(338, 141);
-            this.Check_In.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Check_In.Name = "Check_In";
-            this.Check_In.Size = new System.Drawing.Size(80, 29);
-            this.Check_In.TabIndex = 2;
-            this.Check_In.Text = "Check In";
-            this.Check_In.UseVisualStyleBackColor = false;
-            this.Check_In.Click += new System.EventHandler(this.Check_In_Click);
-            // 
-            // Tag_button
-            // 
-            this.Tag_button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Tag_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tag_button.Location = new System.Drawing.Point(203, 141);
-            this.Tag_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Tag_button.Name = "Tag_button";
-            this.Tag_button.Size = new System.Drawing.Size(86, 29);
-            this.Tag_button.TabIndex = 1;
-            this.Tag_button.Text = "Tag Friends";
-            this.Tag_button.UseVisualStyleBackColor = false;
-            this.Tag_button.Click += new System.EventHandler(this.Tag_button_Click);
-            // 
-            // Photo_Video
-            // 
-            this.Photo_Video.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Photo_Video.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Photo_Video.Location = new System.Drawing.Point(66, 141);
-            this.Photo_Video.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Photo_Video.Name = "Photo_Video";
-            this.Photo_Video.Size = new System.Drawing.Size(90, 29);
-            this.Photo_Video.TabIndex = 0;
-            this.Photo_Video.Text = "Photo/Video";
-            this.Photo_Video.UseVisualStyleBackColor = false;
-            this.Photo_Video.Click += new System.EventHandler(this.Photo_Video_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
@@ -162,7 +116,7 @@ namespace WindowsFormsApp7
             this.panel2.Controls.Add(this.user_button);
             this.panel2.Controls.Add(this.SNHUbook_lbl);
             this.panel2.Location = new System.Drawing.Point(1, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(921, 43);
             this.panel2.TabIndex = 3;
@@ -173,7 +127,7 @@ namespace WindowsFormsApp7
             this.pictureBox1.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.FemaleAvatar1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(465, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -193,7 +147,7 @@ namespace WindowsFormsApp7
             this.settings_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.settings_button.Image = global::WindowsFormsApp7.Properties.Resources.setting_icon;
             this.settings_button.Location = new System.Drawing.Point(867, 18);
-            this.settings_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.settings_button.Margin = new System.Windows.Forms.Padding(2);
             this.settings_button.Name = "settings_button";
             this.settings_button.Size = new System.Drawing.Size(19, 20);
             this.settings_button.TabIndex = 8;
@@ -210,7 +164,7 @@ namespace WindowsFormsApp7
             this.FriendRequest_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FriendRequest_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FriendRequest_button.Location = new System.Drawing.Point(684, 13);
-            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(2);
             this.FriendRequest_button.Name = "FriendRequest_button";
             this.FriendRequest_button.Size = new System.Drawing.Size(131, 30);
             this.FriendRequest_button.TabIndex = 7;
@@ -228,7 +182,7 @@ namespace WindowsFormsApp7
             this.home_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.home_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.home_button.Location = new System.Drawing.Point(585, 13);
-            this.home_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.home_button.Margin = new System.Windows.Forms.Padding(2);
             this.home_button.Name = "home_button";
             this.home_button.Size = new System.Drawing.Size(104, 30);
             this.home_button.TabIndex = 6;
@@ -246,7 +200,7 @@ namespace WindowsFormsApp7
             this.user_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.user_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.user_button.Location = new System.Drawing.Point(489, 13);
-            this.user_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.user_button.Margin = new System.Windows.Forms.Padding(2);
             this.user_button.Name = "user_button";
             this.user_button.Size = new System.Drawing.Size(104, 30);
             this.user_button.TabIndex = 1;
@@ -271,7 +225,7 @@ namespace WindowsFormsApp7
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.panel3.Location = new System.Drawing.Point(1, 41);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(141, 734);
             this.panel3.TabIndex = 4;
@@ -283,7 +237,7 @@ namespace WindowsFormsApp7
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Location = new System.Drawing.Point(157, 317);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(730, 109);
             this.panel4.TabIndex = 5;
@@ -318,12 +272,12 @@ namespace WindowsFormsApp7
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(920, 673);
+            this.ClientSize = new System.Drawing.Size(937, 690);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HomePage";
             this.Text = "HomePage";
             this.Load += new System.EventHandler(this.HomePage_Load);
@@ -343,9 +297,6 @@ namespace WindowsFormsApp7
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Create_Post_lbl;
-        private System.Windows.Forms.Button Check_In;
-        private System.Windows.Forms.Button Tag_button;
-        private System.Windows.Forms.Button Photo_Video;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label SNHUbook_lbl;
         private System.Windows.Forms.Panel panel3;

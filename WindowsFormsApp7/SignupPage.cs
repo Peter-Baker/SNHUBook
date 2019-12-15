@@ -26,6 +26,14 @@ namespace WindowsFormsApp7
         private void firstname_textbox_TextChanged(object sender, EventArgs e)
         {
             firstName = firstname_textbox.Text;
+            if(firstname_textbox.Text.Length == 0)
+            {
+                firstNameErrorText.Visible = true;
+            }
+            else
+            {
+                firstNameErrorText.Visible = false;
+            }
         }
 
         private void login_Click(object sender, EventArgs e)
@@ -114,20 +122,58 @@ namespace WindowsFormsApp7
         private void lastname_textbox_TextChanged(object sender, EventArgs e)
         {
             lastName = lastname_textbox.Text;
+            if(lastname_textbox.Text.Length == 0)
+            {
+                LastNameErrorText.Visible = true;
+            }
+            else
+            {
+                LastNameErrorText.Visible = false;
+            }
         }
 
         private void email_textbox_TextChanged(object sender, EventArgs e)
         {
             email = email_textbox.Text;
+            if (email_textbox.Text.Length == 0)
+            {
+                EmailCantBeEmpty.Visible = true;
+            }else if(email_textbox.Text.Contains("@snhu.edu") == false)
+            {
+                MustBeASNHUEmailAddress.Visible = true;
+            }
+            else
+            {
+                EmailCantBeEmpty.Visible = false;
+                MustBeASNHUEmailAddress.Visible = false;
+            }
         }
 
         private void password_textbox_TextChanged(object sender, EventArgs e)
         {
             password = password_textbox.Text;
             password_textbox.PasswordChar = '*';
+            if(password_textbox.Text.Length == 0)
+            {
+                PasswordCantBeEmpty.Visible = true;
+            }
+            else
+            {
+                PasswordCantBeEmpty.Visible = false;
+            }
         }
 
         private void SignUp_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LastNameErrorText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void firstNameErrorText_Click(object sender, EventArgs e)
         {
 
         }

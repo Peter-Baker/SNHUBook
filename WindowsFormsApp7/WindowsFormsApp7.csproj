@@ -57,6 +57,7 @@
     <Compile Include="AddFriend.Designer.cs">
       <DependentUpon>AddFriend.cs</DependentUpon>
     </Compile>
+    <Compile Include="AccountAddPost.cs" />
     <Compile Include="AddPost.cs" />
     <Compile Include="AddBackground.cs">
       <SubType>Form</SubType>

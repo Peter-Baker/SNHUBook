@@ -8,10 +8,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp7
 {
-    class AddPost
+    class AccountAddPost
     {
         public static int number = 0;
-        public static int PanelLocation = 320;
+        public static int PanelLocation = 666;
         public static int LabelLocation = 55;
         public static int DateLocation = 15;
         public static int DeleteLocation = 15;
@@ -21,7 +21,7 @@ namespace WindowsFormsApp7
         public Label delete_lbl = new Label();
         public string delete_name;
 
-        public AddPost(int num, bool isNewPage)
+        public AccountAddPost(int num, bool isNewPage)
         {
             if(isNewPage == true)
             {
