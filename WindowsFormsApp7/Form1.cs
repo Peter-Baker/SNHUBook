@@ -13,6 +13,11 @@ namespace WindowsFormsApp7
     public partial class AccountPage : Form
     {
         string email, add_bio;
+
+        private int postCurrentNum = 1;
+        bool isNewPage = true;
+        private static int PanelLocation = 666;
+
         public AccountPage(String email)
         {
             InitializeComponent();
@@ -26,6 +31,39 @@ namespace WindowsFormsApp7
             home_lbl.Text = MySQLFunctions.getHome(email);
             Image backImage = new Bitmap(MySQLFunctions.getBackgroundImage(email));
             CoverPicture.BackgroundImage = backImage;
+
+            panel4.Hide();
+            if (MySQLFunctions.getTotalPosts(email) != "0")
+            {
+                int totalPosts = int.Parse(MySQLFunctions.getTotalPosts(email));
+                string post = "";
+                for (int i = totalPosts; i > 0; i--)
+                {
+                    post = MySQLFunctions.getPost(email, i.ToString());
+
+
+                    AccountAddPost a = new AccountAddPost(i, isNewPage);
+                    a.post_lbl.Text = post;
+                    a.post_lbl.Size = new System.Drawing.Size(700, 25);
+
+                    isNewPage = false;
+                    postCurrentNum = i;
+
+                    this.Controls.Add(a.post_background);
+                    a.post_background.Controls.Add(a.post_lbl);
+                    a.post_background.Controls.Add(a.date_lbl);
+                    a.post_background.Controls.Add(a.delete_lbl);
+
+                    a.date_lbl.Text = MySQLFunctions.getDate(email, i.ToString());
+
+                    a.post_lbl.Show();
+                    a.date_lbl.Show();
+                    a.post_background.Show();
+                    a.delete_lbl.Show();
+                    PanelLocation += 100; //Adding an amount
+                }
+            }
+
         }
 
         private void AccountPage_Load(object sender, EventArgs e)
@@ -183,6 +221,11 @@ namespace WindowsFormsApp7
             FriendRequest a = new FriendRequest(email, 1);
             a.ShowDialog();
             this.Close();
+        }
+
+        private void Submit_post_button_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void Add_bn_Click(object sender, EventArgs e)
