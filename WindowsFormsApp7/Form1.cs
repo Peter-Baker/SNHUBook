@@ -177,6 +177,14 @@ namespace WindowsFormsApp7
             this.Close();
         }
 
+        private void FriendRequest_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FriendRequest a = new FriendRequest(email, 1);
+            a.ShowDialog();
+            this.Close();
+        }
+
         private void Add_bn_Click(object sender, EventArgs e)
         {
             Bio_lbl.Text = add_bio;

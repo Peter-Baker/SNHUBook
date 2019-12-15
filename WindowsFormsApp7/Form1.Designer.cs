@@ -80,7 +80,7 @@
             // 
             this.add_home_bn.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_home_bn.Location = new System.Drawing.Point(161, 90);
-            this.add_home_bn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.add_home_bn.Margin = new System.Windows.Forms.Padding(2);
             this.add_home_bn.Name = "add_home_bn";
             this.add_home_bn.Size = new System.Drawing.Size(59, 28);
             this.add_home_bn.TabIndex = 15;
@@ -103,7 +103,7 @@
             // 
             this.cancel_home_bn.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancel_home_bn.Location = new System.Drawing.Point(54, 90);
-            this.cancel_home_bn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cancel_home_bn.Margin = new System.Windows.Forms.Padding(2);
             this.cancel_home_bn.Name = "cancel_home_bn";
             this.cancel_home_bn.Size = new System.Drawing.Size(65, 28);
             this.cancel_home_bn.TabIndex = 15;
@@ -115,7 +115,7 @@
             // 
             this.hometown_text.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hometown_text.Location = new System.Drawing.Point(55, 68);
-            this.hometown_text.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.hometown_text.Margin = new System.Windows.Forms.Padding(2);
             this.hometown_text.Multiline = true;
             this.hometown_text.Name = "hometown_text";
             this.hometown_text.Size = new System.Drawing.Size(167, 25);
@@ -126,7 +126,7 @@
             // 
             this.AddBio_Text.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBio_Text.Location = new System.Drawing.Point(54, 46);
-            this.AddBio_Text.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddBio_Text.Margin = new System.Windows.Forms.Padding(2);
             this.AddBio_Text.Multiline = true;
             this.AddBio_Text.Name = "AddBio_Text";
             this.AddBio_Text.Size = new System.Drawing.Size(168, 22);
@@ -150,7 +150,7 @@
             // 
             this.Add_bn.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add_bn.Location = new System.Drawing.Point(150, 70);
-            this.Add_bn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Add_bn.Margin = new System.Windows.Forms.Padding(2);
             this.Add_bn.Name = "Add_bn";
             this.Add_bn.Size = new System.Drawing.Size(67, 25);
             this.Add_bn.TabIndex = 12;
@@ -162,7 +162,7 @@
             // 
             this.Cancel_bn.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancel_bn.Location = new System.Drawing.Point(56, 70);
-            this.Cancel_bn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Cancel_bn.Margin = new System.Windows.Forms.Padding(2);
             this.Cancel_bn.Name = "Cancel_bn";
             this.Cancel_bn.Size = new System.Drawing.Size(67, 25);
             this.Cancel_bn.TabIndex = 11;
@@ -233,7 +233,7 @@
             this.panel2.Controls.Add(this.SNHUbook_lbl);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1024, 43);
             this.panel2.TabIndex = 4;
@@ -251,7 +251,7 @@
             this.settings_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settings_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.settings_button.Location = new System.Drawing.Point(977, 20);
-            this.settings_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.settings_button.Margin = new System.Windows.Forms.Padding(2);
             this.settings_button.Name = "settings_button";
             this.settings_button.Size = new System.Drawing.Size(19, 20);
             this.settings_button.TabIndex = 8;
@@ -268,12 +268,13 @@
             this.FriendRequest_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FriendRequest_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FriendRequest_button.Location = new System.Drawing.Point(790, 13);
-            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FriendRequest_button.Margin = new System.Windows.Forms.Padding(2);
             this.FriendRequest_button.Name = "FriendRequest_button";
             this.FriendRequest_button.Size = new System.Drawing.Size(131, 30);
             this.FriendRequest_button.TabIndex = 7;
             this.FriendRequest_button.Text = "Friend Requests";
             this.FriendRequest_button.UseVisualStyleBackColor = false;
+            this.FriendRequest_button.Click += new System.EventHandler(this.FriendRequest_button_Click);
             // 
             // home_button
             // 
@@ -285,7 +286,7 @@
             this.home_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.home_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.home_button.Location = new System.Drawing.Point(681, 13);
-            this.home_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.home_button.Margin = new System.Windows.Forms.Padding(2);
             this.home_button.Name = "home_button";
             this.home_button.Size = new System.Drawing.Size(104, 30);
             this.home_button.TabIndex = 6;
@@ -303,7 +304,7 @@
             this.user_button.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.user_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.user_button.Location = new System.Drawing.Point(572, 13);
-            this.user_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.user_button.Margin = new System.Windows.Forms.Padding(2);
             this.user_button.Name = "user_button";
             this.user_button.Size = new System.Drawing.Size(104, 30);
             this.user_button.TabIndex = 1;

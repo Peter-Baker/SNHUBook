@@ -15,11 +15,15 @@ namespace WindowsFormsApp7
 
         string email;
 
-        public FriendRequest(string email)
+        int recievedform;
+
+        public FriendRequest(string email, int recievedNum)
         {
             InitializeComponent();
 
             this.email = email;
+
+            recievedform = recievedNum;
 
             string totalString = MySQLFunctions.getTotalAccounts();
             int totalAccounts = int.Parse(totalString);
@@ -102,10 +106,34 @@ namespace WindowsFormsApp7
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            HomePage d = new HomePage(email);
-            d.ShowDialog();
-            this.Close();
+            switch (recievedform)
+            {
+                case 0: //HomePage
+                    this.Hide();
+                    HomePage a = new HomePage(email);
+                    a.ShowDialog();
+                    this.Close();
+                    break;
+                case 1: //AccountPage
+                    this.Hide();
+                    AccountPage b = new AccountPage(email);
+                    b.ShowDialog();
+                    this.Close();
+                    break;
+                case 3: //SettingsPage
+                    this.Hide();
+                    SettingsPage c = new SettingsPage(3, email);
+                    c.ShowDialog();
+                    this.Close();
+                    break;
+                default:
+                    this.Hide();
+                    HomePage d = new HomePage(email);
+                    d.ShowDialog();
+                    this.Close();
+                    break;
+
+            }
         }
 
         private void friendsListBox_SelectedIndexChanged(object sender, EventArgs e)

@@ -29,7 +29,7 @@ namespace WindowsFormsApp7
         private void FriendRequest_button_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FriendRequest a = new FriendRequest(email);
+            FriendRequest a = new FriendRequest(email, 0);
             a.ShowDialog();
             this.Close();
         }
