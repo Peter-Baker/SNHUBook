@@ -39,6 +39,11 @@
             this.save_button = new System.Windows.Forms.Button();
             this.login = new System.Windows.Forms.Button();
             this.WelcomeToSNHUBook = new System.Windows.Forms.Label();
+            this.firstNameErrorText = new System.Windows.Forms.Label();
+            this.LastNameErrorText = new System.Windows.Forms.Label();
+            this.EmailCantBeEmpty = new System.Windows.Forms.Label();
+            this.PasswordCantBeEmpty = new System.Windows.Forms.Label();
+            this.MustBeASNHUEmailAddress = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // firstname_textbox
@@ -164,6 +169,68 @@
             this.WelcomeToSNHUBook.TabIndex = 10;
             this.WelcomeToSNHUBook.Text = "Create an Account";
             // 
+            // firstNameErrorText
+            // 
+            this.firstNameErrorText.AutoSize = true;
+            this.firstNameErrorText.BackColor = System.Drawing.Color.White;
+            this.firstNameErrorText.ForeColor = System.Drawing.Color.Red;
+            this.firstNameErrorText.Location = new System.Drawing.Point(367, 152);
+            this.firstNameErrorText.Name = "firstNameErrorText";
+            this.firstNameErrorText.Size = new System.Drawing.Size(129, 13);
+            this.firstNameErrorText.TabIndex = 11;
+            this.firstNameErrorText.Text = "First Name can\'t be empty";
+            this.firstNameErrorText.Visible = false;
+            this.firstNameErrorText.Click += new System.EventHandler(this.firstNameErrorText_Click);
+            // 
+            // LastNameErrorText
+            // 
+            this.LastNameErrorText.AutoSize = true;
+            this.LastNameErrorText.BackColor = System.Drawing.Color.White;
+            this.LastNameErrorText.ForeColor = System.Drawing.Color.Red;
+            this.LastNameErrorText.Location = new System.Drawing.Point(367, 194);
+            this.LastNameErrorText.Name = "LastNameErrorText";
+            this.LastNameErrorText.Size = new System.Drawing.Size(130, 13);
+            this.LastNameErrorText.TabIndex = 12;
+            this.LastNameErrorText.Text = "Last Name can\'t be empty";
+            this.LastNameErrorText.Visible = false;
+            this.LastNameErrorText.Click += new System.EventHandler(this.LastNameErrorText_Click);
+            // 
+            // EmailCantBeEmpty
+            // 
+            this.EmailCantBeEmpty.AutoSize = true;
+            this.EmailCantBeEmpty.BackColor = System.Drawing.Color.White;
+            this.EmailCantBeEmpty.ForeColor = System.Drawing.Color.Red;
+            this.EmailCantBeEmpty.Location = new System.Drawing.Point(367, 241);
+            this.EmailCantBeEmpty.Name = "EmailCantBeEmpty";
+            this.EmailCantBeEmpty.Size = new System.Drawing.Size(105, 13);
+            this.EmailCantBeEmpty.TabIndex = 13;
+            this.EmailCantBeEmpty.Text = "Email Cant Be Empty";
+            this.EmailCantBeEmpty.Visible = false;
+            // 
+            // PasswordCantBeEmpty
+            // 
+            this.PasswordCantBeEmpty.AutoSize = true;
+            this.PasswordCantBeEmpty.BackColor = System.Drawing.Color.White;
+            this.PasswordCantBeEmpty.ForeColor = System.Drawing.Color.Red;
+            this.PasswordCantBeEmpty.Location = new System.Drawing.Point(367, 285);
+            this.PasswordCantBeEmpty.Name = "PasswordCantBeEmpty";
+            this.PasswordCantBeEmpty.Size = new System.Drawing.Size(126, 13);
+            this.PasswordCantBeEmpty.TabIndex = 14;
+            this.PasswordCantBeEmpty.Text = "Password Cant Be Empty";
+            this.PasswordCantBeEmpty.Visible = false;
+            // 
+            // MustBeASNHUEmailAddress
+            // 
+            this.MustBeASNHUEmailAddress.AutoSize = true;
+            this.MustBeASNHUEmailAddress.BackColor = System.Drawing.Color.White;
+            this.MustBeASNHUEmailAddress.ForeColor = System.Drawing.Color.Red;
+            this.MustBeASNHUEmailAddress.Location = new System.Drawing.Point(367, 228);
+            this.MustBeASNHUEmailAddress.Name = "MustBeASNHUEmailAddress";
+            this.MustBeASNHUEmailAddress.Size = new System.Drawing.Size(185, 13);
+            this.MustBeASNHUEmailAddress.TabIndex = 15;
+            this.MustBeASNHUEmailAddress.Text = "Email Must be a SNHU Email Address";
+            this.MustBeASNHUEmailAddress.Visible = false;
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,6 +238,11 @@
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.SNHU;
             this.ClientSize = new System.Drawing.Size(793, 428);
+            this.Controls.Add(this.MustBeASNHUEmailAddress);
+            this.Controls.Add(this.PasswordCantBeEmpty);
+            this.Controls.Add(this.EmailCantBeEmpty);
+            this.Controls.Add(this.LastNameErrorText);
+            this.Controls.Add(this.firstNameErrorText);
             this.Controls.Add(this.WelcomeToSNHUBook);
             this.Controls.Add(this.login);
             this.Controls.Add(this.save_button);
@@ -204,5 +276,10 @@
         private System.Windows.Forms.Button save_button;
         private System.Windows.Forms.Button login;
         private System.Windows.Forms.Label WelcomeToSNHUBook;
+        private System.Windows.Forms.Label firstNameErrorText;
+        private System.Windows.Forms.Label LastNameErrorText;
+        private System.Windows.Forms.Label EmailCantBeEmpty;
+        private System.Windows.Forms.Label PasswordCantBeEmpty;
+        private System.Windows.Forms.Label MustBeASNHUEmailAddress;
     }
 }
