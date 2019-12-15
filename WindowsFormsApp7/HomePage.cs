@@ -12,8 +12,9 @@ namespace WindowsFormsApp7
 {
     public partial class HomePage : Form
     {
-        private static int PanelLocation = 200;
+        private static int PanelLocation = 200, number = 0;
         string email;
+        string[] post_name;
         
         public HomePage(string email) //Please use this one to transfer data.
         {
@@ -71,6 +72,10 @@ namespace WindowsFormsApp7
                     post = MySQLFunctions.getPost(email, i.ToString());
 
                     AddPost a = new AddPost();
+                    WindowsFormsApp7.AddPost.PanelLocation = 320;
+                    WindowsFormsApp7.AddPost.LabelLocation = 55;
+                    WindowsFormsApp7.AddPost.DateLocation = 15;
+                    WindowsFormsApp7.AddPost.DateLocation = 15;
                     a.post_lbl.Text = post;
                     a.post_lbl.Size = new System.Drawing.Size(700, 25);
 
@@ -123,6 +128,8 @@ namespace WindowsFormsApp7
             a.delete_lbl.Show();
             a.post_background.Show();
             PanelLocation += 100;
+            number++;
+            post_name[number] = a.delete_name;
 
             MySQLFunctions.savePost(email, textBox1.Text, a.date_lbl.Text);
         }
@@ -144,7 +151,6 @@ namespace WindowsFormsApp7
             a.delete_lbl.Show();
             a.post_background.Show();
             PanelLocation += 100;
-            delete_lbl_name = a.delete_name;
         }
 
         private void date_lbl_Click(object sender, EventArgs e)
