@@ -28,6 +28,7 @@ namespace WindowsFormsApp7
                 resetPostPositions();
             }
             number = num;
+            
 
             post_background.Name = ("post_background" + number.ToString()); //panel that holds all of the info
             post_background.Location = new System.Drawing.Point(157, PanelLocation);

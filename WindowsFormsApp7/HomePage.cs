@@ -14,7 +14,6 @@ namespace WindowsFormsApp7
     {
         private static int PanelLocation = 200, number = 0;
         string email;
-        string[] post_name;
         private int postCurrentNum = 1;
 
         bool isNewPage = true;
@@ -76,13 +75,9 @@ namespace WindowsFormsApp7
                 string post = "";
                 for (int i = totalPosts; i > 0; i--)
                 {
+                   
                     post = MySQLFunctions.getPost(email, i.ToString());
 
-                    WindowsFormsApp7.AddPost.PanelLocation = 320;
-                    WindowsFormsApp7.AddPost.LabelLocation = 55;
-                    WindowsFormsApp7.AddPost.DateLocation = 15;
-                    WindowsFormsApp7.AddPost.DateLocation = 15;
-                    
                     AddPost a = new AddPost(i, isNewPage);
                     a.post_lbl.Text = post;
                     a.post_lbl.Size = new System.Drawing.Size(700, 25);
@@ -142,13 +137,8 @@ namespace WindowsFormsApp7
             ah.post_background.Show();
             
             PanelLocation += 100;
-            number++;
-            post_name[number] = ah.delete_name;
 
             MySQLFunctions.savePost(email, textBox1.Text, ah.date_lbl.Text);
-
-            //New Post added to end
-            //Delete all Posts, reload
 
             this.Hide();
             AddProfileImage a = new AddProfileImage(1, email);
@@ -158,7 +148,6 @@ namespace WindowsFormsApp7
         public void loadPosts(String post)
         {
             AddPost a = new AddPost(postCurrentNum, isNewPage);
-            string delete_lbl_name;
             a.post_lbl.Text = post;
             a.post_lbl.Size = new System.Drawing.Size(700, 25);
 
