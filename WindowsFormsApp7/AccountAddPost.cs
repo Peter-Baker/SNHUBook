@@ -30,7 +30,7 @@ namespace WindowsFormsApp7
             number = num;
 
             post_background.Name = ("post_background" + number.ToString()); //panel that holds all of the info
-            post_background.Location = new System.Drawing.Point(157, PanelLocation);
+            post_background.Location = new System.Drawing.Point(248, PanelLocation);
             post_background.BackColor = System.Drawing.Color.Transparent;
             this.post_background.BackgroundImage = global::WindowsFormsApp7.Properties.Resources.blue_gradient_background;
             post_background.Size = new System.Drawing.Size(730, 100);
@@ -38,17 +38,17 @@ namespace WindowsFormsApp7
 
             DateTime date = DateTime.Now;   //adding the date
             date_lbl.Name = ("date_lbl" + number.ToString());
-            date_lbl.Location = new System.Drawing.Point(39, DateLocation);
-            date_lbl.ForeColor = System.Drawing.SystemColors.Window;
+            date_lbl.Location = new System.Drawing.Point(33, DateLocation);
+            date_lbl.ForeColor = System.Drawing.Color.White;
             date_lbl.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             date_lbl.Text = date.ToString().Substring(0, 10);
 
-            post_lbl.Location = new System.Drawing.Point(39, LabelLocation);
+            post_lbl.Location = new System.Drawing.Point(33, LabelLocation);
             post_lbl.Name = ("post_lbl" + number.ToString());
-            post_lbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            post_lbl.ForeColor = System.Drawing.Color.White;
             post_lbl.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
-            delete_lbl.Location = new System.Drawing.Point(620, DeleteLocation);
+            delete_lbl.Location = new System.Drawing.Point(580, DeleteLocation);
             delete_lbl.Name = ("delete_lbl" + number.ToString());
             delete_name = delete_lbl.Name;
             delete_lbl.ForeColor = System.Drawing.Color.White;
@@ -58,7 +58,7 @@ namespace WindowsFormsApp7
 
         public void resetPostPositions()
         {
-            PanelLocation = 320;
+            PanelLocation = 666;
             LabelLocation = 55;
             DateLocation = 15;
             DeleteLocation = 15;

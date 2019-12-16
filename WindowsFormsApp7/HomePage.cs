@@ -15,9 +15,7 @@ namespace WindowsFormsApp7
         private static int PanelLocation = 200, number = 0;
         string email;
         string[] post_name;
-        private static int PanelLocation = 200;
         private int postCurrentNum = 1;
-        string email;
 
         bool isNewPage = true;
         
@@ -80,7 +78,6 @@ namespace WindowsFormsApp7
                 {
                     post = MySQLFunctions.getPost(email, i.ToString());
 
-                    AddPost a = new AddPost();
                     WindowsFormsApp7.AddPost.PanelLocation = 320;
                     WindowsFormsApp7.AddPost.LabelLocation = 55;
                     WindowsFormsApp7.AddPost.DateLocation = 15;
@@ -146,7 +143,7 @@ namespace WindowsFormsApp7
             
             PanelLocation += 100;
             number++;
-            post_name[number] = a.delete_name;
+            post_name[number] = ah.delete_name;
 
             MySQLFunctions.savePost(email, textBox1.Text, ah.date_lbl.Text);
 
