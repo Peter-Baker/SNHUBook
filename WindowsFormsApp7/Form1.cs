@@ -225,6 +225,7 @@ namespace WindowsFormsApp7
 
         private void Submit_post_button_Click(object sender, EventArgs e)
         {
+
             AccountAddPost ah = new AccountAddPost(postCurrentNum, isNewPage);
             ah.post_lbl.Text = textBox1.Text;
             ah.post_lbl.Size = new System.Drawing.Size(700, 25);
@@ -240,10 +241,12 @@ namespace WindowsFormsApp7
             ah.post_background.Show();
 
             PanelLocation += 100;
-            //number++;
-            //post_name[number] = ah.delete_name;
 
             MySQLFunctions.savePost(email, textBox1.Text, ah.date_lbl.Text);
+
+            this.Hide();
+            AddProfileImage a = new AddProfileImage(2, email);
+            this.Close();
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)

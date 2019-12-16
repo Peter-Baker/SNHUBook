@@ -21,7 +21,7 @@ namespace WindowsFormsApp7
         {
             //Using this to reload main page, i know horrible coding
             this.email = email;
-            crashPage();
+            crashPage(num);
         }
 
         public AddProfileImage(String email, bool isPersonalPage) //Use this boolean to determine if the page their currently on is their own
@@ -83,12 +83,22 @@ namespace WindowsFormsApp7
            
         }
 
-        public void crashPage()
+        public void crashPage(int num)
         {
-            this.Hide();
-            HomePage a = new HomePage(email);
-            a.ShowDialog();
-            this.Close();
+            if (num == 1)
+            {
+                this.Hide();
+                HomePage a = new HomePage(email);
+                a.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                this.Hide();
+                AccountPage a = new AccountPage(email);
+                a.ShowDialog();
+                this.Close();
+            }
         }
 
         private void profileImageOne_Click(object sender, EventArgs e)

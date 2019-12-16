@@ -400,7 +400,8 @@ namespace WindowsFormsApp7
             cnn = new MySqlConnection(connectionString);
 
             string AccountID = getID(email);
-            string query = $"SELECT COUNT(*) FROM Posts WHERE AccountID like {AccountID};";
+            
+            string query = $"SELECT MAX(ID) from posts where AccountID = {AccountID};";
 
             MySqlCommand cmd = new MySqlCommand(query, cnn);
 
@@ -505,7 +506,6 @@ namespace WindowsFormsApp7
             tempNewPostID++;
             newPostID = tempNewPostID.ToString();
             string query = $"INSERT INTO Posts values({AccountID}, {newPostID}, '{post}', '{date}');";
-
             MySqlCommand cmd = new MySqlCommand(query, cnn);
 
             MySqlDataReader dr;
