@@ -40,27 +40,33 @@ namespace WindowsFormsApp7
                 for (int i = totalPosts; i > 0; i--)
                 {
                     post = MySQLFunctions.getPost(email, i.ToString());
+                    if (post.Length != 0)
+                    {
 
+                        AccountAddPost a = new AccountAddPost(i, isNewPage);
+                        a.post_lbl.Text = post;
+                        a.post_lbl.Size = new System.Drawing.Size(700, 25);
 
-                    AccountAddPost a = new AccountAddPost(i, isNewPage);
-                    a.post_lbl.Text = post;
-                    a.post_lbl.Size = new System.Drawing.Size(700, 25);
+                        isNewPage = false;
+                        postCurrentNum = i;
 
-                    isNewPage = false;
-                    postCurrentNum = i;
+                        this.Controls.Add(a.post_background);
+                        a.post_background.Controls.Add(a.post_lbl);
+                        a.post_background.Controls.Add(a.date_lbl);
+                        a.post_background.Controls.Add(a.delete_lbl);
 
-                    this.Controls.Add(a.post_background);
-                    a.post_background.Controls.Add(a.post_lbl);
-                    a.post_background.Controls.Add(a.date_lbl);
-                    a.post_background.Controls.Add(a.delete_lbl);
+                        a.date_lbl.Text = MySQLFunctions.getDate(email, i.ToString());
 
-                    a.date_lbl.Text = MySQLFunctions.getDate(email, i.ToString());
-
-                    a.post_lbl.Show();
-                    a.date_lbl.Show();
-                    a.post_background.Show();
-                    a.delete_lbl.Show();
-                    PanelLocation += 100; //Adding an amount
+                        a.post_lbl.Show();
+                        a.date_lbl.Show();
+                        a.post_background.Show();
+                        a.delete_lbl.Show();
+                        PanelLocation += 100; //Adding an amount
+                    }
+                    else
+                    {
+                        i--;
+                    }
                 }
             }
 
