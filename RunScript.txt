@@ -6,4 +6,4 @@ create table Accounts(ID mediumint not null auto_increment, FirstName varchar(30
 
 create table Posts(AccountID mediumint not null, ID int not null, value TEXT(1000), date varchar(10) not null, primary key (AccountID, ID), Foreign Key (AccountID) references accounts(ID) on delete cascade on update cascade);
 
-create table Friends(AccountID mediumint not null, ID int not null, value varchar(50), primary key(AccountID, ID), Foreign Key (AccountID) references accounts(ID) on delete cascade on update cascade);
+create table Friends(AccountID mediumint not null, ID int not null, value varchar(50), email varchar(100) not null, primary key(AccountID, ID), Foreign Key (AccountID) references accounts(ID) on delete cascade on update cascade);

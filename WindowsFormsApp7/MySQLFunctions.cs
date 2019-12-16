@@ -338,7 +338,7 @@ namespace WindowsFormsApp7
             cnn = new MySqlConnection(connectionString);
 
             string query = $"SELECT Home FROM accounts WHERE email LIKE '{email}';";
-
+            
             MySqlCommand cmd = new MySqlCommand(query, cnn);
 
             MySqlDataReader dr;
@@ -411,12 +411,17 @@ namespace WindowsFormsApp7
             dr = cmd.ExecuteReader();
 
             string home = string.Empty;
-
-
-            while (dr.Read())
+            try
             {
-                home = dr.GetString(0);
-                Console.WriteLine(home);
+                while (dr.Read())
+                {
+                    home = dr.GetString(0);
+                    Console.WriteLine(home);
+                }
+            }
+            catch (Exception)
+            {
+                return "0";
             }
 
             dr.Close();
@@ -427,7 +432,6 @@ namespace WindowsFormsApp7
 
         public static string getPost(string email, string id)
         {
-
             string idNum = getID(email);
 
             string connectionString = null;
@@ -436,7 +440,6 @@ namespace WindowsFormsApp7
             cnn = new MySqlConnection(connectionString);
 
             string query = $"SELECT value FROM posts WHERE AccountID like {idNum} and ID LIKE '{id}';";
-
             MySqlCommand cmd = new MySqlCommand(query, cnn);
 
             MySqlDataReader dr;
@@ -505,7 +508,10 @@ namespace WindowsFormsApp7
             int tempNewPostID = int.Parse(newPostID);
             tempNewPostID++;
             newPostID = tempNewPostID.ToString();
-            string query = $"INSERT INTO Posts values({AccountID}, {newPostID}, '{post}', '{date}');";
+
+            string dayNumber = date.Substring(3, 2);
+
+            string query = $"INSERT INTO Posts values({AccountID}, {newPostID}, '{post}', '{date}', '{dayNumber}');";
             MySqlCommand cmd = new MySqlCommand(query, cnn);
 
             MySqlDataReader dr;
@@ -630,8 +636,9 @@ namespace WindowsFormsApp7
             MySqlConnection cnn;
             connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
             cnn = new MySqlConnection(connectionString);
-
-            string query = $"INSERT INTO friends (AccountID, ID, value) values ({idNum}, {ID}, '{listBoxText}');";
+            int newID = ID + 1;
+            string userEmail = MySQLFunctions.getEmail(newID.ToString());
+            string query = $"INSERT INTO friends (AccountID, ID, value, email) values ({idNum}, {ID}, '{listBoxText}', '{userEmail}');";
 
             MySqlCommand cmd = new MySqlCommand(query, cnn);
 
@@ -688,5 +695,254 @@ namespace WindowsFormsApp7
             return home;
         }
 
+        public static void deletePost(string email, string text)
+        {
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string AccountID = getID(email);
+
+            string query = $"DELETE FROM posts WHERE AccountID = {AccountID} AND value = '{text}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string home = string.Empty;
+
+
+            while (dr.Read())
+            {
+                home = dr.GetString(0);
+                Console.WriteLine(home);
+            }
+
+            dr.Close();
+            cnn.Close();
+        }
+
+        public static string getAllTotalPosts() //Gets total number of posts of all users
+        {
+
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT * from posts;";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string home = string.Empty;
+
+
+            try
+            {
+                while (dr.Read())
+                {
+                    home = dr.GetString(0);
+                    Console.WriteLine(home);
+                }
+            }
+            catch (Exception)
+            {
+                return "0";
+            }
+
+            dr.Close();
+            cnn.Close();
+
+            return home;
+        }
+
+        public static string[] getFriends(string email) //returns string array that contains emails of all friends
+        {
+            //CheckifUserhasfriends
+            if (friendExists(MySQLFunctions.getAccountIDNext(email)) != "") //Returns 1 for 1 friend
+            {
+                string[] returnString = new string[int.Parse(getTotalFriends(email))]; //Array of size 1
+                string connectionString;
+                MySqlConnection cnn;
+                string query;
+                MySqlCommand cmd;
+                MySqlDataReader dr;
+                string home;
+                int ID;
+                int j = 0;
+                for (int i = 0; i < int.Parse(getTotalAccounts()); i++)
+                {
+                    ID = i + 1;
+                    if (MySQLFunctions.innerFriendExists(ID.ToString()) != "")
+                    {
+                        connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+                        cnn = new MySqlConnection(connectionString);
+
+                        query = $"SELECT email FROM friends WHERE ID like {ID.ToString()};";
+
+                        cmd = new MySqlCommand(query, cnn);
+
+                        cnn.Open();
+                        dr = cmd.ExecuteReader();
+
+                        home = string.Empty;
+
+                        while (dr.Read())
+                        {
+                            home = dr.GetString(0);
+                            Console.WriteLine(home);
+                        }
+
+                        dr.Close();
+                        cnn.Close();
+                        returnString[j] = home;
+
+                        j++;
+                    }
+                }
+                return returnString;
+            }
+            else
+            {
+                return new string[0];
+            }
+
+        }
+
+        public static string friendExists(string ID) // need logged in users ID attached to email
+        {
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT * FROM Friends where AccountID LIKE {ID};";
+            
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string home = string.Empty;
+
+
+            while (dr.Read())
+            {
+                home = dr.GetString(0);
+                Console.WriteLine(home);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+            return home;
+        }
+
+        public static string innerFriendExists(string ID) // need logged in users ID attached to email
+        {
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT * FROM Friends where ID LIKE {ID};";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string home = string.Empty;
+
+
+            while (dr.Read())
+            {
+                home = dr.GetString(0);
+                Console.WriteLine(home);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+            return home;
+        }
+
+        public static string getAccountIDNext(string email)
+        {
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT ID FROM accounts WHERE Email like '{email}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string home = string.Empty;
+
+
+            while (dr.Read())
+            {
+                home = dr.GetString(0);
+                Console.WriteLine(home);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+            return home;
+        }
+
+        public static string getEmail(string id)
+        {
+
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=SNHUBook;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT email FROM accounts WHERE ID like {id};";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string home = string.Empty;
+
+
+            while (dr.Read())
+            {
+                home = dr.GetString(0);
+                Console.WriteLine(home);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+            return home;
+        }
     }
+
+
 }

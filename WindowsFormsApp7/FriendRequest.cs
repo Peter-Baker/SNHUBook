@@ -44,16 +44,17 @@ namespace WindowsFormsApp7
             else
             {
                 int totalFriends = int.Parse(MySQLFunctions.getTotalFriends(email));
-                if(totalFriends == 0) //if user has no friends, just add the friend.
+                string friend = "";
+                friend = MySQLFunctions.getFriend(email, friendsListBox.Items[friendsListBox.SelectedIndex].ToString());
+                if (totalFriends == 0) //if user has no friends, just add the friend.
                 {
                     MessageBox.Show("Friend added!");
                     MySQLFunctions.addFriend(email, friendsListBox.SelectedIndex, friendsListBox.Items[friendsListBox.SelectedIndex].ToString());
                 }
                 
                 //Search friends table to see if friend is already added.
-                string friend = "";
-                friend = MySQLFunctions.getFriend(email, friendsListBox.Items[friendsListBox.SelectedIndex].ToString());
-                if (friend == "")
+
+                else if (friend == "")
                 {
                     MessageBox.Show("Friend added!");
                     MySQLFunctions.addFriend(email, friendsListBox.SelectedIndex, friendsListBox.Items[friendsListBox.SelectedIndex].ToString());
@@ -89,7 +90,6 @@ namespace WindowsFormsApp7
                 else if (friend == "")
                 {
                     MessageBox.Show("User is not your friend!");
-                    //MySQLFunctions.addFriend(email, friendsListBox.SelectedIndex, friendsListBox.Items[friendsListBox.SelectedIndex].ToString());
                 }
 
                 else if (friend == MySQLFunctions.getFriend(email, MySQLFunctions.getName(email)))

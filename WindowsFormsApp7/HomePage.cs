@@ -12,7 +12,7 @@ namespace WindowsFormsApp7
 {
     public partial class HomePage : Form
     {
-        private static int PanelLocation = 200, number = 0;
+        private static int PanelLocation = 200;
         string email;
         private int postCurrentNum = 1;
 
@@ -69,16 +69,20 @@ namespace WindowsFormsApp7
         private void HomePage_Load(object sender, EventArgs e)
         {
             panel4.Hide();
-            if (MySQLFunctions.getTotalPosts(email) != "0")
+            if (MySQLFunctions.getAllTotalPosts() != "0")
             {
+                
+                
                 int totalPosts = int.Parse(MySQLFunctions.getTotalPosts(email));
                 string post = "";
-                for (int i = totalPosts; i > 0; i--)
+                string name = "";
+                for (int i = totalPosts; i > 0; i--) //will post all posts for your own email
                 {
                     post = MySQLFunctions.getPost(email, i.ToString());
                     if (post.Length != 0)
                     {
                         AddPost a = new AddPost(i, isNewPage);
+
                         a.post_lbl.Text = post;
                         a.post_lbl.Size = new System.Drawing.Size(700, 25);
 
@@ -88,14 +92,14 @@ namespace WindowsFormsApp7
                         this.Controls.Add(a.post_background);
                         a.post_background.Controls.Add(a.post_lbl);
                         a.post_background.Controls.Add(a.date_lbl);
-                        a.post_background.Controls.Add(a.delete_lbl);
 
-                        a.date_lbl.Text = MySQLFunctions.getDate(email, i.ToString());
+                        name = MySQLFunctions.getName(email);
+                        a.date_lbl.Text = MySQLFunctions.getDate(email, i.ToString()) + " - " + name;
+                        a.date_lbl.Width = 500;
 
                         a.post_lbl.Show();
                         a.date_lbl.Show();
                         a.post_background.Show();
-                        a.delete_lbl.Show();
                         PanelLocation += 100; //Adding an amount
                     }
                     else
@@ -103,7 +107,47 @@ namespace WindowsFormsApp7
                         i--;
                     }
                 }
+                string[] friendsList = MySQLFunctions.getFriends(email); //Returns string array will all friends emails
+                for (int i = 0; i < int.Parse(MySQLFunctions.getTotalFriends(email)); i++)
+                {
+                    int tPosts = friendsList.Length;
+
+                    string p = "";
+                    string n = "";
+                    for (int j = tPosts; j > 0; j--)
+                    {
+                        p = MySQLFunctions.getPost(friendsList[j - 1], j.ToString());
+                        if (p.Length != 0)
+                        {
+                            AddPost a = new AddPost(j, isNewPage);
+
+                            a.post_lbl.Text = p;
+                            a.post_lbl.Size = new System.Drawing.Size(700, 25);
+
+                            isNewPage = false;
+                            postCurrentNum = j;
+
+                            this.Controls.Add(a.post_background);
+                            a.post_background.Controls.Add(a.post_lbl);
+                            a.post_background.Controls.Add(a.date_lbl);
+
+                            n = MySQLFunctions.getName(friendsList[j - 1]);
+                            a.date_lbl.Text = MySQLFunctions.getDate(friendsList[j-1], j.ToString()) + " - " + n;
+                            a.date_lbl.Width = 500;
+
+                            a.post_lbl.Show();
+                            a.date_lbl.Show();
+                            a.post_background.Show();
+                            PanelLocation += 100; //Adding an amount
+                        }
+                        else
+                        {
+                            j--;
+                        }
+                    }
+                }
             }
+            
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -134,11 +178,9 @@ namespace WindowsFormsApp7
             this.Controls.Add(ah.post_background);
             ah.post_background.Controls.Add(ah.post_lbl);
             ah.post_background.Controls.Add(ah.date_lbl);
-            ah.post_background.Controls.Add(ah.delete_lbl);
 
             ah.post_lbl.Show();
             ah.date_lbl.Show();
-            ah.delete_lbl.Show();
             ah.post_background.Show();
             
             PanelLocation += 100;
@@ -159,11 +201,9 @@ namespace WindowsFormsApp7
             this.Controls.Add(a.post_background);
             a.post_background.Controls.Add(a.post_lbl);
             a.post_background.Controls.Add(a.date_lbl);
-            a.post_background.Controls.Add(a.delete_lbl);
 
             a.post_lbl.Show();
             a.date_lbl.Show();
-            a.delete_lbl.Show();
             a.post_background.Show();
             PanelLocation += 100;
         }

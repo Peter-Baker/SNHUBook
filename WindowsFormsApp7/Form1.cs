@@ -42,7 +42,7 @@ namespace WindowsFormsApp7
                     post = MySQLFunctions.getPost(email, i.ToString());
                     if (post.Length != 0)
                     {
-
+                        postsTooDelete.Items.Add(post);
                         AccountAddPost a = new AccountAddPost(i, isNewPage);
                         a.post_lbl.Text = post;
                         a.post_lbl.Size = new System.Drawing.Size(700, 25);
@@ -53,14 +53,12 @@ namespace WindowsFormsApp7
                         this.Controls.Add(a.post_background);
                         a.post_background.Controls.Add(a.post_lbl);
                         a.post_background.Controls.Add(a.date_lbl);
-                        a.post_background.Controls.Add(a.delete_lbl);
 
                         a.date_lbl.Text = MySQLFunctions.getDate(email, i.ToString());
 
                         a.post_lbl.Show();
                         a.date_lbl.Show();
                         a.post_background.Show();
-                        a.delete_lbl.Show();
                         PanelLocation += 100; //Adding an amount
                     }
                     else
@@ -69,6 +67,8 @@ namespace WindowsFormsApp7
                     }
                 }
             }
+
+
 
         }
 
@@ -239,11 +239,9 @@ namespace WindowsFormsApp7
             this.Controls.Add(ah.post_background);
             ah.post_background.Controls.Add(ah.post_lbl);
             ah.post_background.Controls.Add(ah.date_lbl);
-            ah.post_background.Controls.Add(ah.delete_lbl);
 
             ah.post_lbl.Show();
             ah.date_lbl.Show();
-            ah.delete_lbl.Show();
             ah.post_background.Show();
 
             PanelLocation += 100;
@@ -263,6 +261,22 @@ namespace WindowsFormsApp7
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void deletePostSubmitButton_Click(object sender, EventArgs e)
+        {
+            if (postsTooDelete.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select an Item first!");
+            }
+            else
+            {
+                MessageBox.Show("Post removed.");
+                MySQLFunctions.deletePost(email, postsTooDelete.Text);
+                this.Hide();
+                AddProfileImage a = new AddProfileImage(2, email);
+                this.Close();
+            }
         }
 
         private void Add_bn_Click(object sender, EventArgs e)
